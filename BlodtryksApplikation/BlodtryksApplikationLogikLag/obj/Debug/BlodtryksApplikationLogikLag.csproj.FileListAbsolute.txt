@@ -1,0 +1,7 @@
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.pdb
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationDataLag.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationDataLag.pdb
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.csprojResolveAssemblyReference.cache
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.pdb
