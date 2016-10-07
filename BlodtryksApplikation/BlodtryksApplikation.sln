@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodtryksApplikationLogikLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodtryksApplikationDataLag", "BlodtryksApplikationDataLag\BlodtryksApplikationDataLag.csproj", "{2269F45D-9466-407F-BA85-8DB0D8C446A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{811AED78-0963-47EE-B212-755139E6FD3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2269F45D-9466-407F-BA85-8DB0D8C446A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2269F45D-9466-407F-BA85-8DB0D8C446A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2269F45D-9466-407F-BA85-8DB0D8C446A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{811AED78-0963-47EE-B212-755139E6FD3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811AED78-0963-47EE-B212-755139E6FD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811AED78-0963-47EE-B212-755139E6FD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{811AED78-0963-47EE-B212-755139E6FD3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

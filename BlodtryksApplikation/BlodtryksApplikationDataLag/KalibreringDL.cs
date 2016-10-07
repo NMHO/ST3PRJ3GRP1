@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using NationalInstruments;
 using NationalInstruments.DAQmx;
+using DTO;
 //using ST2Prj2LibNI_DAQ;
 
 namespace BlodtryksApplikationDataLag
 {
-    public class Kalibrering
+    public class KalibreringDL
     {
         //NI_DAQVoltage datacollector;
 
@@ -29,7 +30,8 @@ namespace BlodtryksApplikationDataLag
         //}
 
         public double KalibreringsVærdiIVolt { get; private set; }
-        public Kalibrering()
+
+        public KalibreringDL()
         {
             KalibreringsVærdiIVolt = 0;
         }
@@ -38,11 +40,11 @@ namespace BlodtryksApplikationDataLag
         /// Indlæser en enkelt sample fra NI-DAQ i volt
         /// </summary>
         /// <returns></returns>
-        private double indlæsKalibreringsVærdi()
+        public double indlæsKalibreringsSpænding()
         {
             NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
             AIChannel myAIChannel;
-            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("dev1/ai0", "myAIChannel", 
+            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("dev1/ai0", "myAIChannel",
                 AITerminalConfiguration.Differential, 0, 10, AIVoltageUnits.Volts);
 
             AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
@@ -50,6 +52,11 @@ namespace BlodtryksApplikationDataLag
             KalibreringsVærdiIVolt = reader.ReadSingleSample();
 
             return KalibreringsVærdiIVolt;
+        }
+
+        public void gemKalibreringsData(double kalibreringsVærdi)
+        {
+            // metode der gemmer kalibreringsdata til fil
         }
     }
 }

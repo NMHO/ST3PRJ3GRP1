@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Kalibreringsvindue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Kalibreringsvindue.Designer.cs">
+      <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTA Hovedvindue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTA Hovedvindue.Designer.cs">
+      <DependentUpon>BTA Hovedvindue.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Kalibreringsvindue.resx">
+      <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTA Hovedvindue.resx">
+      <DependentUpon>BTA Hovedvindue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,6 +94,10 @@
     <ProjectReference Include="..\BlodtryksApplikationLogikLag\BlodtryksApplikationLogikLag.csproj">
       <Project>{88902e50-8858-4e48-83e5-03879e1e9fe4}</Project>
       <Name>BlodtryksApplikationLogikLag</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{811aed78-0963-47ee-b212-755139e6fd3e}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
