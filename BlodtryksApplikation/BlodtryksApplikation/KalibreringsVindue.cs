@@ -12,12 +12,12 @@ using BlodtryksApplikationLogikLag;
 
 namespace BlodtryksApplikation
 {
-    public partial class KalibreringsForm : Form
+    public partial class KalibreringsVindue : Form
     {
         KalibreringDTO KDTO;
         private KalibreringLL KLL;
         private bool validering { get; set; }
-        public KalibreringsForm(ref KalibreringDTO KDTO)
+        public KalibreringsVindue(ref KalibreringDTO KDTO)
         {
             InitializeComponent();
             this.KDTO = KDTO;

@@ -1,6 +1,6 @@
 ﻿namespace BlodtryksApplikation
 {
-    partial class MainForm
+    partial class BTAHovedvindue
     {
         /// <summary>
         /// Required designer variable.
@@ -60,14 +60,14 @@
             this.kalibrérSystemToolStripMenuItem.Text = "Kalibrér system";
             this.kalibrérSystemToolStripMenuItem.Click += new System.EventHandler(this.kalibrérSystemToolStripMenuItem_Click);
             // 
-            // MainForm
+            // BTAHovedvindue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1552, 906);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainForm";
+            this.Name = "BTAHovedvindue";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

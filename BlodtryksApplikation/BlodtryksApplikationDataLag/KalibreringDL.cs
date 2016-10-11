@@ -54,7 +54,7 @@ namespace BlodtryksApplikationDataLag
             return KalibreringsVærdiIVolt;
         }
 
-        public void gemKalibreringsData(double kalibreringsVærdi)
+        public void gemKalibreringTilFil(KalibreringDTO KDTO)
         {
             // metode der gemmer kalibreringsdata til fil
         }

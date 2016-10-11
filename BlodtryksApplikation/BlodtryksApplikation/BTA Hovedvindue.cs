@@ -12,10 +12,10 @@ using DTO;
 
 namespace BlodtryksApplikation
 {
-    public partial class MainForm : Form
+    public partial class BTAHovedvindue : Form
     {
         private KalibreringDTO KDTO;       
-        public MainForm()
+        public BTAHovedvindue()
         {
             InitializeComponent();
             KDTO = new KalibreringDTO();
@@ -23,7 +23,7 @@ namespace BlodtryksApplikation
 
         private void kalibrérSystemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var kalibreringsForm = new KalibreringsForm(ref KDTO);
+            var kalibreringsForm = new KalibreringsVindue(ref KDTO);
             kalibreringsForm.Show();
         }
     }
