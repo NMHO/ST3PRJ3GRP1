@@ -14,9 +14,9 @@ namespace BlodtryksApplikation
 {
     public partial class KalibreringsVindue : Form
     {
-        KalibreringDTO KDTO;
+        private KalibreringDTO KDTO;
         private KalibreringLL KLL;
-        private bool validering { get; set; }
+        private bool validering;
         public KalibreringsVindue(ref KalibreringDTO KDTO)
         {
             InitializeComponent();
@@ -27,13 +27,16 @@ namespace BlodtryksApplikation
         private void btnKalibreringNr1_Click(object sender, EventArgs e)
         {
             validering = KLL.opdaterKalibreringsData(double.Parse(txbKalibreringNr1.Text), 1);
-            if (validering == false)
+            if (validering == true)
             {
-                // udskriv fejlmeddelse
+                // udskriv godkendt
+                // aktiver Knap 2 og tekstfelt
+                // 
             }
             else
             {
-                // udskriv godkendt
+                // udskriv fejlmeddelse
+                // Nulstil KDTO               
             }
         }
 
@@ -41,14 +44,22 @@ namespace BlodtryksApplikation
         {
             validering = KLL.opdaterKalibreringsData(double.Parse(txbKalibreringNr2.Text), 2);
 
-            if (validering == false)
+            if (validering == true)
             {
-                // udskriv fejlmeddelse
+                // udskriv godkend
+                // Kald gem data metode
+                // Luk vindue
             }
             else
             {
-                // udskriv godkendt
+                // udskriv fejlmeddelse 
+                // Nulstil KDTO               
             }
+        }
+
+        private void KalibreringsVindue_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            // Nulstil KDTO og gem nulstillingen
         }
     }
 }

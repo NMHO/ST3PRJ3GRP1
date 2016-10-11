@@ -29,11 +29,11 @@ namespace BlodtryksApplikationDataLag
         //    return datacollector.currentVoltageSeq.Average();
         //}
 
-        public double KalibreringsVærdiIVolt { get; private set; }
+        private KalibreringDTO KDTO;
 
         public KalibreringDL()
         {
-            KalibreringsVærdiIVolt = 0;
+            KDTO = new KalibreringDTO();
         }
 
         /// <summary>
@@ -49,14 +49,18 @@ namespace BlodtryksApplikationDataLag
 
             AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
-            KalibreringsVærdiIVolt = reader.ReadSingleSample();
-
-            return KalibreringsVærdiIVolt;
+            return reader.ReadSingleSample();
         }
 
         public void gemKalibreringTilFil(KalibreringDTO KDTO)
         {
-            // metode der gemmer kalibreringsdata til fil
+            // metode der gemmer kalibreringsdata til json-fil
+        }
+
+        public KalibreringDTO hentKalibreringFraFil()
+        {
+            // Metode der henter kalibreringsdata fra json-fil
+            return null;
         }
     }
 }

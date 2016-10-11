@@ -52,19 +52,19 @@
     <Compile Include="Kalibreringsvindue.Designer.cs">
       <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
     </Compile>
-    <Compile Include="BTA Hovedvindue.cs">
+    <Compile Include="BTAHovedvindue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BTA Hovedvindue.Designer.cs">
-      <DependentUpon>BTA Hovedvindue.cs</DependentUpon>
+    <Compile Include="BTAHovedvindue.Designer.cs">
+      <DependentUpon>BTAHovedvindue.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Kalibreringsvindue.resx">
       <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BTA Hovedvindue.resx">
-      <DependentUpon>BTA Hovedvindue.cs</DependentUpon>
+    <EmbeddedResource Include="BTAHovedvindue.resx">
+      <DependentUpon>BTAHovedvindue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

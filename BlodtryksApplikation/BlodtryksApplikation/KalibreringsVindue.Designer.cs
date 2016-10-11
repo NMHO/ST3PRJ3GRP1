@@ -108,9 +108,9 @@
             // btnKalibreringNr1
             // 
             this.btnKalibreringNr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnKalibreringNr1.Location = new System.Drawing.Point(699, 223);
+            this.btnKalibreringNr1.Location = new System.Drawing.Point(699, 210);
             this.btnKalibreringNr1.Name = "btnKalibreringNr1";
-            this.btnKalibreringNr1.Size = new System.Drawing.Size(287, 41);
+            this.btnKalibreringNr1.Size = new System.Drawing.Size(287, 51);
             this.btnKalibreringNr1.TabIndex = 7;
             this.btnKalibreringNr1.Text = "Godkend kalibrering 1";
             this.btnKalibreringNr1.UseVisualStyleBackColor = true;
@@ -119,9 +119,9 @@
             // btnKalibreringNr2
             // 
             this.btnKalibreringNr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnKalibreringNr2.Location = new System.Drawing.Point(699, 375);
+            this.btnKalibreringNr2.Location = new System.Drawing.Point(699, 361);
             this.btnKalibreringNr2.Name = "btnKalibreringNr2";
-            this.btnKalibreringNr2.Size = new System.Drawing.Size(287, 41);
+            this.btnKalibreringNr2.Size = new System.Drawing.Size(287, 52);
             this.btnKalibreringNr2.TabIndex = 8;
             this.btnKalibreringNr2.Text = "Godkend kalibrering 2";
             this.btnKalibreringNr2.UseVisualStyleBackColor = true;
@@ -132,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1098, 759);
+            this.ClientSize = new System.Drawing.Size(1079, 581);
             this.Controls.Add(this.btnKalibreringNr2);
             this.Controls.Add(this.btnKalibreringNr1);
             this.Controls.Add(this.label5);
@@ -143,7 +143,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "KalibreringsVindue";
-            this.Text = "KalibreringsVindue";
+            this.Text = "Kalibreringsvindue";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KalibreringsVindue_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

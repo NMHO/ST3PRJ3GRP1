@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kalibrérSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnKalibrerSystem = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,17 +59,29 @@
             this.kalibrérSystemToolStripMenuItem.Name = "kalibrérSystemToolStripMenuItem";
             this.kalibrérSystemToolStripMenuItem.Size = new System.Drawing.Size(217, 30);
             this.kalibrérSystemToolStripMenuItem.Text = "Kalibrér system";
-            this.kalibrérSystemToolStripMenuItem.Click += new System.EventHandler(this.kalibrérSystemToolStripMenuItem_Click);
+            this.kalibrérSystemToolStripMenuItem.Click += new System.EventHandler(this.btnToolStripKalibrerSystem_Click);
+            // 
+            // btnKalibrerSystem
+            // 
+            this.btnKalibrerSystem.Location = new System.Drawing.Point(12, 51);
+            this.btnKalibrerSystem.Name = "btnKalibrerSystem";
+            this.btnKalibrerSystem.Size = new System.Drawing.Size(160, 40);
+            this.btnKalibrerSystem.TabIndex = 1;
+            this.btnKalibrerSystem.Text = "Kalibrér system";
+            this.btnKalibrerSystem.UseVisualStyleBackColor = true;
+            this.btnKalibrerSystem.Click += new System.EventHandler(this.btnKalibrerSystem_Click);
             // 
             // BTAHovedvindue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1552, 906);
+            this.Controls.Add(this.btnKalibrerSystem);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "BTAHovedvindue";
-            this.Text = "Form1";
+            this.Text = "BTA - Hovedvindue";
+            this.Shown += new System.EventHandler(this.BTAHovedvindue_Shown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -81,6 +94,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem kalibrérSystemToolStripMenuItem;
+        private System.Windows.Forms.Button btnKalibrerSystem;
     }
 }
 
