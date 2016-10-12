@@ -6,34 +6,17 @@ using System.Threading.Tasks;
 using NationalInstruments;
 using NationalInstruments.DAQmx;
 using DTO;
-//using ST2Prj2LibNI_DAQ;
-
+using Newtonsoft.Json;
+using System.IO;
 namespace BlodtryksApplikationDataLag
 {
     public class KalibreringDL
     {
-        //NI_DAQVoltage datacollector;
-
-        //public Kalibrering()
-        //{
-        //    datacollector = new NI_DAQVoltage();
-        //}
-
-        //public double indlæsKalibreringsVærdi()
-        //{
-        //    datacollector.samplesPerChannel = 10;
-        //    datacollector.sampleRateInHz = 1000;
-        //    datacollector.deviceName = "Dev1/ai0";
-        //    datacollector.getVoltageSeqBlocking();            
-
-        //    return datacollector.currentVoltageSeq.Average();
-        //}
-
         private KalibreringDTO KDTO;
 
-        public KalibreringDL()
+        public KalibreringDL(ref KalibreringDTO KDTO)
         {
-            KDTO = new KalibreringDTO();
+            this.KDTO = KDTO;
         }
 
         /// <summary>
@@ -55,12 +38,28 @@ namespace BlodtryksApplikationDataLag
         public void gemKalibreringTilFil(KalibreringDTO KDTO)
         {
             // metode der gemmer kalibreringsdata til json-fil
+            string json = JsonConvert.SerializeObject(KDTO);
+
+            string path = Environment.CurrentDirectory + @"\AppData\Kalibrering.json";
+
+            File.WriteAllText(path, json);
         }
 
         public KalibreringDTO hentKalibreringFraFil()
         {
             // Metode der henter kalibreringsdata fra json-fil
-            return null;
+            // budIndlæst = JsonConvert.DeserializeObject<PPT>(File.ReadAllText(@"c:\temp\bud.json"));
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\AppData\Kalibrering.json";
+
+                KDTO = JsonConvert.DeserializeObject<KalibreringDTO>(File.ReadAllText(path));
+                return KDTO;
+            }
+            catch (Exception)
+            {
+                return null;          
+            }          
         }
     }
 }

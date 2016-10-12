@@ -108,7 +108,7 @@
             // btnKalibreringNr1
             // 
             this.btnKalibreringNr1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnKalibreringNr1.Location = new System.Drawing.Point(699, 210);
+            this.btnKalibreringNr1.Location = new System.Drawing.Point(699, 218);
             this.btnKalibreringNr1.Name = "btnKalibreringNr1";
             this.btnKalibreringNr1.Size = new System.Drawing.Size(287, 51);
             this.btnKalibreringNr1.TabIndex = 7;
@@ -119,7 +119,7 @@
             // btnKalibreringNr2
             // 
             this.btnKalibreringNr2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnKalibreringNr2.Location = new System.Drawing.Point(699, 361);
+            this.btnKalibreringNr2.Location = new System.Drawing.Point(699, 369);
             this.btnKalibreringNr2.Name = "btnKalibreringNr2";
             this.btnKalibreringNr2.Size = new System.Drawing.Size(287, 52);
             this.btnKalibreringNr2.TabIndex = 8;
@@ -144,7 +144,6 @@
             this.Controls.Add(this.label1);
             this.Name = "KalibreringsVindue";
             this.Text = "Kalibreringsvindue";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.KalibreringsVindue_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,13 +15,16 @@ namespace BlodtryksApplikation
     public partial class KalibreringsVindue : Form
     {
         private KalibreringDTO KDTO;
+
         private KalibreringLL KLL;
         private bool validering;
         public KalibreringsVindue(ref KalibreringDTO KDTO)
         {
             InitializeComponent();
             this.KDTO = KDTO;
-            KLL = new KalibreringLL();
+            KLL = new KalibreringLL(ref KDTO);
+            btnKalibreringNr2.Enabled = false;
+            txbKalibreringNr2.Enabled = false;
         }
 
         private void btnKalibreringNr1_Click(object sender, EventArgs e)
@@ -32,11 +35,19 @@ namespace BlodtryksApplikation
                 // udskriv godkendt
                 // aktiver Knap 2 og tekstfelt
                 // 
+                btnKalibreringNr1.Enabled = false;
+                txbKalibreringNr1.Enabled = false;
+                btnKalibreringNr2.Enabled = true;
+                txbKalibreringNr2.Enabled = true;
+                MessageBox.Show("Kalibrering for kalibreringstryk 1 udført", "Godkendt");
+                
             }
             else
             {
                 // udskriv fejlmeddelse
-                // Nulstil KDTO               
+                // Nulstil KDTO
+                KDTO = null;
+                MessageBox.Show("Fejl i indtastning. Indtastningen skal være over 0 mmHg og under 250 mmHg", " Fejl i indtastet kalibreringstryk 1");
             }
         }
 
@@ -49,17 +60,23 @@ namespace BlodtryksApplikation
                 // udskriv godkend
                 // Kald gem data metode
                 // Luk vindue
+
+                KLL.gemKalibrering();
+                MessageBox.Show("Kalibrering for kalibreringstryk 2 udført", "Godkendt");
+                Close();
             }
             else
             {
                 // udskriv fejlmeddelse 
-                // Nulstil KDTO               
+                // Nulstil KDTO
+                btnKalibreringNr1.Enabled = false;
+                txbKalibreringNr1.Enabled = false;
+                btnKalibreringNr2.Enabled = false;
+                txbKalibreringNr2.Enabled = false;
+                MessageBox.Show("Fejl i indtastning. Indtastningen skal være over 0 mmHg og under 250 mmHg", " Fejl i indtastet kalibreringstryk 2");
             }
         }
 
-        private void KalibreringsVindue_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            // Nulstil KDTO og gem nulstillingen
-        }
+        
     }
 }

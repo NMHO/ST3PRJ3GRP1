@@ -18,7 +18,7 @@ namespace BlodtryksApplikation
         public BTAHovedvindue()
         {
             InitializeComponent();
-            KDTO = new KalibreringDTO();
+            KDTO = new KalibreringDTO();            
         }
 
 
@@ -30,12 +30,12 @@ namespace BlodtryksApplikation
         private void btnKalibrerSystem_Click(object sender, EventArgs e)
         {
             var kalibreringsForm = new KalibreringsVindue(ref KDTO);
-            kalibreringsForm.ShowDialog();
+            kalibreringsForm.ShowDialog();            
         }
 
         private void BTAHovedvindue_Shown(object sender, EventArgs e)
         {
-            var KLL = new KalibreringLL();
+            var KLL = new KalibreringLL(ref KDTO);
             KalibreringDTO temp = KLL.hentKalibreringFraDL();
 
             if (temp != null || KDTO.kalibreringsHældning != 0)
