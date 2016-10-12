@@ -25,6 +25,8 @@ namespace BlodtryksApplikation
             KLL = new KalibreringLL(ref KDTO);
             btnKalibreringNr2.Enabled = false;
             txbKalibreringNr2.Enabled = false;
+            txbKalibreringNr1.Text = (0).ToString();
+            txbKalibreringNr2.Text = (0).ToString();
         }
 
         private void btnKalibreringNr1_Click(object sender, EventArgs e)
@@ -52,7 +54,7 @@ namespace BlodtryksApplikation
         }
 
         private void btnKalibreringNr2_Click(object sender, EventArgs e)
-        {
+        {            
             validering = KLL.opdaterKalibreringsData(double.Parse(txbKalibreringNr2.Text), 2);
 
             if (validering == true)
