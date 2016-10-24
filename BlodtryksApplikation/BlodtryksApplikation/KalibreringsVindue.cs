@@ -40,15 +40,15 @@ namespace BlodtryksApplikation
                 btnKalibreringNr1.Enabled = false;
                 txbKalibreringNr1.Enabled = false;
                 btnKalibreringNr2.Enabled = true;
-                txbKalibreringNr2.Enabled = true;
+                txbKalibreringNr2.Enabled = true;                
                 MessageBox.Show("Kalibreringstryk 1 godkendt og opdateret!", "Godkendt");
                 
             }
             else
             {
                 // udskriv fejlmeddelse
-                // Nulstil KDTO
-                KDTO = null;
+                // Nulstil KDTO 
+                txbKalibreringNr1.Text = (0).ToString();
                 MessageBox.Show("Fejl i indtastning. Indtastningen skal være over 0 mmHg og under 250 mmHg", " Fejl i indtastet kalibreringstryk 1");
             }
         }
@@ -64,17 +64,19 @@ namespace BlodtryksApplikation
                 // Luk vindue
 
                 KLL.gemKalibrering();
-                MessageBox.Show("Kalibreringstryk 2 godkendt og systemkalibrering opdateret", "Godkendt");
+                MessageBox.Show("Kalibreringstryk 2 godkendt og systemkalibrering udført", "Godkendt");
                 Close();
             }
             else
             {
                 // udskriv fejlmeddelse 
                 // Nulstil KDTO
-                btnKalibreringNr1.Enabled = false;
-                txbKalibreringNr1.Enabled = false;
+                btnKalibreringNr1.Enabled = true;
+                txbKalibreringNr1.Enabled = true;
                 btnKalibreringNr2.Enabled = false;
                 txbKalibreringNr2.Enabled = false;
+                txbKalibreringNr1.Text = (0).ToString();
+                txbKalibreringNr2.Text = (0).ToString();
                 MessageBox.Show("Fejl i indtastning. Indtastningen skal være over 0 mmHg og under 250 mmHg", " Fejl i indtastet kalibreringstryk 2");
             }
         }
