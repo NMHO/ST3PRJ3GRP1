@@ -15,3 +15,20 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\Newtonsoft.Json.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.pdb
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationDataLag.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\DTO.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\Newtonsoft.Json.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.Native.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.MStudioCLM.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationDataLag.pdb
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\DTO.pdb
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.xml
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.xml
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.csprojResolveAssemblyReference.cache
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.dll
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.pdb

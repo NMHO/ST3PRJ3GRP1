@@ -53,5 +53,15 @@ namespace BlodtryksApplikation
                 }
             }
         }
+
+        private void btnToolStripNulpunktsjusterSystem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
