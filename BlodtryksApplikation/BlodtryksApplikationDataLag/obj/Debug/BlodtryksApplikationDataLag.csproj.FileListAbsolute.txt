@@ -28,3 +28,18 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.csprojResolveAssemblyReference.cache
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.pdb
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\BlodtryksApplikationDataLag.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\BlodtryksApplikationDataLag.pdb
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\DTO.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NI-DAQ.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\DTO.pdb
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.csprojResolveAssemblyReference.cache
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.dll
+C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.pdb

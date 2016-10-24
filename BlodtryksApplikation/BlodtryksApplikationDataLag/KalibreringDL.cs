@@ -27,8 +27,8 @@ namespace BlodtryksApplikationDataLag
         {
             NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
             AIChannel myAIChannel;
-            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("dev1/ai0", "myAIChannel",
-                AITerminalConfiguration.Differential, 0, 10, AIVoltageUnits.Volts);
+            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
+                AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
             AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
