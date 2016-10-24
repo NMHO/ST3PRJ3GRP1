@@ -41,7 +41,7 @@ namespace BlodtryksApplikation
                 txbKalibreringNr1.Enabled = false;
                 btnKalibreringNr2.Enabled = true;
                 txbKalibreringNr2.Enabled = true;
-                MessageBox.Show("Kalibrering for kalibreringstryk 1 udført", "Godkendt");
+                MessageBox.Show("Kalibreringstryk 1 godkendt og opdateret!", "Godkendt");
                 
             }
             else
@@ -64,7 +64,7 @@ namespace BlodtryksApplikation
                 // Luk vindue
 
                 KLL.gemKalibrering();
-                MessageBox.Show("Kalibrering for kalibreringstryk 2 udført", "Godkendt");
+                MessageBox.Show("Kalibreringstryk 2 godkendt og systemkalibrering opdateret", "Godkendt");
                 Close();
             }
             else
