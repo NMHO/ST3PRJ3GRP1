@@ -30,7 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.kalibrérSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnToolStripKalibrerSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnToolStripNulpunktsjusterSystem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnKalibrerSystem = new System.Windows.Forms.Button();
             this.btnNulpunktsjusterSystem = new System.Windows.Forms.Button();
@@ -44,40 +44,38 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(957, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1436, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.kalibrérSystemToolStripMenuItem,
+            this.btnToolStripKalibrerSystem,
             this.btnToolStripNulpunktsjusterSystem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(69, 29);
             this.toolStripMenuItem1.Text = "Menu";
             // 
-            // kalibrérSystemToolStripMenuItem
+            // btnToolStripKalibrerSystem
             // 
-            this.kalibrérSystemToolStripMenuItem.Name = "kalibrérSystemToolStripMenuItem";
-            this.kalibrérSystemToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.kalibrérSystemToolStripMenuItem.Text = "Kalibrér system";
-            this.kalibrérSystemToolStripMenuItem.Click += new System.EventHandler(this.btnToolStripKalibrerSystem_Click);
+            this.btnToolStripKalibrerSystem.Name = "btnToolStripKalibrerSystem";
+            this.btnToolStripKalibrerSystem.Size = new System.Drawing.Size(221, 30);
+            this.btnToolStripKalibrerSystem.Text = "Kalibrér system";
+            this.btnToolStripKalibrerSystem.Click += new System.EventHandler(this.btnToolStripKalibrerSystem_Click);
             // 
             // btnToolStripNulpunktsjusterSystem
             // 
             this.btnToolStripNulpunktsjusterSystem.Name = "btnToolStripNulpunktsjusterSystem";
-            this.btnToolStripNulpunktsjusterSystem.Size = new System.Drawing.Size(158, 22);
+            this.btnToolStripNulpunktsjusterSystem.Size = new System.Drawing.Size(221, 30);
             this.btnToolStripNulpunktsjusterSystem.Text = "Nulpunktsjuster";
             this.btnToolStripNulpunktsjusterSystem.Click += new System.EventHandler(this.btnToolStripNulpunktsjusterSystem_Click);
             // 
             // btnKalibrerSystem
             // 
-            this.btnKalibrerSystem.Location = new System.Drawing.Point(8, 33);
-            this.btnKalibrerSystem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKalibrerSystem.Location = new System.Drawing.Point(12, 51);
             this.btnKalibrerSystem.Name = "btnKalibrerSystem";
-            this.btnKalibrerSystem.Size = new System.Drawing.Size(107, 26);
+            this.btnKalibrerSystem.Size = new System.Drawing.Size(160, 40);
             this.btnKalibrerSystem.TabIndex = 1;
             this.btnKalibrerSystem.Text = "Kalibrér system";
             this.btnKalibrerSystem.UseVisualStyleBackColor = true;
@@ -85,10 +83,9 @@
             // 
             // btnNulpunktsjusterSystem
             // 
-            this.btnNulpunktsjusterSystem.Location = new System.Drawing.Point(8, 83);
-            this.btnNulpunktsjusterSystem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNulpunktsjusterSystem.Location = new System.Drawing.Point(12, 128);
             this.btnNulpunktsjusterSystem.Name = "btnNulpunktsjusterSystem";
-            this.btnNulpunktsjusterSystem.Size = new System.Drawing.Size(107, 26);
+            this.btnNulpunktsjusterSystem.Size = new System.Drawing.Size(160, 40);
             this.btnNulpunktsjusterSystem.TabIndex = 2;
             this.btnNulpunktsjusterSystem.Text = "Nulpunktsjuster";
             this.btnNulpunktsjusterSystem.UseVisualStyleBackColor = true;
@@ -96,14 +93,13 @@
             // 
             // BTAHovedvindue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 567);
+            this.ClientSize = new System.Drawing.Size(1436, 872);
             this.Controls.Add(this.btnNulpunktsjusterSystem);
             this.Controls.Add(this.btnKalibrerSystem);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BTAHovedvindue";
             this.Text = "BTA - Hovedvindue";
             this.Shown += new System.EventHandler(this.BTAHovedvindue_Shown);
@@ -118,7 +114,7 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem kalibrérSystemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btnToolStripKalibrerSystem;
         private System.Windows.Forms.Button btnKalibrerSystem;
         private System.Windows.Forms.ToolStripMenuItem btnToolStripNulpunktsjusterSystem;
         private System.Windows.Forms.Button btnNulpunktsjusterSystem;
