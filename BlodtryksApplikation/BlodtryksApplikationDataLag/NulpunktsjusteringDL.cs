@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BlodtryksApplikationDataLag
 {
-    class NulpunktsjusteringDL
+    /// <summary>
+    /// 
+    /// </summary>
+    public class NulpunktsjusteringDL
     {
     }
 }

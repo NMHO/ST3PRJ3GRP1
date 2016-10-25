@@ -49,3 +49,6 @@ C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksAppli
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.csprojResolveAssemblyReference.cache
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.dll
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.pdb
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.XML
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationDataLag.xml
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\DTO.xml

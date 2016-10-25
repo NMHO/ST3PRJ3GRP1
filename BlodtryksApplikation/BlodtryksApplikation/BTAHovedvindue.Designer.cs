@@ -69,7 +69,6 @@
             this.btnToolStripNulpunktsjusterSystem.Name = "btnToolStripNulpunktsjusterSystem";
             this.btnToolStripNulpunktsjusterSystem.Size = new System.Drawing.Size(221, 30);
             this.btnToolStripNulpunktsjusterSystem.Text = "Nulpunktsjuster";
-            this.btnToolStripNulpunktsjusterSystem.Click += new System.EventHandler(this.btnToolStripNulpunktsjusterSystem_Click);
             // 
             // btnKalibrerSystem
             // 

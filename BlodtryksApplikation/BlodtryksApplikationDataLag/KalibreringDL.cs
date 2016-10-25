@@ -10,10 +10,17 @@ using Newtonsoft.Json;
 using System.IO;
 namespace BlodtryksApplikationDataLag
 {
+    /// <summary>
+    /// Indlæser kalibreringsværdi fra DAQ'en og gemmer og henter fra kalibreringsfil
+    /// </summary>
     public class KalibreringDL
     {
         private KalibreringDTO KDTO;
 
+        /// <summary>
+        /// Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
+        /// </summary>
+        /// <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
         public KalibreringDL(ref KalibreringDTO KDTO)
         {
             this.KDTO = KDTO;
@@ -22,7 +29,9 @@ namespace BlodtryksApplikationDataLag
         /// <summary>
         /// Indlæser en enkelt sample fra NI-DAQ i volt
         /// </summary>
-        /// <returns></returns>
+        /// <returns>
+        /// Returnerer den indlæste spænding
+        /// </returns>
         public double indlæsKalibreringsSpænding()
         {
             NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
@@ -35,9 +44,12 @@ namespace BlodtryksApplikationDataLag
             return reader.ReadSingleSample();
         }
 
+        /// <summary>
+        /// Gemmer kalibreringsdata til json-kalibreringsfil
+        /// </summary>
+        /// <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
         public void gemKalibreringTilFil(KalibreringDTO KDTO)
         {
-            // metode der gemmer kalibreringsdata til json-fil
             string json = JsonConvert.SerializeObject(KDTO);
 
             string path = Environment.CurrentDirectory + @"\AppData\Kalibrering.json";
@@ -45,10 +57,14 @@ namespace BlodtryksApplikationDataLag
             File.WriteAllText(path, json);
         }
 
+        /// <summary>
+        /// Henter kalibreringsdata fra json-kalibreringsfil
+        /// </summary>
+        /// <returns>
+        /// Returnerer en KalibreringDTO med de indlæste kalibreringsdata
+        /// </returns>
         public KalibreringDTO hentKalibreringFraFil()
         {
-            // Metode der henter kalibreringsdata fra json-fil
-            // budIndlæst = JsonConvert.DeserializeObject<PPT>(File.ReadAllText(@"c:\temp\bud.json"));
             try
             {
                 string path = Environment.CurrentDirectory + @"\AppData\Kalibrering.json";

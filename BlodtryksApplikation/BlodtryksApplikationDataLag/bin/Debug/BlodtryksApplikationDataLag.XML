@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlodtryksApplikationDataLag</name>
+    </assembly>
+    <members>
+        <member name="T:BlodtryksApplikationDataLag.KalibreringDL">
+            <summary>
+            Indlæser kalibreringsværdi fra DAQ'en og gemmer og henter fra kalibreringsfil
+            </summary>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.KalibreringDL.#ctor(DTO.KalibreringDTO@)">
+            <summary>
+            Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
+            </summary>
+            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.KalibreringDL.indlæsKalibreringsSpænding">
+            <summary>
+            Indlæser en enkelt sample fra NI-DAQ i volt
+            </summary>
+            <returns>
+            Returnerer den indlæste spænding
+            </returns>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.KalibreringDL.gemKalibreringTilFil(DTO.KalibreringDTO)">
+            <summary>
+            Gemmer kalibreringsdata til json-kalibreringsfil
+            </summary>
+            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.KalibreringDL.hentKalibreringFraFil">
+            <summary>
+            Henter kalibreringsdata fra json-kalibreringsfil
+            </summary>
+            <returns>
+            Returnerer en KalibreringDTO med de indlæste kalibreringsdata
+            </returns>
+        </member>
+        <member name="T:BlodtryksApplikationDataLag.NulpunktsjusteringDL">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

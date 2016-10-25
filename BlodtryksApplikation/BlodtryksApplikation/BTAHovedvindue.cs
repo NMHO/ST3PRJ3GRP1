@@ -12,9 +12,16 @@ using DTO;
 
 namespace BlodtryksApplikation
 {
+    /// <summary>
+    /// Blodtryk Applikationens hovedvindue
+    /// </summary>
     public partial class BTAHovedvindue : Form
     {
         private KalibreringDTO KDTO;
+
+        /// <summary>
+        /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
+        /// </summary>
         public BTAHovedvindue()
         {
             InitializeComponent();
@@ -32,7 +39,9 @@ namespace BlodtryksApplikation
             var kalibreringsForm = new KalibreringsVindue(ref KDTO);
             kalibreringsForm.ShowDialog();            
         }
-
+        /// <summary>
+        /// Ved start af program indlæses kalibreringsdata fra kalibreringsfil, hvis den findes
+        /// </summary>
         private void BTAHovedvindue_Shown(object sender, EventArgs e)
         {
             var KLL = new KalibreringLL(ref KDTO);
@@ -53,11 +62,7 @@ namespace BlodtryksApplikation
                 }
             }
         }
-
-        private void btnToolStripNulpunktsjusterSystem_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
