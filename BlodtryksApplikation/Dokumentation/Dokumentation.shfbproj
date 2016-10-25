@@ -37,7 +37,7 @@
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="(global)" isDocumented="True">BlodtryksApplikation - Et projekt til indlæsning og behandling af blodtrykssignal</NamespaceSummaryItem>
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
 <NamespaceSummaryItem name="BlodtryksApplikation" isDocumented="True">BlodtryksApplikation'ens præsentationslag. 
 Behandler modtagelse og præsentation af data forbrugeren af applikationen</NamespaceSummaryItem>
 <NamespaceSummaryItem name="BlodtryksApplikationDataLag" isDocumented="True">BlodtryksApplikation'ens datalag.
@@ -45,6 +45,20 @@ Her opbevares og håndteres data, som eventuelt læses fra fil eller database el
 <NamespaceSummaryItem name="BlodtryksApplikationLogikLag" isDocumented="True">BlodtryksApplikation'ens logiklag.
 Står for udvekslingen af data mellem præsentationslaget og datalaget.</NamespaceSummaryItem>
 <NamespaceSummaryItem name="DTO" isDocumented="True">En fælles DTO (Data Trans-fer Object) medsendes som parameter. Ved hjælp af DTO-objektet kan data simpelt hentes fradatalaget til logiklaget og til sidst til fremvisning i brugergrænsefladen af præsentationslaget, og ligeledes persistere data til fil gennem lagene ved brug af et DTO-objekt.</NamespaceSummaryItem></NamespaceSummaries>
+    <HelpFileVersion>1.0.0.0</HelpFileVersion>
+    <MaximumGroupParts>2</MaximumGroupParts>
+    <NamespaceGrouping>False</NamespaceGrouping>
+    <SyntaxFilters>C#</SyntaxFilters>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <Preliminary>False</Preliminary>
+    <NamingMethod>Guid</NamingMethod>
+    <HelpTitle>Sandcastle dokumentation af Blodtryk Applikation</HelpTitle>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ProjectSummary>BlodtryksApplikation - Et projekt til indl&amp;#230%3bsning og behandling af blodtrykssignal</ProjectSummary>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Privates, PrivateFields, Protected, ProtectedInternalAsProtected</VisibleItems>
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace, TypeParameter, AutoDocumentDispose</MissingTags>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->

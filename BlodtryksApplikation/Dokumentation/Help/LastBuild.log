@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.9.17.0" projectFile="C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Dokumentation.shfbproj" started="25/10/16 13.07.15">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.9.17.0" projectFile="C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Dokumentation.shfbproj" started="25/10/16 17.48.59">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -15,9 +15,6 @@ Loading and initializing plug-ins...
 Lightweight Website Style Version 2016.9.17.0
 Copyright &#169; 2006-2016, Eric Woodruff, All Rights Reserved
 Portions Copyright &#169; 2014, Sam Harwell, All Rights Reserved
-</buildStep>
-<buildStep step="ClearWorkFolder">
-Clearing working folder...
 </buildStep>
 <buildStep step="ValidatingDocumentationSources">
 Validating and copying documentation source information
@@ -47,16 +44,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0260
+</plugIn>    Last step completed in 00:00:00,0110
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0040
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 25/10/16 13.07.16.
+Build started 25/10/16 17.49.00.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -66,7 +63,7 @@ GenerateRefInfo:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   No source code context base path specified.  Source context information is unavailable.
   Loaded 4 assemblies for reflection and 4 dependency assemblies.
-  Wrote information on 4 namespaces, 7 types, and 21 members
+  Wrote information on 4 namespaces, 7 types, and 53 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2016.9.17.0)
   Copyright c 2006-2016, Microsoft Corporation, All Rights Reserved.
@@ -76,13 +73,13 @@ Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 201
 
 Build succeeded.
 
-Time Elapsed 00:00:00.91
-    Last step completed in 00:00:01,0440
+Time Elapsed 00:00:00.84
+    Last step completed in 00:00:00,9930
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - TransformManifest.proj]
-Build started 25/10/16 13.07.17.
+Build started 25/10/16 17.49.01.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2016.9.17.0)
@@ -102,12 +99,12 @@ Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 201
 
 Build succeeded.
 
-Time Elapsed 00:00:01.09
-    Last step completed in 00:00:01,1910
+Time Elapsed 00:00:01.08
+    Last step completed in 00:00:01,1960
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00,0390
+    Last step completed in 00:00:00,0580
 </buildStep>
 <buildStep step="CopyConceptualContent">
 Copying conceptual content...
@@ -122,28 +119,28 @@ Generating conceptual topic files
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Content\VersionHistory\VersionHistory.aml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\ddueXml\d1a0e8c2-b80e-4702-ba24-e3823a346b0e.xml
     Parsing topic file &#39;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Content\VersionHistory\v1.0.0.0.aml&#39;
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Content\VersionHistory\v1.0.0.0.aml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\ddueXml\3ed0a98f-b12f-42c8-b041-4c9595b90734.xml
-    Last step completed in 00:00:00,0620
+    Last step completed in 00:00:00,0880
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0150
+    Last step completed in 00:00:00,0330
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\icons\Help.png -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\icons\Help.png
-    Last step completed in 00:00:00,0100
+    Last step completed in 00:00:00,0150
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0010
+    Last step completed in 00:00:00,0050
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 25/10/16 13.07.18.
+Build started 25/10/16 17.49.02.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2016.9.17.0)
@@ -154,14 +151,14 @@ Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 201
 
 Build succeeded.
 
-Time Elapsed 00:00:00.12
+Time Elapsed 00:00:00.14
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,2290
+    Last step completed in 00:00:00,2891
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,4400
+    Last step completed in 00:00:00,5730
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -169,12 +166,12 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0300
+    Last step completed in 00:00:00,0470
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - BuildTopics.proj]
-Build started 25/10/16 13.07.19.
+Build started 25/10/16 17.49.03.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2016.9.17.0)
@@ -182,25 +179,63 @@ BuildTopics:
   Portions Copyright c 2006-2016, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.btnKalibrerSystem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.btnNulpunktsjusterSystem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.btnToolStripKalibrerSystem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnToolStripKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnToolStripKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.BTAHovedvindue.btnToolStripKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.btnToolStripNulpunktsjusterSystem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.KDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.menuStrip1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.BTAHovedvindue.toolStripMenuItem1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.btnKalibreringNr1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.btnKalibreringNr2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.KalibreringsVindue.btnKalibreringNr2_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BlodtryksApplikation.KalibreringsVindue.btnKalibreringNr2_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.KDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.KLL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.label1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.label2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.label3] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.label4] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.label5] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.txbKalibreringNr1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.txbKalibreringNr2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikation.KalibreringsVindue.validering] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikationDataLag.KalibreringDL.KDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BlodtryksApplikationDataLag.NulpunktsjusteringDL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BlodtryksApplikationDataLag.NulpunktsjusteringLL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
-  Processed 49 topic(s)
-  2 warning(s)
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikationLogikLag.KalibreringLL.KDL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BlodtryksApplikationLogikLag.KalibreringLL.KDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+  Processed 85 topic(s)
+  39 warning(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
-  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 2 of 15.
+  ResolveReferenceLinksComponent: 6 entries added to the MSDN content ID cache.  New cache size: 544 entries
+  CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 4 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 7 of 30.
-  SaveComponent: Waiting for the document writer task to finish (15 Help1 API file(s) remaining)...
+  SaveComponent: Waiting for the document writer task to finish (27 Help1 API file(s) remaining)...
 Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:14.04
-    Last step completed in 00:00:14,1680
+Time Elapsed 00:00:30.40
+    Last step completed in 00:00:30,6230
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0030
+    Last step completed in 00:00:00,0170
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -212,11 +247,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1
-Processed 49 HTML files
+Processed 85 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Dokumentation.hhk
 Saving HTML Help 1 table of contents to C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Dokumentation.hhc
-    Last step completed in 00:00:00,6190
+    Last step completed in 00:00:01,1730
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -282,7 +317,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:00,6131
+    Last step completed in 00:00:00,8361
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -294,7 +329,7 @@ Generating HTML Help 1 index file...
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00,0090
+    Last step completed in 00:00:00,0140
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -309,13 +344,13 @@ Compiling HTML Help 1 file...
   
   
   
-  Compile time: 0 minutes, 0 seconds
+  Compile time: 0 minutes, 1 second
   
-  51	Topics
+  87	Topics
   
-  437	Local links
+  819	Local links
   
-  4,915	Internet links
+  4,945	Internet links
   
   0	Graphics
   
@@ -323,19 +358,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\Dokumentation.chm, 237,439 bytes
+  Created c:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\Dokumentation.chm, 259,086 bytes
   
-  Compression decreased file by 1,143,974 bytes.
+  Compression decreased file by 1,301,015 bytes.
   
-    Last step completed in 00:00:01,3320
+    Last step completed in 00:00:01,5750
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,0950
+    Last step completed in 00:00:00,1720
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 25/10/16 13.07.36.  Total time: 00:00:20,7120
+Build completed successfully at 25/10/16 17.49.37.  Total time: 00:00:38,4740
 
 </buildStep>
 </shfbBuild>
