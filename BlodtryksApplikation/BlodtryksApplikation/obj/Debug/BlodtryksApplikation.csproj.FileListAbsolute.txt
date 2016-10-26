@@ -74,3 +74,7 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationLogikLag.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationDataLag.xml
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.XML
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationLogikLag.xml
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.xml
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationDataLag.xml

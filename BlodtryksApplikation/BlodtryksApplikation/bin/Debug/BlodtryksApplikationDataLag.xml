@@ -42,5 +42,16 @@
             
             </summary>
         </member>
+        <member name="M:BlodtryksApplikationDataLag.NulpunktsjusteringDL.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.NulpunktsjusteringDL.indlæsNulpunktsSpænding">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
     </members>
 </doc>

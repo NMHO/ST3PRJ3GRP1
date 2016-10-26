@@ -50,10 +50,21 @@
             Returnerer en KalibreringDTO med de indlæste kalibreringsdata
             </returns>
         </member>
-        <member name="T:BlodtryksApplikationDataLag.NulpunktsjusteringLL">
+        <member name="T:BlodtryksApplikationLogikLag.NulpunktsjusteringLL">
             <summary>
             
             </summary>
+        </member>
+        <member name="M:BlodtryksApplikationLogikLag.NulpunktsjusteringLL.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BlodtryksApplikationLogikLag.NulpunktsjusteringLL.hentNulpunktsSpænding">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

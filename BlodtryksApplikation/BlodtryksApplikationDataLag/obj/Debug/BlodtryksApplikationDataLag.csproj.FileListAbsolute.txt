@@ -17,7 +17,6 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\BlodtryksApplikationDataLag.pdb
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\DTO.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.Common.dll
-\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NI-DAQ.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.Common.Native.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\NationalInstruments.MStudioCLM.dll
@@ -44,3 +43,5 @@ C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksAppli
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\obj\Debug\BlodtryksApplikationDataLag.pdb
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\BlodtryksApplikationDataLag.XML
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\DTO.xml
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\BlodtryksApplikationDataLag.XML
+\\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationDataLag\bin\Debug\DTO.xml

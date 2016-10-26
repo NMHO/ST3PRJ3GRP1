@@ -18,14 +18,16 @@ namespace BlodtryksApplikation
     public partial class BTAHovedvindue : Form
     {
         private KalibreringDTO KDTO;
-
+        private NulpunktsjusteringLL NPJLL;
+        private double NulpunktsVærdi;
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
         /// </summary>
         public BTAHovedvindue()
         {
             InitializeComponent();
-            KDTO = new KalibreringDTO();            
+            KDTO = new KalibreringDTO();
+            NPJLL = new NulpunktsjusteringLL();
         }
 
 
@@ -34,11 +36,14 @@ namespace BlodtryksApplikation
             btnKalibrerSystem.PerformClick();
         }        
 
+
         private void btnKalibrerSystem_Click(object sender, EventArgs e)
         {
             var kalibreringsForm = new KalibreringsVindue(ref KDTO);
             kalibreringsForm.ShowDialog();            
         }
+
+
         /// <summary>
         /// Ved start af program indlæses kalibreringsdata fra kalibreringsfil, hvis den findes
         /// </summary>
@@ -66,7 +71,12 @@ namespace BlodtryksApplikation
 
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
+            NulpunktsVærdi = NPJLL.hentNulpunktsSpænding();
+        }
 
+        private void btnToolStripNulpunktsjusterSystem_Click(object sender, EventArgs e)
+        {
+            btnNulpunktsjusterSystem.PerformClick();
         }
     }
 }
