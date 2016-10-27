@@ -72,6 +72,7 @@ namespace BlodtryksApplikation
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
             NulpunktsVærdi = NPJLL.hentNulpunktsSpænding();
+            MessageBox.Show("Nuljustering udført.");
         }
 
         private void btnToolStripNulpunktsjusterSystem_Click(object sender, EventArgs e)
