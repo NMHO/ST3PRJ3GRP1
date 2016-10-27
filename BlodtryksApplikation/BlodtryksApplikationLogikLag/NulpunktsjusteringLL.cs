@@ -19,7 +19,8 @@ namespace BlodtryksApplikationLogikLag
         /// </summary>
         public NulpunktsjusteringLL()
         {       
-           NPJDL = new NulpunktsjusteringDL();
+            NPJDL = new NulpunktsjusteringDL();
+            NulpunktsVærdi = 0;
         }
         /// <summary>
         /// 

@@ -39,19 +39,21 @@
         </member>
         <member name="T:BlodtryksApplikationDataLag.NulpunktsjusteringDL">
             <summary>
-            
+            Indlæser værdi fra DAQ'en
             </summary>
         </member>
         <member name="M:BlodtryksApplikationDataLag.NulpunktsjusteringDL.#ctor">
             <summary>
-            
+            Constructor
             </summary>
         </member>
         <member name="M:BlodtryksApplikationDataLag.NulpunktsjusteringDL.indlæsNulpunktsSpænding">
             <summary>
-            
+            Indlæser en enkelt sample fra NI-DAQ i volt
             </summary>
-            <returns></returns>
+            <returns>
+            Returnerer den indlæste spænding
+            </returns>
         </member>
     </members>
 </doc>

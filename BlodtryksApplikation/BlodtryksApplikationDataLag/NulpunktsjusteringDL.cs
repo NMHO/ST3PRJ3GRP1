@@ -22,7 +22,7 @@ namespace BlodtryksApplikationDataLag
         /// </summary>
         public NulpunktsjusteringDL()
         {
-           
+            NulpunktsVærdi = 0;
         }
 
         /// <summary>
@@ -41,7 +41,9 @@ namespace BlodtryksApplikationDataLag
 
             AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
-            return reader.ReadSingleSample();
+            NulpunktsVærdi = reader.ReadSingleSample();
+
+            return NulpunktsVærdi;
         }
     }
 
