@@ -8,25 +8,23 @@ using BlodtryksApplikationDataLag;
 namespace BlodtryksApplikationLogikLag
 {
     /// <summary>
-    /// Håndterer værdien
+    /// 
     /// </summary>
     public class NulpunktsjusteringLL
     {
         private double NulpunktsVærdi;
         private NulpunktsjusteringDL NPJDL;
         /// <summary>
-        /// constructor
+        /// 
         /// </summary>
         public NulpunktsjusteringLL()
         {       
            NPJDL = new NulpunktsjusteringDL();
         }
         /// <summary>
-        /// Henter spændingen fra datalaget
+        /// 
         /// </summary>
-        /// <returns>
-        /// returnerer nulpunktsværdien
-        /// </returns>
+        /// <returns></returns>
         public double hentNulpunktsSpænding()
         {
             NulpunktsVærdi = NPJDL.indlæsNulpunktsSpænding();
