@@ -74,7 +74,14 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationLogikLag.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationDataLag.xml
+<<<<<<< Updated upstream
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.XML
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationLogikLag.xml
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.xml
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikationDataLag.xml
+=======
+Z:\OneDrive - Aarhus universitet\Ingenioer\3. semester\Projekt 3\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.exe.config
+Z:\OneDrive - Aarhus universitet\Ingenioer\3. semester\Projekt 3\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.XML
+Z:\OneDrive - Aarhus universitet\Ingenioer\3. semester\Projekt 3\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.exe
+Z:\OneDrive - Aarhus universitet\Ingenioer\3. semester\Projekt 3\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.pdb
+>>>>>>> Stashed changes
