@@ -8,6 +8,13 @@ namespace BlodtryksApplikationLogikLag
 {
     class FilterLL
     {
+
+        /// <summary>
+        /// Denne metode filtrere den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+        /// </summary>
+        /// <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
+        /// <param name="data">Listen med data fra DAQ'en</param>
+        /// <returns></returns>
         public List<double> FiltrerSignal(int frameSize, List<double> data)
         {
 
