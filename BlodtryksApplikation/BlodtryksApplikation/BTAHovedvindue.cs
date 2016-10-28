@@ -28,6 +28,7 @@ namespace BlodtryksApplikation
             InitializeComponent();
             KDTO = new KalibreringDTO();
             NPJLL = new NulpunktsjusteringLL();
+            BTN_filterOFF.Hide();
         }
 
 
@@ -78,6 +79,18 @@ namespace BlodtryksApplikation
         private void btnToolStripNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
             btnNulpunktsjusterSystem.PerformClick();
+        }
+
+        private void BTN_filterOFF_Click(object sender, EventArgs e)
+        {
+            BTN_filterOFF.Hide();
+            BTN_FilterON.Show();
+        }
+
+        private void BTN_FilterON_Click(object sender, EventArgs e)
+        {
+            BTN_FilterON.Hide();
+            BTN_filterOFF.Show();
         }
     }
 }
