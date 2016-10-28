@@ -52,19 +52,21 @@
         </member>
         <member name="T:BlodtryksApplikationLogikLag.NulpunktsjusteringLL">
             <summary>
-            
+            Klasse der henter den indlæste nulpunktsspændings fra datalaget
             </summary>
         </member>
         <member name="M:BlodtryksApplikationLogikLag.NulpunktsjusteringLL.#ctor">
             <summary>
-            
+            Constructor
             </summary>
         </member>
         <member name="M:BlodtryksApplikationLogikLag.NulpunktsjusteringLL.hentNulpunktsSpænding">
             <summary>
-            
+            Henter den indlæste nulpunktsspændings fra datalaget
             </summary>
-            <returns></returns>
+            <returns>
+            Returnerer den indlæste nulpunktsspændings
+            </returns>
         </member>
     </members>
 </doc>
