@@ -7,13 +7,6 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\obj\Debug\BlodtryksApplikationLogikLag.pdb
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\DTO.dll
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\DTO.pdb
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.dll
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.dll
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.Native.dll
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.MStudioCLM.dll
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.xml
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\Newtonsoft.Json.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.dll
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.pdb
@@ -58,3 +51,10 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationLogikLag.XML
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\BlodtryksApplikationDataLag.xml
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\DTO.xml
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikationLogikLag\bin\Debug\NationalInstruments.Common.xml

@@ -4,6 +4,14 @@
         <name>BlodtryksApplikationLogikLag</name>
     </assembly>
     <members>
+        <member name="M:BlodtryksApplikationLogikLag.FilterLL.FiltrerSignal(System.Int32,System.Collections.Generic.List{System.Double})">
+            <summary>
+            Denne metode filtrere den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+            </summary>
+            <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
+            <param name="data">Listen med data fra DAQ'en</param>
+            <returns></returns>
+        </member>
         <member name="T:BlodtryksApplikationLogikLag.KalibreringLL">
             <summary>
             Håndterer, beregner og opdaterer kalibreringsdata

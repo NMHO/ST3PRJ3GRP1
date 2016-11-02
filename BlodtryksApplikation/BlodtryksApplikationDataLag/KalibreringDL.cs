@@ -8,6 +8,8 @@ using NationalInstruments.DAQmx;
 using DTO;
 using Newtonsoft.Json;
 using System.IO;
+
+
 namespace BlodtryksApplikationDataLag
 {
     /// <summary>
@@ -17,6 +19,8 @@ namespace BlodtryksApplikationDataLag
     {
         private KalibreringDTO KDTO;
 
+        private IndlæsFraDAQ IFDAQ;
+
         /// <summary>
         /// Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
         /// </summary>
@@ -24,25 +28,20 @@ namespace BlodtryksApplikationDataLag
         public KalibreringDL(ref KalibreringDTO KDTO)
         {
             this.KDTO = KDTO;
+            IFDAQ = new IndlæsFraDAQ();
         }
 
         /// <summary>
-        /// Indlæser en enkelt sample fra NI-DAQ i volt
+        /// Kalder metode der indlæser en datasekvens og beregner gennemsnittet
         /// </summary>
         /// <returns>
-        /// Returnerer den indlæste spænding
+        /// Gennemsnittet af den indlæste datasekvens
         /// </returns>
         public double indlæsKalibreringsSpænding()
         {
-            NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
-            AIChannel myAIChannel;
-            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
-                AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
+            return IFDAQ.indlæsDataSekvens(100).Average();
+        }       
 
-            AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
-
-            return reader.ReadSingleSample();
-        }
 
         /// <summary>
         /// Gemmer kalibreringsdata til json-kalibreringsfil

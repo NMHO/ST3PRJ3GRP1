@@ -4,6 +4,23 @@
         <name>BlodtryksApplikationDataLag</name>
     </assembly>
     <members>
+        <member name="T:BlodtryksApplikationDataLag.IndlæsFraDAQ">
+            <summary>
+            Abstrakt klasse til indlæsning fra DAQ
+            </summary>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.IndlæsFraDAQ.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BlodtryksApplikationDataLag.IndlæsFraDAQ.indlæsDataSekvens(System.Int32)">
+            <summary>
+            Indlæser en serie af samples fra NI-DAQ i volt
+            </summary>
+            <param name="dataSeq">Antal ønsket datapunkter</param>
+            <returns>Returnerer en liste af datapunkter</returns>                             
+        </member>
         <member name="T:BlodtryksApplikationDataLag.KalibreringDL">
             <summary>
             Indlæser kalibreringsværdi fra DAQ'en og gemmer og henter fra kalibreringsfil
@@ -17,10 +34,10 @@
         </member>
         <member name="M:BlodtryksApplikationDataLag.KalibreringDL.indlæsKalibreringsSpænding">
             <summary>
-            Indlæser en enkelt sample fra NI-DAQ i volt
+            Kalder metode der indlæser en datasekvens og beregner gennemsnittet
             </summary>
             <returns>
-            Returnerer den indlæste spænding
+            Gennemsnittet af den indlæste datasekvens
             </returns>
         </member>
         <member name="M:BlodtryksApplikationDataLag.KalibreringDL.gemKalibreringTilFil(DTO.KalibreringDTO)">
@@ -49,10 +66,10 @@
         </member>
         <member name="M:BlodtryksApplikationDataLag.NulpunktsjusteringDL.indlæsNulpunktsSpænding">
             <summary>
-            Indlæser en enkelt sample fra NI-DAQ i volt
+            Kalder metode der indlæser en datasekvens og beregner gennemsnittet
             </summary>
             <returns>
-            Returnerer den indlæste spænding
+            Gennemsnittet af den indlæste datasekvens
             </returns>
         </member>
     </members>

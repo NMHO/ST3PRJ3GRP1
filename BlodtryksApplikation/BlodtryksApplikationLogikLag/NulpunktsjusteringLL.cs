@@ -23,6 +23,7 @@ namespace BlodtryksApplikationLogikLag
             NPJDL = new NulpunktsjusteringDL();
             NulpunktsVærdi = 0;
         }
+
         /// <summary>
         /// Henter den indlæste nulpunktsspændings fra datalaget
         /// </summary>

@@ -8,6 +8,7 @@ using NationalInstruments.DAQmx;
 using Newtonsoft.Json;
 using System.IO;
 
+
 namespace BlodtryksApplikationDataLag
 {
     /// <summary>
@@ -15,37 +16,25 @@ namespace BlodtryksApplikationDataLag
     /// </summary>
     public class NulpunktsjusteringDL
     {
-        private double NulpunktsVærdi;
- 
+        private IndlæsFraDAQ IFDAQ;
+
         /// <summary>
         /// Constructor
         /// </summary>
         public NulpunktsjusteringDL()
         {
-            NulpunktsVærdi = 0;
+            IFDAQ = new IndlæsFraDAQ();
         }
 
         /// <summary>
-        /// Indlæser en enkelt sample fra NI-DAQ i volt
+        /// Kalder metode der indlæser en datasekvens og beregner gennemsnittet
         /// </summary>
         /// <returns>
-        /// Returnerer den indlæste spænding
+        /// Gennemsnittet af den indlæste datasekvens
         /// </returns>
         public double indlæsNulpunktsSpænding()
         {
-
-            NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
-            AIChannel myAIChannel;
-            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
-                AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
-
-            AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
-
-            NulpunktsVærdi = reader.ReadSingleSample();
-
-            return NulpunktsVærdi;
+            return IFDAQ.indlæsDataSekvens(100).Average();
         }
-    }
-
-   
+    }   
 }
