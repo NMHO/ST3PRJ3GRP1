@@ -1,0 +1,9 @@
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.XML
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.pdb
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.xml
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.pdb

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BTADataLag</name>
+    </assembly>
+    <members>
+        <member name="T:BTADataLag.IndlæsFraDAQ">
+            <summary>
+            Abstrakt klasse til indlæsning fra DAQ
+            </summary>
+        </member>
+        <member name="M:BTADataLag.IndlæsFraDAQ.ReadInput(System.Int32)">
+            <summary>
+            Indlæser en serie af samples fra NI-DAQ i volt
+            </summary>
+            <param name="samples">Antal ønsket datapunkter</param>
+            <returns>Returnerer en liste af datapunkter</returns>  
+        </member>
+        <member name="T:BTADataLag.KalibreringDL">
+            <summary>
+            Indlæser kalibreringsværdi fra DAQ'en og gemmer og henter fra kalibreringsfil
+            </summary>
+        </member>
+        <member name="M:BTADataLag.KalibreringDL.#ctor">
+            <summary>
+            Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
+            </summary>
+            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        </member>
+        <member name="M:BTADataLag.KalibreringDL.indlæsKalibreringsSpænding(System.Int32)">
+            <summary>
+            Kalder metode der indlæser en datasekvens og beregner gennemsnittet
+            </summary>
+            <returns>
+            Gennemsnittet af den indlæste datasekvens
+            </returns>
+        </member>
+        <member name="M:BTADataLag.KalibreringDL.gemKalibreringTilFil(DTO.KalibreringDTO)">
+            <summary>
+            Gemmer kalibreringsdata til json-kalibreringsfil
+            </summary>
+            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        </member>
+        <member name="M:BTADataLag.KalibreringDL.hentKalibreringFraFil">
+            <summary>
+            Henter kalibreringsdata fra json-kalibreringsfil
+            </summary>
+            <returns>
+            Returnerer en KalibreringDTO med de indlæste kalibreringsdata
+            </returns>
+        </member>
+        <member name="T:BTADataLag.NulpunktsjusteringDL">
+            <summary>
+            Indlæser værdi fra DAQ'en
+            </summary>
+        </member>
+        <member name="M:BTADataLag.NulpunktsjusteringDL.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BTADataLag.NulpunktsjusteringDL.indlæsNulpunktsSpænding(System.Int32)">
+            <summary>
+            Kalder metode der indlæser en datasekvens og beregner gennemsnittet
+            </summary>
+            <returns>
+            Gennemsnittet af den indlæste datasekvens
+            </returns>
+        </member>
+    </members>
+</doc>

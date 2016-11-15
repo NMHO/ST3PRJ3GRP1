@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BTAPræsentationsLag</name>
+    </assembly>
+    <members>
+        <member name="T:BTAPræsentationsLag.KalibreringsVindue">
+            <summary>
+            Kalibreringsvindue
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.KalibreringsVindue.#ctor(BTALogikLag.ControlLogikLag)">
+            <summary>
+            Constructor der modtager en reference til kalibreringsDTO'en oprettet i hovedvinduet
+            </summary>
+            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        </member>
+        <member name="M:BTAPræsentationsLag.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)">
+            <summary>
+            Håndterer kalibrering 1 programflow
+            </summary>
+            <remarks>
+            Hvis validering er true: udskriv godkendt og aktiver Knap 2 og tekstfelt
+            Hvis validering er false: udskriv fejlmeddelse
+            </remarks>
+        </member>
+        <member name="M:BTAPræsentationsLag.KalibreringsVindue.btnKalibreringNr2_Click(System.Object,System.EventArgs)">
+            <summary>
+            Håndterer kalibrering 2 programflow
+            </summary>
+            <remarks>
+            Hvis validering er true: udskriv godkend, kald gem data metode og luk vindue
+            Hvis validering er false: udskriv fejlmeddelse og gå til programflow 1 start
+            </remarks>
+        </member>
+        <member name="F:BTAPræsentationsLag.KalibreringsVindue.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.KalibreringsVindue.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BTAPræsentationsLag.KalibreringsVindue.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:BTAPræsentationsLag.BTAHovedvindue">
+            <summary>
+            Blodtryk Applikationens hovedvindue
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.#ctor(BTALogikLag.ControlLogikLag)">
+            <summary>
+            Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Ved start af program indlæses kalibreringsdata fra kalibreringsfil, hvis den findes
+            </summary>
+        </member>
+        <member name="F:BTAPræsentationsLag.BTAHovedvindue.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.ControlPræsentationsLag.startGUI">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:BTAPræsentationsLag.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BTAPræsentationsLag.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BTAPræsentationsLag.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

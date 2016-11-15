@@ -1,6 +1,5 @@
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\bin\Debug\DTO.dll
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\bin\Debug\DTO.pdb
-C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.dll
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.pdb
 \\Mac\Home\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\DTO\bin\Debug\DTO.dll

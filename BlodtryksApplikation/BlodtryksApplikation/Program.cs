@@ -1,22 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using BTAPræsentationsLag;
+using BTALogikLag;
+using BTADataLag;
 
 namespace BlodtryksApplikation
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        private ControlPræsentationsLag currentPL;
+        private ControlLogikLag currentLL;
+        private ControlDataLag currentDL;
+
+        
+        static void Main(string[] args)
+        {            
+            Program currentApp = new Program();
+        }
+
+        public Program()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BTAHovedvindue());
+            //Dependensy injektion
+            currentDL = new ControlDataLag();
+            currentLL = new ControlLogikLag(currentDL);
+            currentPL = new ControlPræsentationsLag(currentLL);
+            currentPL.startGUI();
         }
     }
 }

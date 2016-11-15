@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodtryksApplikation", "BlodtryksApplikation\BlodtryksApplikation.csproj", "{DE3D907E-0323-42D0-9A0B-561AC17D402B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTAPræsentationsLag", "BTAPræsentationsLag\BTAPræsentationsLag.csproj", "{DE3D907E-0323-42D0-9A0B-561AC17D402B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodtryksApplikationLogikLag", "BlodtryksApplikationLogikLag\BlodtryksApplikationLogikLag.csproj", "{88902E50-8858-4E48-83E5-03879E1E9FE4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTALogikLag", "BTALogikLag\BTALogikLag.csproj", "{88902E50-8858-4E48-83E5-03879E1E9FE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodtryksApplikationDataLag", "BlodtryksApplikationDataLag\BlodtryksApplikationDataLag.csproj", "{2269F45D-9466-407F-BA85-8DB0D8C446A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTADataLag", "BTADataLag\BTADataLag.csproj", "{2269F45D-9466-407F-BA85-8DB0D8C446A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTO", "DTO\DTO.csproj", "{811AED78-0963-47EE-B212-755139E6FD3E}"
 EndProject
 Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Dokumentation", "Dokumentation\Dokumentation.shfbproj", "{5F3581E4-A2CA-42C6-B605-D12080DD986C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlodtryksApplikation", "BlodtryksApplikation\BlodtryksApplikation.csproj", "{C3BBB6B0-A11E-45A2-B94E-DF6D1EC78FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{1F4517DF-A23A-4CDF-888B-4CCFB041E75F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{5F3581E4-A2CA-42C6-B605-D12080DD986C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F3581E4-A2CA-42C6-B605-D12080DD986C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F3581E4-A2CA-42C6-B605-D12080DD986C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BBB6B0-A11E-45A2-B94E-DF6D1EC78FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BBB6B0-A11E-45A2-B94E-DF6D1EC78FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BBB6B0-A11E-45A2-B94E-DF6D1EC78FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BBB6B0-A11E-45A2-B94E-DF6D1EC78FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F4517DF-A23A-4CDF-888B-4CCFB041E75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F4517DF-A23A-4CDF-888B-4CCFB041E75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F4517DF-A23A-4CDF-888B-4CCFB041E75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F4517DF-A23A-4CDF-888B-4CCFB041E75F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
