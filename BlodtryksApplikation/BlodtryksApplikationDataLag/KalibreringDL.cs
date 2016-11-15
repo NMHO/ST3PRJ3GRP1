@@ -19,7 +19,7 @@ namespace BlodtryksApplikationDataLag
     {
         private KalibreringDTO KDTO;
 
-        private IndlæsFraDAQ IFDAQ;
+        private IndlæsFraDAQ IFDAQ;         
 
         /// <summary>
         /// Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet

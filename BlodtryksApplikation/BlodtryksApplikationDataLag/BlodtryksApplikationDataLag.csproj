@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IndlæsFraDAQ.cs" />
+    <Compile Include="IReadInput.cs" />
     <Compile Include="KalibreringDL.cs" />
     <Compile Include="NulpunktsjusteringDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
