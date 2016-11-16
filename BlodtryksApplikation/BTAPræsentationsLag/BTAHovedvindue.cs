@@ -21,7 +21,6 @@ namespace BTAPræsentationsLag
         private ControlLogikLag currentLL;
         public KalibreringDTO KDTO { get; private set; }
         public KalibreringsVindue kalibreringsForm { get; private set; }
-        public AlarmVindue alarmForm { get; private set; }
         // private NulpunktsjusteringLL NPJLL;
         private double NulpunktsVærdi;
         /// <summary>
@@ -30,10 +29,9 @@ namespace BTAPræsentationsLag
         public BTAHovedvindue(ControlLogikLag myLL)
         {
             currentLL = myLL;
-            alarmForm = new AlarmVindue();
             InitializeComponent();
             KDTO = currentLL.KLL.KDTO;
-            BTN_filterOFF.Hide();
+            BTN_filterOFF.Hide();             
         }
 
 
@@ -98,11 +96,6 @@ namespace BTAPræsentationsLag
         {
             BTN_FilterON.Hide();
             BTN_filterOFF.Show();
-        }
-
-        private void BTN_Start_Click(object sender, EventArgs e)
-        {
-            alarmForm.Show();
         }
     }
 }
