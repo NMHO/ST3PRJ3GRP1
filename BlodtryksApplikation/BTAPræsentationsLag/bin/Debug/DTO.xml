@@ -4,6 +4,21 @@
         <name>DTO</name>
     </assembly>
     <members>
+        <member name="T:DTO.AlarmDTO">
+            <summary>
+            Indeholder to tal for alarmens øvre og nedre grænse
+            </summary>
+        </member>
+        <member name="P:DTO.AlarmDTO.ØGrænse">
+            <summary>
+            Øvre grænse for alarmen
+            </summary>
+        </member>
+        <member name="P:DTO.AlarmDTO.NGrænse">
+            <summary>
+            Nedre grænse for alarmen
+            </summary>
+        </member>
         <member name="T:DTO.KalibreringDTO">
             <summary>
             Kalibrerings-DTO, der indeholder properties til data
