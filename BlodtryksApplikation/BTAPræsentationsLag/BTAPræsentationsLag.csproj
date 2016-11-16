@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gemvindue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gemvindue.Designer.cs">
+      <DependentUpon>Gemvindue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kalibreringsvindue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="ControlPræsentationsLag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gemvindue.resx">
+      <DependentUpon>Gemvindue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Kalibreringsvindue.resx">
       <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
     </EmbeddedResource>

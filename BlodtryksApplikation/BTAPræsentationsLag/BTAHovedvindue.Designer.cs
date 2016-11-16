@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnToolStripKalibrerSystem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +42,7 @@
             this.BTN_FilterON = new System.Windows.Forms.Button();
             this.BTN_filterOFF = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.BTNgemdata = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_BTA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -106,17 +107,17 @@
             // 
             // Chart_BTA
             // 
-            chartArea5.Name = "ChartArea1";
-            this.Chart_BTA.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.Chart_BTA.Legends.Add(legend5);
-            this.Chart_BTA.Location = new System.Drawing.Point(11, 148);
+            chartArea1.Name = "ChartArea1";
+            this.Chart_BTA.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Chart_BTA.Legends.Add(legend1);
+            this.Chart_BTA.Location = new System.Drawing.Point(12, 153);
             this.Chart_BTA.Name = "Chart_BTA";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.Chart_BTA.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.Chart_BTA.Series.Add(series1);
             this.Chart_BTA.Size = new System.Drawing.Size(905, 494);
             this.Chart_BTA.TabIndex = 3;
             this.Chart_BTA.Text = "chart1";
@@ -143,11 +144,21 @@
             this.BTN_filterOFF.UseVisualStyleBackColor = true;
             this.BTN_filterOFF.Click += new System.EventHandler(this.BTN_filterOFF_Click);
             // 
+            // BTNgemdata
+            // 
+            this.BTNgemdata.Location = new System.Drawing.Point(217, 102);
+            this.BTNgemdata.Name = "BTNgemdata";
+            this.BTNgemdata.Size = new System.Drawing.Size(143, 32);
+            this.BTNgemdata.TabIndex = 6;
+            this.BTNgemdata.Text = "Gem data";
+            this.BTNgemdata.UseVisualStyleBackColor = true;
+            // 
             // BTAHovedvindue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1276, 698);
+            this.Controls.Add(this.BTNgemdata);
             this.Controls.Add(this.BTN_filterOFF);
             this.Controls.Add(this.BTN_FilterON);
             this.Controls.Add(this.Chart_BTA);
@@ -180,6 +191,7 @@
         private System.Windows.Forms.Button BTN_FilterON;
         private System.Windows.Forms.Button BTN_filterOFF;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button BTNgemdata;
     }
 }
 

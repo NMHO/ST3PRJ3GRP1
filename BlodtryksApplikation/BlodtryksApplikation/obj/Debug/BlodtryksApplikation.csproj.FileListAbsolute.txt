@@ -21,3 +21,26 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\Interfaces.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.exe
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.exe.config
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.XML
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.exe
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.exe
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BlodtryksApplikation.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTADataLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTALogikLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTAPræsentationsLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\Interfaces.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTADataLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTADataLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTALogikLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTALogikLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTAPræsentationsLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\BTAPræsentationsLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\DTO.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\Interfaces.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\bin\Debug\Interfaces.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BlodtryksApplikation\obj\Debug\BlodtryksApplikation.csprojResolveAssemblyReference.cache

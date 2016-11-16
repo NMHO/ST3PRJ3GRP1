@@ -97,5 +97,7 @@ namespace BTAPræsentationsLag
             BTN_FilterON.Hide();
             BTN_filterOFF.Show();
         }
+
+        
     }
 }
