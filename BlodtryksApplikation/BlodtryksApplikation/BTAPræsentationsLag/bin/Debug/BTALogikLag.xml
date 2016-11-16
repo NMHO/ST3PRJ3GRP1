@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BTALogikLag</name>
+    </assembly>
+    <members>
+        <member name="M:BTALogikLag.FilterLL.FiltrerSignal(System.Int32,System.Collections.Generic.List{System.Double})">
+            <summary>
+            Denne metode filtrere den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+            </summary>
+            <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
+            <param name="data">Listen med data fra DAQ'en</param>
+            <returns></returns>
+        </member>
+        <member name="T:BTALogikLag.KalibreringLL">
+            <summary>
+            Håndterer, beregner og opdaterer kalibreringsdata
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.KalibreringLL.#ctor(BTADataLag.ControlDataLag)">
+            <summary>
+            Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
+            </summary>
+            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        </member>
+        <member name="M:BTALogikLag.KalibreringLL.opdaterKalibreringsData(System.Double,System.Int32)">
+            <summary>
+            Opdaterer DTO'en med den det indtastede kalibreringstryk og den indlæste spændingsværdi fra DAQ'en
+            Gemmer når programflow kalibrering 2 er udført
+            </summary>
+            <param name="kalTryk">Det indtastede kalibreringstryk i mmHg i kalibreringsvinduet</param>
+            <param name="kalNr">Nummeret på igangværende kalibrering. 1 eller 2</param>
+            <returns>
+            Returnerer bool-værdi om indtastet data er godkendte
+            </returns>
+        </member>
+        <member name="M:BTALogikLag.KalibreringLL.beregnKalibreringsHældning">
+            <summary>
+            Omregner den indlæste kalibreringsværdi fra spænding i volt til tryk i mmHg
+            </summary>
+            <remarks>
+            Beregne hældningen for følsomheden y = a*x .. a = (y2 - y1) / (x2 - x1)
+            </remarks>
+            <returns>
+            Returnerer bool-værdi om udregningen kunne lade sig gøre
+            </returns>
+        </member>
+        <member name="M:BTALogikLag.KalibreringLL.gemKalibrering(DTO.KalibreringDTO)">
+            <summary>
+            Kalder metode der gemmer KDTO fra datalaget
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.KalibreringLL.hentKalibreringFraDL">
+            <summary>
+            Kalder metode der henter de indlæste kalibreringsdata fra datalaget
+            </summary>
+            <returns>
+            Returnerer en KalibreringDTO med de indlæste kalibreringsdata
+            </returns>
+        </member>
+        <member name="T:BTALogikLag.NulpunktsjusteringLL">
+            <summary>
+            Klasse der henter den indlæste nulpunktsspændings fra datalaget
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.NulpunktsjusteringLL.#ctor(BTADataLag.ControlDataLag)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.NulpunktsjusteringLL.hentNulpunktsSpænding">
+            <summary>
+            Henter den indlæste nulpunktsspændings fra datalaget
+            </summary>
+            <returns>
+            Returnerer den indlæste nulpunktsspændings
+            </returns>
+        </member>
+    </members>
+</doc>

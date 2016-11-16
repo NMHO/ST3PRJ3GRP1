@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DTO</name>
+    </assembly>
+    <members>
+        <member name="T:DTO.KalibreringDTO">
+            <summary>
+            Kalibrerings-DTO, der indeholder properties til data
+            </summary>
+        </member>
+        <member name="P:DTO.KalibreringDTO.kalibreringsTrykNr1">
+            <summary>
+            Det indtastede kalibreringstryk 1
+            </summary>
+        </member>
+        <member name="P:DTO.KalibreringDTO.kalibreringsSpændingNr1">
+            <summary>
+            Den indlæste kalibreringsspænding 1 ved det pågældende kalibreingstryk 1
+            </summary>
+        </member>
+        <member name="P:DTO.KalibreringDTO.kalibreringsTrykNr2">
+            <summary>
+            Det indtastede kalibreringstryk 2
+            </summary>
+        </member>
+        <member name="P:DTO.KalibreringDTO.kalibreringsSpændingNr2">
+            <summary>
+            Den indlæste kalibreringsspænding 2 ved det pågældende kalibreingstryk 2
+            </summary>
+        </member>
+        <member name="P:DTO.KalibreringDTO.kalibreringsHældning">
+            <summary>
+            Den beregnede kalibreringshældning ud fra de fire andre properties
+            </summary>
+        </member>
+        <member name="M:DTO.KalibreringDTO.#ctor">
+            <summary>
+            Constructor der sætter alle properties til 0
+            </summary>
+        </member>
+    </members>
+</doc>
