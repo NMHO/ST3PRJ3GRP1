@@ -42,7 +42,11 @@
             this.BTN_FilterON = new System.Windows.Forms.Button();
             this.BTN_filterOFF = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+<<<<<<< HEAD
             this.BTN_Start = new System.Windows.Forms.Button();
+=======
+            this.BTNgemdata = new System.Windows.Forms.Button();
+>>>>>>> origin/master
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_BTA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -111,15 +115,23 @@
             this.Chart_BTA.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.Chart_BTA.Legends.Add(legend1);
+<<<<<<< HEAD
             this.Chart_BTA.Location = new System.Drawing.Point(22, 287);
             this.Chart_BTA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.Chart_BTA.Location = new System.Drawing.Point(12, 153);
+>>>>>>> origin/master
             this.Chart_BTA.Name = "Chart_BTA";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.Chart_BTA.Series.Add(series1);
+<<<<<<< HEAD
             this.Chart_BTA.Size = new System.Drawing.Size(1810, 957);
+=======
+            this.Chart_BTA.Size = new System.Drawing.Size(905, 494);
+>>>>>>> origin/master
             this.Chart_BTA.TabIndex = 3;
             this.Chart_BTA.Text = "chart1";
             // 
@@ -145,6 +157,7 @@
             this.BTN_filterOFF.UseVisualStyleBackColor = true;
             this.BTN_filterOFF.Click += new System.EventHandler(this.BTN_filterOFF_Click);
             // 
+<<<<<<< HEAD
             // BTN_Start
             // 
             this.BTN_Start.Location = new System.Drawing.Point(2026, 1170);
@@ -155,13 +168,28 @@
             this.BTN_Start.Text = "Start måling";
             this.BTN_Start.UseVisualStyleBackColor = true;
             this.BTN_Start.Click += new System.EventHandler(this.BTN_Start_Click);
+=======
+            // BTNgemdata
+            // 
+            this.BTNgemdata.Location = new System.Drawing.Point(217, 102);
+            this.BTNgemdata.Name = "BTNgemdata";
+            this.BTNgemdata.Size = new System.Drawing.Size(143, 32);
+            this.BTNgemdata.TabIndex = 6;
+            this.BTNgemdata.Text = "Gem data";
+            this.BTNgemdata.UseVisualStyleBackColor = true;
+>>>>>>> origin/master
             // 
             // BTAHovedvindue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(2552, 1352);
             this.Controls.Add(this.BTN_Start);
+=======
+            this.ClientSize = new System.Drawing.Size(1276, 698);
+            this.Controls.Add(this.BTNgemdata);
+>>>>>>> origin/master
             this.Controls.Add(this.BTN_filterOFF);
             this.Controls.Add(this.BTN_FilterON);
             this.Controls.Add(this.Chart_BTA);
@@ -194,7 +222,11 @@
         private System.Windows.Forms.Button BTN_FilterON;
         private System.Windows.Forms.Button BTN_filterOFF;
         private System.Windows.Forms.BindingSource bindingSource1;
+<<<<<<< HEAD
         private System.Windows.Forms.Button BTN_Start;
+=======
+        private System.Windows.Forms.Button BTNgemdata;
+>>>>>>> origin/master
     }
 }
 
