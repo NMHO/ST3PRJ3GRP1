@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnToolStripKalibrerSystem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +42,7 @@
             this.BTN_FilterON = new System.Windows.Forms.Button();
             this.BTN_filterOFF = new System.Windows.Forms.Button();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.BTN_Start = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Chart_BTA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -54,8 +55,8 @@
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1276, 26);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(2552, 49);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,29 +66,29 @@
             this.btnToolStripKalibrerSystem,
             this.btnToolStripNulpunktsjusterSystem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(58, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(107, 45);
             this.toolStripMenuItem1.Text = "Menu";
             // 
             // btnToolStripKalibrerSystem
             // 
             this.btnToolStripKalibrerSystem.Name = "btnToolStripKalibrerSystem";
-            this.btnToolStripKalibrerSystem.Size = new System.Drawing.Size(186, 26);
+            this.btnToolStripKalibrerSystem.Size = new System.Drawing.Size(342, 46);
             this.btnToolStripKalibrerSystem.Text = "Kalibrér system";
             this.btnToolStripKalibrerSystem.Click += new System.EventHandler(this.btnToolStripKalibrerSystem_Click);
             // 
             // btnToolStripNulpunktsjusterSystem
             // 
             this.btnToolStripNulpunktsjusterSystem.Name = "btnToolStripNulpunktsjusterSystem";
-            this.btnToolStripNulpunktsjusterSystem.Size = new System.Drawing.Size(186, 26);
+            this.btnToolStripNulpunktsjusterSystem.Size = new System.Drawing.Size(342, 46);
             this.btnToolStripNulpunktsjusterSystem.Text = "Nulpunktsjuster";
             this.btnToolStripNulpunktsjusterSystem.Click += new System.EventHandler(this.btnToolStripNulpunktsjusterSystem_Click);
             // 
             // btnKalibrerSystem
             // 
-            this.btnKalibrerSystem.Location = new System.Drawing.Point(11, 41);
-            this.btnKalibrerSystem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKalibrerSystem.Location = new System.Drawing.Point(22, 79);
+            this.btnKalibrerSystem.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.btnKalibrerSystem.Name = "btnKalibrerSystem";
-            this.btnKalibrerSystem.Size = new System.Drawing.Size(143, 32);
+            this.btnKalibrerSystem.Size = new System.Drawing.Size(286, 62);
             this.btnKalibrerSystem.TabIndex = 1;
             this.btnKalibrerSystem.Text = "Kalibrér system";
             this.btnKalibrerSystem.UseVisualStyleBackColor = true;
@@ -95,10 +96,10 @@
             // 
             // btnNulpunktsjusterSystem
             // 
-            this.btnNulpunktsjusterSystem.Location = new System.Drawing.Point(11, 102);
-            this.btnNulpunktsjusterSystem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNulpunktsjusterSystem.Location = new System.Drawing.Point(22, 198);
+            this.btnNulpunktsjusterSystem.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.btnNulpunktsjusterSystem.Name = "btnNulpunktsjusterSystem";
-            this.btnNulpunktsjusterSystem.Size = new System.Drawing.Size(143, 32);
+            this.btnNulpunktsjusterSystem.Size = new System.Drawing.Size(286, 62);
             this.btnNulpunktsjusterSystem.TabIndex = 2;
             this.btnNulpunktsjusterSystem.Text = "Nulpunktsjuster";
             this.btnNulpunktsjusterSystem.UseVisualStyleBackColor = true;
@@ -106,27 +107,28 @@
             // 
             // Chart_BTA
             // 
-            chartArea5.Name = "ChartArea1";
-            this.Chart_BTA.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.Chart_BTA.Legends.Add(legend5);
-            this.Chart_BTA.Location = new System.Drawing.Point(11, 148);
+            chartArea1.Name = "ChartArea1";
+            this.Chart_BTA.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.Chart_BTA.Legends.Add(legend1);
+            this.Chart_BTA.Location = new System.Drawing.Point(22, 287);
+            this.Chart_BTA.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Chart_BTA.Name = "Chart_BTA";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.Chart_BTA.Series.Add(series5);
-            this.Chart_BTA.Size = new System.Drawing.Size(905, 494);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.Chart_BTA.Series.Add(series1);
+            this.Chart_BTA.Size = new System.Drawing.Size(1810, 957);
             this.Chart_BTA.TabIndex = 3;
             this.Chart_BTA.Text = "chart1";
             // 
             // BTN_FilterON
             // 
-            this.BTN_FilterON.Location = new System.Drawing.Point(217, 41);
-            this.BTN_FilterON.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTN_FilterON.Location = new System.Drawing.Point(434, 79);
+            this.BTN_FilterON.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.BTN_FilterON.Name = "BTN_FilterON";
-            this.BTN_FilterON.Size = new System.Drawing.Size(143, 32);
+            this.BTN_FilterON.Size = new System.Drawing.Size(286, 62);
             this.BTN_FilterON.TabIndex = 4;
             this.BTN_FilterON.Text = "Filtrér";
             this.BTN_FilterON.UseVisualStyleBackColor = true;
@@ -134,20 +136,32 @@
             // 
             // BTN_filterOFF
             // 
-            this.BTN_filterOFF.Location = new System.Drawing.Point(217, 41);
-            this.BTN_filterOFF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BTN_filterOFF.Location = new System.Drawing.Point(434, 79);
+            this.BTN_filterOFF.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.BTN_filterOFF.Name = "BTN_filterOFF";
-            this.BTN_filterOFF.Size = new System.Drawing.Size(143, 32);
+            this.BTN_filterOFF.Size = new System.Drawing.Size(286, 62);
             this.BTN_filterOFF.TabIndex = 5;
             this.BTN_filterOFF.Text = "Fjern filter";
             this.BTN_filterOFF.UseVisualStyleBackColor = true;
             this.BTN_filterOFF.Click += new System.EventHandler(this.BTN_filterOFF_Click);
             // 
+            // BTN_Start
+            // 
+            this.BTN_Start.Location = new System.Drawing.Point(969, 79);
+            this.BTN_Start.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.BTN_Start.Name = "BTN_Start";
+            this.BTN_Start.Size = new System.Drawing.Size(286, 62);
+            this.BTN_Start.TabIndex = 6;
+            this.BTN_Start.Text = "Start måling";
+            this.BTN_Start.UseVisualStyleBackColor = true;
+            this.BTN_Start.Click += new System.EventHandler(this.BTN_Start_Click);
+            // 
             // BTAHovedvindue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1276, 698);
+            this.ClientSize = new System.Drawing.Size(2552, 1352);
+            this.Controls.Add(this.BTN_Start);
             this.Controls.Add(this.BTN_filterOFF);
             this.Controls.Add(this.BTN_FilterON);
             this.Controls.Add(this.Chart_BTA);
@@ -155,7 +169,7 @@
             this.Controls.Add(this.btnKalibrerSystem);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.Name = "BTAHovedvindue";
             this.Text = "BTA - Hovedvindue";
             this.Shown += new System.EventHandler(this.BTAHovedvindue_Shown);
@@ -180,6 +194,7 @@
         private System.Windows.Forms.Button BTN_FilterON;
         private System.Windows.Forms.Button BTN_filterOFF;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Button BTN_Start;
     }
 }
 
