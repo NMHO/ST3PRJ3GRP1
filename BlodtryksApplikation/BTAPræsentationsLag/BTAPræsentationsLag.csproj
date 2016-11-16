@@ -51,16 +51,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="AlarmVindue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlarmVindue.Designer.cs"/>
+    <Compile Include="AlarmVindue.Designer.cs">
       <DependentUpon>AlarmVindue.cs</DependentUpon>
+=======
     <Compile Include="Gemvindue.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gemvindue.Designer.cs">
       <DependentUpon>Gemvindue.cs</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="Kalibreringsvindue.cs">
       <SubType>Form</SubType>
@@ -76,11 +79,13 @@
     </Compile>
     <Compile Include="ControlPræsentationsLag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-
-    <EmbeddedResource Include="AlarmVindue.resx"/>
+<<<<<<< HEAD
+    <EmbeddedResource Include="AlarmVindue.resx">
       <DependentUpon>AlarmVindue.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Gemvindue.resx">
       <DependentUpon>Gemvindue.cs</DependentUpon>
+>>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="Kalibreringsvindue.resx">
       <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
