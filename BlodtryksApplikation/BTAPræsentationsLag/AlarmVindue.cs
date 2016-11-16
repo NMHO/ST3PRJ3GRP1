@@ -24,7 +24,8 @@ namespace BTAPræsentationsLag
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            ADTO = new AlarmDTO();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,7 +43,8 @@ namespace BTAPræsentationsLag
             {
                 ADTO.NGrænse = NGrænse_;
                 ADTO.ØGrænse = ØGrænse_;
-                this.Hide();
+                this.Close();
+
             }
         }
     }

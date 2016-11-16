@@ -103,7 +103,7 @@ namespace BTAPræsentationsLag
 
         private void BTN_Start_Click(object sender, EventArgs e)
         {
-            alarmForm.Show();
+            alarmForm.ShowDialog();
             this.ADTO = alarmForm.ADTO;
         }
     }
