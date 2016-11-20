@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControlDataLag.cs" />
+    <Compile Include="GemDL.cs" />
     <Compile Include="IndlæsFraDAQ.cs" />
     <Compile Include="KalibreringDL.cs" />
     <Compile Include="MonitoreringDL.cs" />
