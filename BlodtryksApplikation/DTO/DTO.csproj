@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AlarmDTO.cs" />
     <Compile Include="KalibreringDTO.cs" />
+    <Compile Include="MonitorerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

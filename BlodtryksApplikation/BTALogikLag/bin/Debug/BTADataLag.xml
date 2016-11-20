@@ -21,18 +21,22 @@
             Indlæser kalibreringsværdi fra DAQ'en og gemmer og henter fra kalibreringsfil
             </summary>
         </member>
+        <member name="P:BTADataLag.KalibreringDL.KDTO">
+            <summary>
+            Bruges til at opbevare kalibreringsdata i
+            </summary>
+        </member>
         <member name="M:BTADataLag.KalibreringDL.#ctor">
             <summary>
-            Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
+            Constructor der opretter en kalibreringsDTO
             </summary>
-            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
         </member>
         <member name="M:BTADataLag.KalibreringDL.indlæsKalibreringsSpænding(System.Int32)">
             <summary>
-            Kalder metode der indlæser en datasekvens og beregner gennemsnittet
+            Kalder metode der indlæser en datasekvens
             </summary>
             <returns>
-            Gennemsnittet af den indlæste datasekvens
+            Returnerer af den indlæste datasekvens
             </returns>
         </member>
         <member name="M:BTADataLag.KalibreringDL.gemKalibreringTilFil(DTO.KalibreringDTO)">
@@ -47,6 +51,24 @@
             </summary>
             <returns>
             Returnerer en KalibreringDTO med de indlæste kalibreringsdata
+            </returns>
+        </member>
+        <member name="T:BTADataLag.MonitoreringDL">
+            <summary>
+            Indlæser datasekvenser fra DAQ'en
+            </summary>
+        </member>
+        <member name="M:BTADataLag.MonitoreringDL.#ctor">
+            <summary>
+            Opretter en ny monitorerings DTO
+            </summary>
+        </member>
+        <member name="M:BTADataLag.MonitoreringDL.indlæsBTSignal(System.Int32)">
+            <summary>
+            Kalder metode der indlæser en datasekvens
+            </summary>
+            <returns>
+            Returnerer af den indlæste datasekvens
             </returns>
         </member>
         <member name="T:BTADataLag.NulpunktsjusteringDL">

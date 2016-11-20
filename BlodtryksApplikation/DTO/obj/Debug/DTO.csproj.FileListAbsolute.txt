@@ -15,3 +15,4 @@ C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksAppli
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.dll
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.pdb
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache

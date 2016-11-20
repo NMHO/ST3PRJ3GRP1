@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BTALogikLag;
 using DTO;
 using Interfaces;
+using System.Threading;
 
 namespace BTAPræsentationsLag
 {
@@ -19,12 +20,16 @@ namespace BTAPræsentationsLag
     public partial class BTAHovedvindue : Form
     {
         private ControlLogikLag currentLL;
-        public KalibreringDTO KDTO { get; private set; }
-        public AlarmDTO ADTO { get; private set; }
-        public KalibreringsVindue kalibreringsForm { get; private set; }
-        AlarmVindue alarmForm;
-        // private NulpunktsjusteringLL NPJLL;
+        private KalibreringDTO KDTO;
+        private AlarmDTO ADTO;
+        private MonitorerDTO MDTO;
+        private KalibreringsVindue kalibreringsForm;
+        private AlarmVindue alarmForm;
         private double NulpunktsVærdi;
+        private static SemaphoreSlim sem = new SemaphoreSlim(1);
+        private static bool monitorer; 
+
+
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
         /// </summary>
@@ -32,8 +37,11 @@ namespace BTAPræsentationsLag
         {
             currentLL = myLL;
             InitializeComponent();
+            BTChartInit();
+
             KDTO = currentLL.KLL.KDTO;
-            alarmForm = new AlarmVindue();
+            MDTO = currentLL.MLL.MDTO;
+
             BTN_filterOFF.Hide();             
         }
 
@@ -101,10 +109,89 @@ namespace BTAPræsentationsLag
             BTN_filterOFF.Show();
         }
 
-        private void BTN_Start_Click(object sender, EventArgs e)
-        {
+        private void btnStartMåling_Click(object sender, EventArgs e)
+        {            
+            alarmForm = new AlarmVindue();
             alarmForm.ShowDialog();
             this.ADTO = alarmForm.ADTO;
+
+            if (!(ADTO.NGrænse == 0 && ADTO.ØGrænse == 0))
+            {
+                monitorer = true;           
+                Thread monThread = new Thread(monitorerBTIGUI);
+                monThread.IsBackground = true;
+                monThread.Start();
+            }   
         }
+
+        private void btnStopMåling_Click(object sender, EventArgs e)
+        {
+            monitorer = false;
+        }
+
+        private void BTChartInit()
+        {
+            ChartBT.Series["BTSerie"].Points.Clear();
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Title = "Tid i sekunder";
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Title = "mmHg";
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Minimum = -1;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Maximum = 6;
+
+            var temp = new List<double>(new double[5000]);
+            double xval = 0;
+            double sampleTime = 0.001;
+
+            foreach (var value in temp)
+            {
+                xval = sampleTime + xval;
+                ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
+            }
+        }
+
+        private void monitorerBTIGUI()
+        {            
+            while (monitorer == true)
+            {
+                sem.Wait();
+                currentLL.MLL.hentBTSekvens();
+                MDTO = currentLL.MLL.MDTO;
+                opdaterBTChart(MDTO.NuværendeSekvens);
+                sem.Release();
+            }
+        }
+
+        private void opdaterBTChart(List<double> NuværendeSekvens)
+        {
+            EventArgs e = new MyEvent(NuværendeSekvens);
+            object[] pList = { this, e };
+            // Sender et event til GUI-tråden
+            ChartBT.BeginInvoke(new MyEventsHandler(opdaterChart), pList);
+        }
+        
+        private delegate void MyEventsHandler(object sender, MyEvent e);
+
+        private void opdaterChart(object o, MyEvent e)
+        {
+            double xval = 0;
+            foreach (var value in e.NuværendeSekvens)
+            {
+                xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1/MDTO.sampleFrekvens;
+                ChartBT.Series["BTSerie"].Points.RemoveAt(0);
+                ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
+            }
+
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + e.NuværendeSekvens.Count / MDTO.sampleFrekvens;
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + e.NuværendeSekvens.Count / MDTO.sampleFrekvens;
+        }     
+    }
+
+    public class MyEvent : EventArgs
+    {        
+        public List<double> NuværendeSekvens { get; private set; }
+
+        public MyEvent(List<double> NuværendeSekvens)
+        {
+            this.NuværendeSekvens = NuværendeSekvens;
+        }        
     }
 }

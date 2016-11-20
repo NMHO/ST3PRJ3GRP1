@@ -15,11 +15,14 @@ namespace BTALogikLag
         public KalibreringLL KLL { get; private set; }
         public NulpunktsjusteringLL NPJLL { get; private set; }
 
+        public MonitoreringLL MLL { get; private set; }
+
         public ControlLogikLag(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
             KLL = new KalibreringLL(currentDatalag);
             NPJLL = new NulpunktsjusteringLL(currentDatalag);
+            MLL = new MonitoreringLL(currentDatalag);
         }        
     }
 }

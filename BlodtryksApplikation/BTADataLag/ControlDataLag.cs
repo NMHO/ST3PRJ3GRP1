@@ -12,10 +12,12 @@ namespace BTADataLag
     {
         public KalibreringDL KDL { get; private set; }
         public NulpunktsjusteringDL NPJDL { get; private set; }
+        public MonitoreringDL MDL { get; private set; }
         public ControlDataLag()
         {
             KDL = new KalibreringDL();
             NPJDL = new NulpunktsjusteringDL();
+            MDL = new MonitoreringDL();
         }        
         
     }

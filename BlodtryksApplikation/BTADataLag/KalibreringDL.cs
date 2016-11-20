@@ -17,29 +17,28 @@ namespace BTADataLag
     /// </summary>
     public class KalibreringDL : IndlæsFraDAQ
     {
-        public KalibreringDTO KDTO { get; private set; }
-
-        //private IndlæsFraDAQ IFDAQ;         
+        /// <summary>
+        /// Bruges til at opbevare kalibreringsdata i
+        /// </summary>
+        public KalibreringDTO KDTO { get; private set; }  
 
         /// <summary>
-        /// Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
+        /// Constructor der opretter en kalibreringsDTO
         /// </summary>
-        /// <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
         public KalibreringDL()
         {
             this.KDTO = new KalibreringDTO();
-            //IFDAQ = new IndlæsFraDAQ();
         }
 
         /// <summary>
-        /// Kalder metode der indlæser en datasekvens og beregner gennemsnittet
+        /// Kalder metode der indlæser en datasekvens
         /// </summary>
         /// <returns>
-        /// Gennemsnittet af den indlæste datasekvens
+        /// Returnerer af den indlæste datasekvens
         /// </returns>
         public List<double> indlæsKalibreringsSpænding(int samples)
         {
-            return ReadInput(samples);     //0;//IFDAQ.indlæsDataSekvens(100).Average();
+            return ReadInput(samples);
         }       
 
 

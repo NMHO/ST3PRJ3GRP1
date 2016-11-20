@@ -44,6 +44,7 @@
     <Compile Include="ControlLogikLag.cs" />
     <Compile Include="FilterLL.cs" />
     <Compile Include="KalibreringLL.cs" />
+    <Compile Include="MonitoreringLL.cs" />
     <Compile Include="NulpunktsjusteringLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

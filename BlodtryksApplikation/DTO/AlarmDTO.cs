@@ -13,8 +13,8 @@ namespace DTO
 
         public AlarmDTO()
         {
-            ØGrænse = 250;
-            NGrænse = 30;
+            ØGrænse = 0;
+            NGrænse = 0;
         }
 
     }

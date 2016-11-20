@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Interfaces;
 using BTALogikLag;
 using DTO;
+using System.Threading;
 
 namespace BTAPræsentationsLag
 {
@@ -13,6 +14,8 @@ namespace BTAPræsentationsLag
     {
         private ControlLogikLag currentLL;
         public BTAHovedvindue BTAHovedvindue { get; private set; }
+
+        public static SemaphoreSlim sem = new SemaphoreSlim(1);
 
         public ControlPræsentationsLag(ControlLogikLag myLL)
         {
