@@ -37,11 +37,10 @@ namespace BTAPræsentationsLag
         {
             currentLL = myLL;
             InitializeComponent();
-            BTChartInit();
-
             KDTO = currentLL.KLL.KDTO;
             MDTO = currentLL.MLL.MDTO;
 
+            BTChartInit();     
             BTN_filterOFF.Hide();             
         }
 
@@ -115,8 +114,10 @@ namespace BTAPræsentationsLag
             alarmForm.ShowDialog();
             this.ADTO = alarmForm.ADTO;
 
-            if (!(ADTO.NGrænse == 0 && ADTO.ØGrænse == 0))
+            if (alarmForm.ok == true)
             {
+                MDTO.nulstil();
+                BTChartInit();
                 monitorer = true;           
                 Thread monThread = new Thread(monitorerBTIGUI);
                 monThread.IsBackground = true;
@@ -134,16 +135,19 @@ namespace BTAPræsentationsLag
             ChartBT.Series["BTSerie"].Points.Clear();
             ChartBT.ChartAreas["BTChartArea"].AxisX.Title = "Tid i sekunder";
             ChartBT.ChartAreas["BTChartArea"].AxisY.Title = "mmHg";
-            ChartBT.ChartAreas["BTChartArea"].AxisY.Minimum = -1;
-            ChartBT.ChartAreas["BTChartArea"].AxisY.Maximum = 6;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Minimum = -1.0;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Maximum = 6.0;
 
-            var temp = new List<double>(new double[5000]);
-            double xval = 0;
-            double sampleTime = 0.001;
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = -10.0;
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = 0.0;
+
+            var temp = new List<double>(new double[ Convert.ToInt32(MDTO.midlingsFrekvens*10 - 1.0) ]);
+            double xval = -10.0;
+            double sampleTime = 1.0 / MDTO.midlingsFrekvens;
 
             foreach (var value in temp)
             {
-                xval = sampleTime + xval;
+                xval += sampleTime;
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
             }
         }
@@ -172,16 +176,19 @@ namespace BTAPræsentationsLag
 
         private void opdaterChart(object o, MyEvent e)
         {
-            double xval = 0;
+            double xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1.0 / MDTO.midlingsFrekvens;
+
             foreach (var value in e.NuværendeSekvens)
-            {
-                xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1/MDTO.sampleFrekvens;
+            {               
                 ChartBT.Series["BTSerie"].Points.RemoveAt(0);
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
+                xval += + 1.0 / MDTO.midlingsFrekvens;
             }
 
-            ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + e.NuværendeSekvens.Count / MDTO.sampleFrekvens;
-            ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + e.NuværendeSekvens.Count / MDTO.sampleFrekvens;
+            double step = e.NuværendeSekvens.Count / MDTO.midlingsFrekvens;
+
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + step, 1);
+            ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);
         }     
     }
 

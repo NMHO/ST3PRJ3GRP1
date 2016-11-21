@@ -14,12 +14,16 @@ namespace BTAPræsentationsLag
     public partial class AlarmVindue : Form
     {
         public AlarmDTO ADTO { get; private set; }
+        
+        public bool ok { get; private set; }
+
         public AlarmVindue()
         {
             InitializeComponent();
             ADTO = new AlarmDTO();
             textBox1.Text = "30";
             textBox2.Text = "250";
+            ok = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -43,8 +47,8 @@ namespace BTAPræsentationsLag
             {
                 ADTO.NGrænse = NGrænse_;
                 ADTO.ØGrænse = ØGrænse_;
+                ok = true;
                 this.Close();
-
             }
         }
     }

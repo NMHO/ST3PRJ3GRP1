@@ -23,8 +23,9 @@ namespace BTALogikLag
         public void hentBTSekvens()
         {
             MDTO.NuværendeSekvens = currentDatalag.MDL.indlæsBTSignal(100);
+
             MDTO.RåBlodtrykssignal.AddRange(MDTO.NuværendeSekvens);
-            MDTO.SignalLængdeISek = MDTO.RåBlodtrykssignal.Count() / 1000;
+            MDTO.SignalLængdeISek = Convert.ToDouble(MDTO.RåBlodtrykssignal.Count()) / 1000.0;
             Thread.Sleep(100); // simulerer DAQ-indlæsning              
         }
 
