@@ -12,14 +12,12 @@ namespace BTADataLag
     /// </summary>
     public class MonitoreringDL : IndlæsFraDAQ
     {
-        public MonitorerDTO MDTO { get; set; }
-
         /// <summary>
         /// Opretter en ny monitorerings DTO
         /// </summary>
         public MonitoreringDL()
         {
-            MDTO = new MonitorerDTO();
+           
         }
 
         /// <summary>

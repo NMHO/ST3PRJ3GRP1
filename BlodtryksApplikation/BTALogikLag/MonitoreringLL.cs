@@ -17,17 +17,43 @@ namespace BTALogikLag
         public MonitoreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
-            this.MDTO = currentDatalag.MDL.MDTO;
+            
         }
 
         public void hentBTSekvens()
         {
-            MDTO.NuværendeSekvens = currentDatalag.MDL.indlæsBTSignal(100);
-
+            MDTO.NuværendeSekvens = midlingAfIndlæstSignal(currentDatalag.MDL.indlæsBTSignal(100));           
             MDTO.RåBlodtrykssignal.AddRange(MDTO.NuværendeSekvens);
             MDTO.SignalLængdeISek = Convert.ToDouble(MDTO.RåBlodtrykssignal.Count()) / 1000.0;
             Thread.Sleep(100); // simulerer DAQ-indlæsning              
         }
+
+        public void indstilRefTilDTO(ref MonitorerDTO MDTO)
+        {
+            this.MDTO = MDTO;
+            MDTO.midlingsFrekvens = 200;
+        }
+
+        private List<double> midlingAfIndlæstSignal(List<double> nSekvens)
+        {
+            int tæller = 0;
+            double sum = 0;
+            List<double> mSekvens = new List<double>();
+            foreach (var værdi in nSekvens)
+            {
+                tæller++;
+                sum += værdi;
+                if (tæller == 5)
+                {
+                    mSekvens.Add(sum / 5);
+                    tæller = 0;
+                    sum = 0;
+                }
+                
+            }
+            return mSekvens;
+        }
+            
 
     }
 }

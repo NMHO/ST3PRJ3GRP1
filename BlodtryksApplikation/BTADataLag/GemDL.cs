@@ -7,7 +7,7 @@ using DTO;
 
 namespace BTADataLag
 {
-    class GemDL
+    public class GemDL
     {
         public GemDTO GDTO { get; set; }
 

@@ -25,11 +25,5 @@ namespace DTO
             midlingsFrekvens = 1000;
         }
 
-        public void nulstil()
-        {
-            RåBlodtrykssignal.Clear();
-            NuværendeSekvens.Clear();
-            SignalLængdeISek = 0;
-        }
     }
 }

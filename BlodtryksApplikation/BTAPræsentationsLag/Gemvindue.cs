@@ -23,7 +23,7 @@ namespace BTAPræsentationsLag
         public Gemvindue(ControlLogikLag myLL)
         {
             InitializeComponent();
-            this.GDTO = currentLL.  //Mangler 
+            //this.GDTO = currentLL;  //Mangler 
 
         }
 
@@ -61,7 +61,7 @@ namespace BTAPræsentationsLag
         }
         private void BNTGem_Click(object sender, EventArgs e)
         {
-            bool CPR = validereCPR(TXBCPR.Text);
+            /*bool CPR = validereCPR(TXBCPR.Text);
             bool pnummer = validerePersonalenr(TXBPersonalenummer.Text);
             bool chek = validereTjekboxValgt();
             if(CPR == true && pnummer == true && chek == true)
@@ -80,7 +80,7 @@ namespace BTAPræsentationsLag
             {
                 MessageBox.Show("Intet data valgt.");
             }
-
+            */
         }
 
         private void BTNAnnuller_Click(object sender, EventArgs e)

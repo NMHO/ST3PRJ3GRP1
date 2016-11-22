@@ -16,3 +16,12 @@ C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksAppli
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.XML
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.pdb
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.xml
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.pdb

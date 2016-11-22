@@ -39,17 +39,18 @@ namespace BTAPræsentationsLag
             currentLL = myLL;
             InitializeComponent();
             KDTO = currentLL.KLL.KDTO;
-            MDTO = currentLL.MLL.MDTO;
-
-            BTChartInit();     
-            BTN_filterOFF.Hide();             
+            MDTO = new MonitorerDTO();
+            currentLL.MLL.indstilRefTilDTO(ref MDTO);
+            BTChartInit();
+            BTN_filterOFF.Hide();
         }
+
 
 
         private void btnToolStripKalibrerSystem_Click(object sender, EventArgs e)
         {
-            btnKalibrerSystem.PerformClick();            
-        }        
+            btnKalibrerSystem.PerformClick();
+        }
 
 
         private void btnKalibrerSystem_Click(object sender, EventArgs e)
@@ -60,7 +61,7 @@ namespace BTAPræsentationsLag
         }
 
 
-        
+
         /// <summary>
         /// Ved start af program indlæses kalibreringsdata fra kalibreringsfil, hvis den findes
         /// </summary>
@@ -82,9 +83,9 @@ namespace BTAPræsentationsLag
                     btnKalibrerSystem.PerformClick();
                 }
             }
-            
+
         }
-        
+
 
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
@@ -110,20 +111,23 @@ namespace BTAPræsentationsLag
         }
 
         private void btnStartMåling_Click(object sender, EventArgs e)
-        {            
+        {
             alarmForm = new AlarmVindue();
             alarmForm.ShowDialog();
             this.ADTO = alarmForm.ADTO;
 
             if (alarmForm.ok == true)
             {
-                MDTO.nulstil();
+                MDTO.RåBlodtrykssignal.Clear();
+                MDTO.NuværendeSekvens.Clear();
+                MDTO.SignalLængdeISek = 0;
+
                 BTChartInit();
-                monitorer = true;           
+                monitorer = true;
                 Thread monThread = new Thread(monitorerBTIGUI);
                 monThread.IsBackground = true;
                 monThread.Start();
-            }   
+            }
         }
 
         private void btnStopMåling_Click(object sender, EventArgs e)
@@ -142,7 +146,7 @@ namespace BTAPræsentationsLag
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = -10.0;
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = 0.0;
 
-            var temp = new List<double>(new double[ Convert.ToInt32(MDTO.midlingsFrekvens*10 - 1.0) ]);
+            var temp = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10 - 1.0)]);
             double xval = -10.0;
             double sampleTime = 1.0 / MDTO.midlingsFrekvens;
 
@@ -154,12 +158,12 @@ namespace BTAPræsentationsLag
         }
 
         private void monitorerBTIGUI()
-        {            
+        {
             while (monitorer == true)
             {
                 sem.Wait();
                 currentLL.MLL.hentBTSekvens();
-                MDTO = currentLL.MLL.MDTO;
+                //MDTO = currentLL.MLL.MDTO;
                 opdaterBTChart(MDTO.NuværendeSekvens);
                 sem.Release();
             }
@@ -172,7 +176,7 @@ namespace BTAPræsentationsLag
             // Sender et event til GUI-tråden
             ChartBT.BeginInvoke(new MyEventsHandler(opdaterChart), pList);
         }
-        
+
         private delegate void MyEventsHandler(object sender, MyEvent e);
 
         private void opdaterChart(object o, MyEvent e)
@@ -180,10 +184,10 @@ namespace BTAPræsentationsLag
             double xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1.0 / MDTO.midlingsFrekvens;
 
             foreach (var value in e.NuværendeSekvens)
-            {               
+            {
                 ChartBT.Series["BTSerie"].Points.RemoveAt(0);
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
-                xval += + 1.0 / MDTO.midlingsFrekvens;
+                xval += +1.0 / MDTO.midlingsFrekvens;
             }
 
             double step = e.NuværendeSekvens.Count / MDTO.midlingsFrekvens;
@@ -194,18 +198,18 @@ namespace BTAPræsentationsLag
 
         private void BTNGemdata_Click(object sender, EventArgs e)
         {
-            gemForm = new Gemvindue();
-            gemForm.ShowDialog();
+            //gemForm = new Gemvindue();
+            //gemForm.ShowDialog();
         }
     }
 
     public class MyEvent : EventArgs
-    {        
+    {
         public List<double> NuværendeSekvens { get; private set; }
 
         public MyEvent(List<double> NuværendeSekvens)
         {
             this.NuværendeSekvens = NuværendeSekvens;
-        }        
+        }
     }
 }
