@@ -30,7 +30,7 @@ namespace BTALogikLag
             //MDTO.NuværendeSekvens = midlingAfIndlæstSignal(currentDatalag.MDL.indlæsBTSignal(100));           
             MDTO.RåBlodtrykssignal.AddRange(råtSignal);
             MDTO.SignalLængdeISek = Convert.ToDouble(MDTO.RåBlodtrykssignal.Count()) / 1000.0;
-            //Thread.Sleep(100); // simulerer DAQ-indlæsning              
+            Thread.Sleep(100); // simulerer DAQ-indlæsning              
         }
 
         public void indstilRefTilDTO(ref MonitorerDTO MDTO)
