@@ -76,3 +76,29 @@ C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksAppli
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.dll
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.pdb
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.AlarmVindue.resources
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTAPræsentationsLag.dll.config
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTAPræsentationsLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTAPræsentationsLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTAPræsentationsLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTALogikLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\DTO.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\Interfaces.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTADataLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTALogikLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTALogikLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\DTO.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\DTO.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\Interfaces.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\Interfaces.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTADataLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTADataLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.csprojResolveAssemblyReference.cache
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.AlarmVindue.resources
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.Gemvindue.resources
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.KalibreringsVindue.resources
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.BTAHovedvindue.resources
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.Properties.Resources.resources
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.csproj.GenerateResource.Cache
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.pdb

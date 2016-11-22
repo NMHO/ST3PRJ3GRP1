@@ -53,3 +53,21 @@ C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksAppli
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\obj\Debug\BTADataLag.csprojResolveAssemblyReference.cache
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\obj\Debug\BTADataLag.dll
 C:\Users\Lasse\Dropbox\Århus Universitet\3. Semester\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\obj\Debug\BTADataLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\BTADataLag.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\BTADataLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\BTADataLag.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\DTO.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\Interfaces.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\DTO.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\DTO.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\Interfaces.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\Interfaces.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\obj\Debug\BTADataLag.csprojResolveAssemblyReference.cache
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\obj\Debug\BTADataLag.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\obj\Debug\BTADataLag.pdb
