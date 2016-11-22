@@ -42,7 +42,6 @@ namespace BTAPræsentationsLag
             MDTO = new MonitorerDTO();
             currentLL.MLL.indstilRefTilDTO(ref MDTO);
             BTChartInit();
-            BTN_filterOFF.Hide();
         }
 
 
@@ -98,16 +97,19 @@ namespace BTAPræsentationsLag
             btnNulpunktsjusterSystem.PerformClick();
         }
 
-        private void BTN_filterOFF_Click(object sender, EventArgs e)
-        {
-            BTN_filterOFF.Hide();
-            BTN_FilterON.Show();
-        }
-
         private void BTN_FilterON_Click(object sender, EventArgs e)
         {
-            BTN_FilterON.Hide();
-            BTN_filterOFF.Show();
+            if (BTN_FilterON.Text == "Diagnose-tilstand")
+            {
+                BTN_FilterON.Text = "Monitorerings-tilstand";
+                currentLL.MLL.framesize = 5;
+            }
+            else
+            {
+                BTN_FilterON.Text = "Diagnose-tilstand";
+                currentLL.MLL.framesize = 1;
+            }
+
         }
 
         private void btnStartMåling_Click(object sender, EventArgs e)
@@ -163,7 +165,6 @@ namespace BTAPræsentationsLag
             {
                 sem.Wait();
                 currentLL.MLL.hentBTSekvens();
-                //MDTO = currentLL.MLL.MDTO;
                 opdaterBTChart(MDTO.NuværendeSekvens);
                 sem.Release();
             }
@@ -181,16 +182,16 @@ namespace BTAPræsentationsLag
 
         private void opdaterChart(object o, MyEvent e)
         {
-            double xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1.0 / MDTO.midlingsFrekvens;
+            double xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1.0 / (MDTO.NuværendeSekvens.Count*10);
 
             foreach (var value in e.NuværendeSekvens)
             {
                 ChartBT.Series["BTSerie"].Points.RemoveAt(0);
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
-                xval += +1.0 / MDTO.midlingsFrekvens;
+                xval += (1.0) / (MDTO.NuværendeSekvens.Count*10);
             }
 
-            double step = e.NuværendeSekvens.Count / MDTO.midlingsFrekvens;
+            double step = (e.NuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + step, 1);
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);

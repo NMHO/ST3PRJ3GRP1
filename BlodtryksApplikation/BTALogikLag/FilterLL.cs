@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BTADataLag;
 
 namespace BTALogikLag
 {
-    class FilterLL
+    public class FilterLL
     {
+        private ControlDataLag currentDatalag;
 
+        public FilterLL(ControlDataLag mydal)
+        {
+            this.currentDatalag = mydal;
+        }
         /// <summary>
         /// Denne metode filtrere den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
         /// </summary>

@@ -16,33 +16,7 @@ namespace BTADataLag
     public abstract class IndlæsFraDAQ : IReadInput
     {
 
-        /*
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public IndlæsFraDAQ()
-        {
-        }
 
-        /// <summary>
-        /// Indlæser en serie af samples fra NI-DAQ i volt
-        /// </summary>
-        /// <param name="dataSeq">Antal ønsket datapunkter</param>
-        /// <returns>Returnerer en liste af datapunkter</returns>                             
-        public List<double> indlæsDataSekvens(int dataSeq)
-        {
-            NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
-            AIChannel myAIChannel;
-            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
-                AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
-
-            AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
-
-            var seqList = new List<double>(reader.ReadMultiSample(dataSeq));
-
-            return seqList;            
-        }
-        */
         static Random rnd = new Random();
         private List<double> testUdenDAQ()
         {
@@ -63,18 +37,18 @@ namespace BTADataLag
         /// <returns>Returnerer en liste af datapunkter</returns>  
         public List<double> ReadInput(int samples)
         {
-            /*
-            NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
-            AIChannel myAIChannel;
-            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
-                AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-            AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
+            //NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
+            //AIChannel myAIChannel;
+            //myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
+            //    AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-            var seqList = new List<double>(reader.ReadMultiSample(samples));
+            //AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
-            return seqList;
-            */
+            //var seqList = new List<double>(reader.ReadMultiSample(samples));
+
+            //return seqList;
+
 
             return testUdenDAQ();
         }

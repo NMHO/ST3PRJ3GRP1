@@ -13,19 +13,24 @@ namespace BTALogikLag
     {
         public MonitorerDTO MDTO { get; set; }
         private ControlDataLag currentDatalag;
+        public FilterLL FLL;
+        public int framesize { get; set; }
 
         public MonitoreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
-            
+            FLL = new FilterLL(currentDatalag);
+            framesize = 1;
         }
 
         public void hentBTSekvens()
         {
-            MDTO.NuværendeSekvens = midlingAfIndlæstSignal(currentDatalag.MDL.indlæsBTSignal(100));           
-            MDTO.RåBlodtrykssignal.AddRange(MDTO.NuværendeSekvens);
+            var råtSignal = currentDatalag.MDL.indlæsBTSignal(100);
+            MDTO.NuværendeSekvens = FLL.FiltrerSignal(framesize, midlingAfIndlæstSignal(råtSignal));
+            //MDTO.NuværendeSekvens = midlingAfIndlæstSignal(currentDatalag.MDL.indlæsBTSignal(100));           
+            MDTO.RåBlodtrykssignal.AddRange(råtSignal);
             MDTO.SignalLængdeISek = Convert.ToDouble(MDTO.RåBlodtrykssignal.Count()) / 1000.0;
-            Thread.Sleep(100); // simulerer DAQ-indlæsning              
+            //Thread.Sleep(100); // simulerer DAQ-indlæsning              
         }
 
         public void indstilRefTilDTO(ref MonitorerDTO MDTO)

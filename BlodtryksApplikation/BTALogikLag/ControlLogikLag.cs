@@ -15,6 +15,7 @@ namespace BTALogikLag
         public KalibreringLL KLL { get; private set; }
         public NulpunktsjusteringLL NPJLL { get; private set; }
 
+
         public MonitoreringLL MLL { get; private set; }
         //public GemLL GLL { get; private set; }
 
@@ -23,7 +24,9 @@ namespace BTALogikLag
             this.currentDatalag = mydal;
             KLL = new KalibreringLL(currentDatalag);
             NPJLL = new NulpunktsjusteringLL(currentDatalag);
+
             MLL = new MonitoreringLL(currentDatalag);
+            
             //GLL = new GemLL(currentDatalag);
         }        
     }
