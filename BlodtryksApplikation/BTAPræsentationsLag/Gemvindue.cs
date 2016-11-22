@@ -15,7 +15,7 @@ namespace BTAPræsentationsLag
     public partial class Gemvindue : Form
     {
         private ControlLogikLag currentLL;
-        private GemDTO GDTO { get; private set; }
+        public GemDTO GDTO { get; private set; }
 
         private bool CPRvalidering;
         private bool PnummerValidering;
@@ -23,7 +23,7 @@ namespace BTAPræsentationsLag
         public Gemvindue(ControlLogikLag myLL)
         {
             InitializeComponent();
-            this.GDTO = currentLL.
+            this.GDTO = currentLL.  //Mangler 
 
         }
 

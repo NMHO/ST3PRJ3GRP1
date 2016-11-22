@@ -8,12 +8,12 @@ namespace DTO
 {
     public class GemDTO
     {
-        public string CRP { get; set; }
+        public string CPR { get; set; }
         public string Personalenummer { get; set; }
 
         public GemDTO()
         {
-            CRP = "0000000000";
+            CPR = "0000000000";
             Personalenummer = "XXX000";
         }
     }
