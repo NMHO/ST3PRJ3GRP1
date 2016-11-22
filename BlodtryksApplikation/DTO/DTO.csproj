@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlarmDTO.cs" />
+    <Compile Include="GemDTO.cs" />
     <Compile Include="KalibreringDTO.cs" />
     <Compile Include="MonitorerDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

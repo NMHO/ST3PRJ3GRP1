@@ -16,6 +16,7 @@ namespace BTALogikLag
         public NulpunktsjusteringLL NPJLL { get; private set; }
 
         public MonitoreringLL MLL { get; private set; }
+        public GemLL GLL { get; private set; }
 
         public ControlLogikLag(ControlDataLag mydal)
         {
@@ -23,6 +24,7 @@ namespace BTALogikLag
             KLL = new KalibreringLL(currentDatalag);
             NPJLL = new NulpunktsjusteringLL(currentDatalag);
             MLL = new MonitoreringLL(currentDatalag);
+            GLL = new GemLL(currentDatalag);
         }        
     }
 }

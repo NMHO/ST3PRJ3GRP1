@@ -27,7 +27,8 @@ namespace BTAPræsentationsLag
         private AlarmVindue alarmForm;
         private double NulpunktsVærdi;
         private static SemaphoreSlim sem = new SemaphoreSlim(1);
-        private static bool monitorer; 
+        private static bool monitorer;
+        private Gemvindue gemForm;
 
 
         /// <summary>
@@ -189,7 +190,13 @@ namespace BTAPræsentationsLag
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + step, 1);
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);
-        }     
+        }
+
+        private void BTNGemdata_Click(object sender, EventArgs e)
+        {
+            gemForm = new Gemvindue();
+            gemForm.ShowDialog();
+        }
     }
 
     public class MyEvent : EventArgs

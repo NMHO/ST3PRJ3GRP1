@@ -57,6 +57,12 @@
     <Compile Include="AlarmVindue.Designer.cs">
       <DependentUpon>AlarmVindue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gemvindue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gemvindue.Designer.cs">
+      <DependentUpon>Gemvindue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kalibreringsvindue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AlarmVindue.resx">
       <DependentUpon>AlarmVindue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gemvindue.resx">
+      <DependentUpon>Gemvindue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kalibreringsvindue.resx">
       <DependentUpon>Kalibreringsvindue.cs</DependentUpon>
