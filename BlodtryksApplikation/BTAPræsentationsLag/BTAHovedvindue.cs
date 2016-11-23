@@ -29,7 +29,7 @@ namespace BTAPræsentationsLag
         private static SemaphoreSlim sem = new SemaphoreSlim(1);
         private static bool monitorer;
         private Gemvindue gemForm;
-
+        private List<double> GUIChartPunkter;
 
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
@@ -38,19 +38,11 @@ namespace BTAPræsentationsLag
         {
             currentLL = myLL;
             InitializeComponent();
-            KDTO = currentLL.KLL.KDTO;
+            KDTO = new KalibreringDTO();
             MDTO = new MonitorerDTO();
             currentLL.MLL.indstilRefTilDTO(ref MDTO);
             BTChartInit();
         }
-
-
-
-        private void btnToolStripKalibrerSystem_Click(object sender, EventArgs e)
-        {
-            btnKalibrerSystem.PerformClick();
-        }
-
 
         private void btnKalibrerSystem_Click(object sender, EventArgs e)
         {
@@ -66,11 +58,15 @@ namespace BTAPræsentationsLag
         /// </summary>
         private void BTAHovedvindue_Shown(object sender, EventArgs e)
         {
+            BTNGemdata.Enabled = false;
+            btnStartMåling.Enabled = false;
+            btnStopMåling.Enabled = false;
+            BTN_FilterON.Enabled = false;
             KalibreringDTO temp = currentLL.KLL.hentKalibreringFraDL();
 
-            if (temp != null || KDTO.kalibreringsHældning != 0)
+            if (temp != null && temp.kalibreringsHældning != 0)
             {
-                KDTO = temp;
+                this.KDTO = temp;
             }
             else
             {
@@ -89,13 +85,10 @@ namespace BTAPræsentationsLag
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
             NulpunktsVærdi = currentLL.NPJLL.hentNulpunktsSpænding();
-            MessageBox.Show("Nuljustering er foretaget. " + NulpunktsVærdi);
+            MessageBox.Show("Nuljustering er foretaget.");
+            btnStartMåling.Enabled = true;
         }
 
-        private void btnToolStripNulpunktsjusterSystem_Click(object sender, EventArgs e)
-        {
-            btnNulpunktsjusterSystem.PerformClick();
-        }
 
         private void BTN_FilterON_Click(object sender, EventArgs e)
         {
@@ -130,11 +123,14 @@ namespace BTAPræsentationsLag
                 monThread.IsBackground = true;
                 monThread.Start();
             }
+            btnStopMåling.Enabled = true;
+            BTN_FilterON.Enabled = true;
         }
 
         private void btnStopMåling_Click(object sender, EventArgs e)
         {
             monitorer = false;
+            BTNGemdata.Enabled = true;
         }
 
         private void BTChartInit()
@@ -142,17 +138,17 @@ namespace BTAPræsentationsLag
             ChartBT.Series["BTSerie"].Points.Clear();
             ChartBT.ChartAreas["BTChartArea"].AxisX.Title = "Tid i sekunder";
             ChartBT.ChartAreas["BTChartArea"].AxisY.Title = "mmHg";
-            ChartBT.ChartAreas["BTChartArea"].AxisY.Minimum = -1.0;
-            ChartBT.ChartAreas["BTChartArea"].AxisY.Maximum = 6.0;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Minimum = 0.0;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.Maximum = 250.0;
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = -10.0;
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = 0.0;
 
-            var temp = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10 - 1.0)]);
+            GUIChartPunkter = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10)]);
             double xval = -10.0;
             double sampleTime = 1.0 / MDTO.midlingsFrekvens;
 
-            foreach (var value in temp)
+            foreach (var value in GUIChartPunkter)
             {
                 xval += sampleTime;
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
@@ -164,7 +160,7 @@ namespace BTAPræsentationsLag
             while (monitorer == true)
             {
                 sem.Wait();
-                currentLL.MLL.hentBTSekvens();
+                currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, NulpunktsVærdi);
                 opdaterBTChart(MDTO.NuværendeSekvens);
                 sem.Release();
             }
@@ -182,16 +178,37 @@ namespace BTAPræsentationsLag
 
         private void opdaterChart(object o, MyEvent e)
         {
-            double xval = ChartBT.Series["BTSerie"].Points.Last().XValue + 1.0 / (MDTO.NuværendeSekvens.Count*10);
+            double nuværendeXval = ChartBT.Series["BTSerie"].Points.Last().XValue;
+            double næsteXval = 1.0 / (MDTO.NuværendeSekvens.Count * 10);
 
             foreach (var value in e.NuværendeSekvens)
             {
                 ChartBT.Series["BTSerie"].Points.RemoveAt(0);
-                ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
-                xval += (1.0) / (MDTO.NuværendeSekvens.Count*10);
+                ChartBT.Series["BTSerie"].Points.AddXY(nuværendeXval + næsteXval, value);
+                nuværendeXval += næsteXval;
+
+                GUIChartPunkter.RemoveAt(0);
+                GUIChartPunkter.Add(value);
+
+                if (GUIChartPunkter.Last() > this.ADTO.ØGrænse)
+                {
+                    ChartBT.Series["BTSerie"].Points.Last().Color = Color.Red;
+                }
+                else if (GUIChartPunkter.Last() < this.ADTO.NGrænse)
+                {
+                    ChartBT.Series["BTSerie"].Points.Last().Color = Color.Yellow;
+                }
             }
 
             double step = (e.NuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
+
+            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 10)
+            {
+                var max = GUIChartPunkter.Max();
+                var min = GUIChartPunkter.Min();
+                tbSys.Text = max.ToString();
+                tbDia.Text = min.ToString();
+            }
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + step, 1);
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);

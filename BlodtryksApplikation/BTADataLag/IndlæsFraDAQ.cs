@@ -38,19 +38,20 @@ namespace BTADataLag
         public List<double> ReadInput(int samples)
         {
 
-            //NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
-            //AIChannel myAIChannel;
-            //myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
-            //    AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
+            NationalInstruments.DAQmx.Task analogInTask = new NationalInstruments.DAQmx.Task();
+            analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.FiniteSamples);
+            AIChannel myAIChannel;
+            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel",
+                AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-            //AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
+            AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
-            //var seqList = new List<double>(reader.ReadMultiSample(samples));
+            var seqList = new List<double>(reader.ReadMultiSample(samples));
 
-            //return seqList;
+            return seqList;
 
 
-            return testUdenDAQ();
+            //return testUdenDAQ();
         }
     }
 }

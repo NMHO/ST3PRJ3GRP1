@@ -25,7 +25,8 @@ namespace BTALogikLag
         public KalibreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
-            this.KDTO = currentDatalag.KDL.KDTO;
+            //this.KDTO = currentDatalag.KDL.KDTO;
+
         }
 
         /// <summary>
@@ -104,8 +105,9 @@ namespace BTALogikLag
         /// Returnerer en KalibreringDTO med de indlæste kalibreringsdata
         /// </returns>
         public KalibreringDTO hentKalibreringFraDL()
-        {            
-            return currentDatalag.KDL.hentKalibreringFraFil(); 
+        {        
+            this.KDTO = currentDatalag.KDL.hentKalibreringFraFil();
+            return KDTO;
         }
 
     }

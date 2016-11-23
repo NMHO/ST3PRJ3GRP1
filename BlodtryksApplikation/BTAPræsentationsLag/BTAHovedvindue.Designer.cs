@@ -29,13 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnToolStripKalibrerSystem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnToolStripNulpunktsjusterSystem = new System.Windows.Forms.ToolStripMenuItem();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnKalibrerSystem = new System.Windows.Forms.Button();
             this.btnNulpunktsjusterSystem = new System.Windows.Forms.Button();
             this.BTN_FilterON = new System.Windows.Forms.Button();
@@ -44,45 +40,13 @@
             this.ChartBT = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnStopMåling = new System.Windows.Forms.Button();
             this.BTNGemdata = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
+            this.tbSys = new System.Windows.Forms.TextBox();
+            this.tbDia = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBT)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1270, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnToolStripKalibrerSystem,
-            this.btnToolStripNulpunktsjusterSystem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 22);
-            this.toolStripMenuItem1.Text = "Menu";
-            // 
-            // btnToolStripKalibrerSystem
-            // 
-            this.btnToolStripKalibrerSystem.Name = "btnToolStripKalibrerSystem";
-            this.btnToolStripKalibrerSystem.Size = new System.Drawing.Size(158, 22);
-            this.btnToolStripKalibrerSystem.Text = "Kalibrér system";
-            this.btnToolStripKalibrerSystem.Click += new System.EventHandler(this.btnToolStripKalibrerSystem_Click);
-            // 
-            // btnToolStripNulpunktsjusterSystem
-            // 
-            this.btnToolStripNulpunktsjusterSystem.Name = "btnToolStripNulpunktsjusterSystem";
-            this.btnToolStripNulpunktsjusterSystem.Size = new System.Drawing.Size(158, 22);
-            this.btnToolStripNulpunktsjusterSystem.Text = "Nulpunktsjuster";
-            this.btnToolStripNulpunktsjusterSystem.Click += new System.EventHandler(this.btnToolStripNulpunktsjusterSystem_Click);
             // 
             // btnKalibrerSystem
             // 
@@ -130,18 +94,18 @@
             // 
             // ChartBT
             // 
-            chartArea3.Name = "BTChartArea";
-            this.ChartBT.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.ChartBT.Legends.Add(legend3);
+            chartArea1.Name = "BTChartArea";
+            this.ChartBT.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ChartBT.Legends.Add(legend1);
             this.ChartBT.Location = new System.Drawing.Point(17, 125);
             this.ChartBT.Margin = new System.Windows.Forms.Padding(2);
             this.ChartBT.Name = "ChartBT";
-            series3.ChartArea = "BTChartArea";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series3.Legend = "Legend1";
-            series3.Name = "BTSerie";
-            this.ChartBT.Series.Add(series3);
+            series1.ChartArea = "BTChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "BTSerie";
+            this.ChartBT.Series.Add(series1);
             this.ChartBT.Size = new System.Drawing.Size(1239, 582);
             this.ChartBT.TabIndex = 7;
             this.ChartBT.Text = "chart1";
@@ -168,11 +132,49 @@
             this.BTNGemdata.UseVisualStyleBackColor = true;
             this.BTNGemdata.Click += new System.EventHandler(this.BTNGemdata_Click);
             // 
+            // tbSys
+            // 
+            this.tbSys.Enabled = false;
+            this.tbSys.Location = new System.Drawing.Point(558, 39);
+            this.tbSys.Name = "tbSys";
+            this.tbSys.Size = new System.Drawing.Size(100, 20);
+            this.tbSys.TabIndex = 10;
+            // 
+            // tbDia
+            // 
+            this.tbDia.Enabled = false;
+            this.tbDia.Location = new System.Drawing.Point(558, 83);
+            this.tbDia.Name = "tbDia";
+            this.tbDia.Size = new System.Drawing.Size(100, 20);
+            this.tbDia.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(558, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Systole";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(558, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Diastole";
+            // 
             // BTAHovedvindue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1270, 674);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbDia);
+            this.Controls.Add(this.tbSys);
             this.Controls.Add(this.BTNGemdata);
             this.Controls.Add(this.btnStopMåling);
             this.Controls.Add(this.ChartBT);
@@ -180,14 +182,10 @@
             this.Controls.Add(this.BTN_FilterON);
             this.Controls.Add(this.btnNulpunktsjusterSystem);
             this.Controls.Add(this.btnKalibrerSystem);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BTAHovedvindue";
             this.Text = "BTA - Hovedvindue";
             this.Shown += new System.EventHandler(this.BTAHovedvindue_Shown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBT)).EndInit();
             this.ResumeLayout(false);
@@ -196,12 +194,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem btnToolStripKalibrerSystem;
         private System.Windows.Forms.Button btnKalibrerSystem;
-        private System.Windows.Forms.ToolStripMenuItem btnToolStripNulpunktsjusterSystem;
         private System.Windows.Forms.Button btnNulpunktsjusterSystem;
         private System.Windows.Forms.Button BTN_FilterON;
         private System.Windows.Forms.BindingSource bindingSource1;
@@ -209,6 +202,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartBT;
         private System.Windows.Forms.Button btnStopMåling;
         private System.Windows.Forms.Button BTNGemdata;
+        private System.Windows.Forms.TextBox tbSys;
+        private System.Windows.Forms.TextBox tbDia;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
