@@ -49,6 +49,7 @@
     <Compile Include="IndlæsFraDAQ.cs" />
     <Compile Include="KalibreringDL.cs" />
     <Compile Include="MonitoreringDL.cs" />
+    <Compile Include="NI-DAQVoltage.cs" />
     <Compile Include="NulpunktsjusteringDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

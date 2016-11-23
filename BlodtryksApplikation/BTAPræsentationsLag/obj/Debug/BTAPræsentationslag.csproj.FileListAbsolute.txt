@@ -128,3 +128,11 @@ C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsenta
 C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\Interfaces.xml
 C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTADataLag.pdb
 C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\BTADataLag.xml
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\obj\Debug\BTAPræsentationsLag.Gemvindue.resources
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPræsentationsLag\bin\Debug\NationalInstruments.Common.xml
