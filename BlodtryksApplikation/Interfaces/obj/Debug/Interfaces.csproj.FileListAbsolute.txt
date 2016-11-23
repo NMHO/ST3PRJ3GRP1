@@ -25,3 +25,12 @@ C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\b
 C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.XML
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.pdb
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\bin\Debug\DTO.xml
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.csprojResolveAssemblyReference.cache
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Bruger\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\Interfaces\obj\Debug\Interfaces.pdb

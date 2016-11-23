@@ -16,71 +16,90 @@ namespace BTAPræsentationsLag
     {
         private ControlLogikLag currentLL;
         public GemDTO GDTO { get; private set; }
+        private MonitorerDTO MDTO;
 
         private bool CPRvalidering;
         private bool PnummerValidering;
-        private bool checkboxValidering;
-        public Gemvindue(ControlLogikLag myLL)
+        private int valgtLængde;
+       
+        public Gemvindue(ControlLogikLag myLL, ref MonitorerDTO MDTO)
         {
+            this.currentLL = myLL;
             InitializeComponent();
-            //this.GDTO = currentLL;  //Mangler 
+            this.GDTO = currentLL.GLL.GDTO;
+            this.MDTO = MDTO;
+            LLængde.Text = (MDTO.RåBlodtrykssignal.Count/1000).ToString() + " sek";        
 
         }
 
-        //private bool validereCPR(string CPR)
-        //{
-        //    char[] CPRArray = CPR.ToCharArray();
-        //    int resultat = 0;
-        //    int[] factor = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
-
-        //    for (int i = 0; i < CPRArray.Length; i++)
-        //    {
-        //        resultat = ((CPRArray[i] - 48) * factor[i]) % 11;
-        //    }
-        //    if (resultat == 0)
-        //        return true;
-        //    else
-        //        return false;
-        //}
-        private bool validerePersonalenr(string pnummer)
-        {
-            char[] PnummerArray = pnummer.ToCharArray();
-            if (PnummerArray.Length == 6)
-            {
-                return true;
-            }
-            else
-                return false;
-        }
+       
         private bool validereTjekboxValgt()
         {
-            if (RB10sek.Checked || RB1min.Checked || RBHelesignalet.Checked)
+            if (RB10sek.Checked && MDTO.RåBlodtrykssignal.Count > 10000)
+            {
+                valgtLængde = 10;
                 return true;
+            }
+            else if(RB1min.Checked && MDTO.RåBlodtrykssignal.Count > 60000)
+            {
+                valgtLængde = 60;
+                return true;
+            }
+            else if(RBHelesignalet.Checked  || RB10sek.Checked || RB1min.Checked)
+            {
+                valgtLængde = MDTO.RåBlodtrykssignal.Count/1000;
+                return true;
+            }    
             else
                 return false;
         }
         private void BNTGem_Click(object sender, EventArgs e)
         {
-            /*bool CPR = validereCPR(TXBCPR.Text);
-            bool pnummer = validerePersonalenr(TXBPersonalenummer.Text);
+            CPRvalidering = currentLL.GLL.validereCPR(TXBCPR.Text);
+            PnummerValidering = currentLL.GLL.validerePersonalenr(TXBPersonalenummer.Text); 
+            
             bool chek = validereTjekboxValgt();
-            if(CPR == true && pnummer == true && chek == true)
+            if (CPRvalidering == true && PnummerValidering == true && chek == true)
             {
+                List<double> list = MDTO.RåBlodtrykssignal;
+                list.RemoveRange(0, list.Count - valgtLængde * 1000);
+                GDTO.SignalBLOB = list.ToArray().SelectMany(value => BitConverter.GetBytes(value)).ToArray();
+                GDTO.CPR = TXBCPR.Text;
+                GDTO.Personalenummer = TXBPersonalenummer.Text;
 
+                bool b = currentLL.GLL.gemData(GDTO);
+                if(b == true)
+                {
+                    MessageBox.Show("Data gemt i fil");
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Data ikke gemt i fil, prøve igen");
+                    TXBCPR.Clear();
+                    TXBPersonalenummer.Clear();
+                    RB10sek.Checked = false;
+                    RB1min.Checked = false;
+                    RBHelesignalet.Checked = false;
+                }
             }
-            else if (CPR == false)
+            else if (CPRvalidering == false)
             {
                 MessageBox.Show("Ugyldigt CPR.");
+                TXBCPR.Clear();
             }
-            else if (pnummer == false)
+            else if (PnummerValidering == false)
             {
                 MessageBox.Show("Ugyldigt personalenummer.");
+                TXBPersonalenummer.Clear();
             }
             else
             {
                 MessageBox.Show("Intet data valgt.");
+                
             }
-            */
+            
+
         }
 
         private void BTNAnnuller_Click(object sender, EventArgs e)

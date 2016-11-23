@@ -10,6 +10,8 @@ namespace DTO
     {
         public string CPR { get; set; }
         public string Personalenummer { get; set; }
+        public byte[] SignalBLOB { get; set; }
+
 
         public GemDTO()
         {

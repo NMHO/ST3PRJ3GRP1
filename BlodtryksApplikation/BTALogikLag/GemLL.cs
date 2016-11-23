@@ -8,7 +8,7 @@ using DTO;
 
 namespace BTALogikLag
 {
-    class GemLL
+    public class GemLL
     {
         public GemDTO GDTO { get; set; }
         private ControlDataLag currentDatalag;
@@ -18,7 +18,7 @@ namespace BTALogikLag
             this.currentDatalag = mydal;
             this.GDTO = currentDatalag.GDL.GDTO;
          }
-        private bool validereCPR(string CPR)
+        public bool validereCPR(string CPR)
         {
             char[] CPRArray = CPR.ToCharArray();
             int resultat = 0;
@@ -33,5 +33,23 @@ namespace BTALogikLag
             else
                 return false;
         }
+
+        public bool validerePersonalenr(string pnummer)
+        {
+            char[] PnummerArray = pnummer.ToCharArray();
+            if (PnummerArray.Length == 6)
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        
+        public bool gemData(GemDTO GDTO_)
+        {
+            bool b = currentDatalag.GDL.gemDataTilFil(GDTO_);
+            return b;
+        }
+        
     }
 }

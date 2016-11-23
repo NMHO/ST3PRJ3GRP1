@@ -199,8 +199,11 @@ namespace BTAPræsentationsLag
 
         private void BTNGemdata_Click(object sender, EventArgs e)
         {
-            //gemForm = new Gemvindue();
-            //gemForm.ShowDialog();
+            gemForm = new Gemvindue(currentLL, ref MDTO);
+            gemForm.ShowDialog();
+
+
+            // this.KDTO = kalibreringsForm.KDTO;
         }
     }
 
