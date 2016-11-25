@@ -58,12 +58,10 @@
             Indlæser datasekvenser fra DAQ'en
             </summary>
         </member>
-        <member name="M:BTADataLag.MonitoreringDL.#ctor">
+        <member name="M:BTADataLag.MonitoreringDL.startInputAsync(System.Int32)">
             <summary>
             Opretter en ny monitorerings DTO
             </summary>
-        </member>
-        <member name="M:BTADataLag.MonitoreringDL.indlæsBTSignal(System.Int32)">
             <summary>
             Kalder metode der indlæser en datasekvens
             </summary>
@@ -71,55 +69,6 @@
             Returnerer af den indlæste datasekvens
             </returns>
         </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.currentVoltageSeqArray">
-            <summary>
-            Gives a copy as an array to the latest sequence of voltage meassurings 
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.currentVoltageSeq">
-            <summary>
-            Gives a copy of the latest sequence of voltage meassurings
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.sampleRateInHz">
-            <summary>
-            Get or set the sample rate in Hz to collect the collect the sequence of voltage meassurings
-            Default if not set is 250Hz
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.rangeMinimumVolt">
-            <summary>
-            Get or set the minimum voltage to read in Volt Ex: -1.0 for -1.0 V
-            Default if not set is -1.0 Volt
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.rangeMaximumVolt">
-            <summary>
-            Get or set the maximum voltage to read in Volt Ex: 1.0 for 1.0 V
-            Default if not set is 1.0 Volt
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.samplesPerChannel">
-            <summary>
-            Get or set the number of samples to read per channel (in this case only one channel)
-            Default if not set is 3600
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.seqTimeOut">
-            <summary>
-            Get or set the collection timeout in millisecond ex 2500 is 2500 millisecond
-            Default if not set is infinite ms (-1 seconds)
-            If set to -1 gives infinite wait for reading
-            </summary>
-        </member>
-        <member name="P:BTADataLag.NI_DAQVoltage.deviceName">
-            <summary>
-            Set or get the name of the current device being used
-            Ex: "Dev2/ai0"
-            Default if not set is "Dev2/ai0"
-            </summary>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:BTADataLag.NI_DAQVoltage.getVoltageSeqBlocking" -->
         <member name="T:BTADataLag.NulpunktsjusteringDL">
             <summary>
             Indlæser værdi fra DAQ'en

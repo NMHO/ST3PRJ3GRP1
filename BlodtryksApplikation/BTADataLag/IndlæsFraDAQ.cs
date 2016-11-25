@@ -20,31 +20,30 @@ namespace BTADataLag
         //private NI_DAQVoltage datacollector;      
 
         
-        private NationalInstruments.DAQmx.Task analogInTask;
-        private AnalogSingleChannelReader reader;
-        private int samplesPerChannel = 100;
+        
 
+        public int samples { get; set; }
+        public NationalInstruments.DAQmx.Task analogInTask { get; set; }
+        public AnalogSingleChannelReader reader { get; set; }       
 
 
         public IndlæsFraDAQ()
+        {            
+            
+        }
+
+        public void indstilDAQ()
         {
-            /*
-            datacollector = new NI_DAQVoltage();
-            datacollector.sampleRateInHz = 1000;
-            datacollector.deviceName = "Dev1/ai0";
-            datacollector.samplesPerChannel = 100;*/
-
-
             analogInTask = new NationalInstruments.DAQmx.Task();
 
             analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-            analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.FiniteSamples, samplesPerChannel);
+            analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
+
+            analogInTask.Control(TaskAction.Verify);            
 
             reader = new AnalogSingleChannelReader(analogInTask.Stream);
-
-        }
-
+        }       
 
         /// <summary>
         /// Indlæser en serie af samples fra NI-DAQ i volt
@@ -53,22 +52,16 @@ namespace BTADataLag
         /// <returns>Returnerer en liste af datapunkter</returns>  
         public List<double> ReadInput(int samples)
         {
-            
+            indstilDAQ();
+
             var seqList = new List<double>(reader.ReadMultiSample(samples));
 
-            //analogInTask.Dispose();
+            analogInTask.Dispose();
 
             return seqList;
 
-            //return null;
-
             //return testUdenDAQ();
-
-            //datacollector.samplesPerChannel = samples;     
-
-            //datacollector.getVoltageSeqBlocking();
-
-            //return datacollector.currentVoltageSeq;
+            
         }
 
 

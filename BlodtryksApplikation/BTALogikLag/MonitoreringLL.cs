@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 using DTO;
 using BTADataLag;
 using System.Threading;
+using Interfaces;
 
 namespace BTALogikLag
 {
-    public class MonitoreringLL
+    public class MonitoreringLL : Subject, IObserver
     {
-        public MonitorerDTO MDTO { get; set; }
+        private MonitorerDTO MDTO;
         private ControlDataLag currentDatalag;
         public FilterLL FLL;
         public int framesize { get; set; }
-
+        
         public MonitoreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
@@ -23,22 +24,30 @@ namespace BTALogikLag
             framesize = 0;
         }
 
+        public void startMåling()
+        {
+            currentDatalag.MDL.Attach(this);
+            currentDatalag.MDL.startInputAsync(100);
+        }
+
+        public void stopMåling()
+        {
+            currentDatalag.MDL.Detach(this);
+            currentDatalag.MDL.stoptInputAsync();
+        }
+
         public void hentBTSekvens(double KHældning, double NVærdi)
         {
-            var råtSignal = currentDatalag.MDL.indlæsBTSignal(100);
-            //int i=0;
+
+            var råtSignal = MDTO.NuværendeSekvens;
+            
             double temp;
             for (int i = 0; i < råtSignal.Count; i++)
             {
                 temp = (råtSignal[i] * KHældning) - NVærdi;
                 råtSignal[i] = temp;
             }
-
-            //foreach (var value in råtSignal)
-            //{
-            //    råtSignal[i] = (value * KDTO.kalibreringsHældning) - Nulpunktsværdi; //Y=ax-b
-            //    i++;
-            //}
+            
 
             if (framesize > 1)
             {
@@ -78,7 +87,34 @@ namespace BTALogikLag
             }
             return mSekvens;
         }
-            
 
+        public void Update(List<double> sekvens)
+        {
+            MDTO.NuværendeSekvens = sekvens;
+            Notify(sekvens);
+        }
+    }
+
+    abstract public class Subject
+    {
+        private List<IObserver> observers = new List<IObserver>();
+
+        public void Attach(IObserver observer)
+        {
+            observers.Add(observer);
+        }
+
+        public void Detach(IObserver observer)
+        {
+            observers.Remove(observer);
+        }
+
+        public void Notify(List<double> sekvens)
+        {
+            foreach (var observer in observers)
+            {
+                observer.Update(sekvens);
+            }
+        }
     }
 }

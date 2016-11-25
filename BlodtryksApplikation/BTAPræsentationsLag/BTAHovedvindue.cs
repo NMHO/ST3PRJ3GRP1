@@ -17,7 +17,7 @@ namespace BTAPræsentationsLag
     /// <summary>
     /// Blodtryk Applikationens hovedvindue
     /// </summary>
-    public partial class BTAHovedvindue : Form
+    public partial class BTAHovedvindue : Form, IObserver
     {
         private ControlLogikLag currentLL;
         private KalibreringDTO KDTO;
@@ -26,10 +26,11 @@ namespace BTAPræsentationsLag
         private KalibreringsVindue kalibreringsForm;
         private AlarmVindue alarmForm;
         private double NulpunktsVærdi;
-        private static SemaphoreSlim sem = new SemaphoreSlim(1);
+        //private static SemaphoreSlim sem = new SemaphoreSlim(1);
         private static bool monitorer;
         private Gemvindue gemForm;
         private List<double> GUIChartPunkter;
+        private Thread thread;
 
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
@@ -118,10 +119,19 @@ namespace BTAPræsentationsLag
                 MDTO.SignalLængdeISek = 0;
 
                 BTChartInit();
-                monitorer = true;
-                Thread monThread = new Thread(monitorerBTIGUI);
-                monThread.IsBackground = true;
-                monThread.Start();
+
+
+                currentLL.MLL.Attach(this);
+                currentLL.MLL.startMåling();               
+
+                //monitorer = true;
+                
+                /*
+                thread = new Thread(monitorerBTIGUI);
+                thread.Name = "monThread";
+                thread.IsBackground = true;
+                thread.Start();*/
+                
             }
             btnStopMåling.Enabled = true;
             BTN_FilterON.Enabled = true;
@@ -129,7 +139,9 @@ namespace BTAPræsentationsLag
 
         private void btnStopMåling_Click(object sender, EventArgs e)
         {
-            monitorer = false;
+            currentLL.MLL.Detach(this);
+            currentLL.MLL.stopMåling();
+            //monitorer = false;
             BTNGemdata.Enabled = true;
         }
 
@@ -157,13 +169,18 @@ namespace BTAPræsentationsLag
 
         private void monitorerBTIGUI()
         {
+            currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, NulpunktsVærdi);
+            opdaterBTChart(MDTO.NuværendeSekvens);
+
+            //currentLL.MLL.startMåling();
+
+            /*
             while (monitorer == true)
-            {
-                sem.Wait();
+            {               
                 currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, NulpunktsVærdi);
                 opdaterBTChart(MDTO.NuværendeSekvens);
-                sem.Release();
-            }
+            }*/
+
         }
 
         private void opdaterBTChart(List<double> NuværendeSekvens)
@@ -221,6 +238,15 @@ namespace BTAPræsentationsLag
 
 
             // this.KDTO = kalibreringsForm.KDTO;
+        }
+
+        public void Update(List<double> sekvens)
+        {
+            MDTO.NuværendeSekvens = sekvens;
+            thread = new Thread(monitorerBTIGUI);
+            thread.Name = "monThread";
+            thread.IsBackground = true;
+            thread.Start();
         }
     }
 

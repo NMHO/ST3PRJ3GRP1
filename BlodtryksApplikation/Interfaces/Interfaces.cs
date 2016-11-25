@@ -21,6 +21,11 @@ namespace Interfaces
         List<double> ReadInput(int samples);
     }
 
+    public interface IObserver
+    {
+        void Update(List<double> sekvens);
+    }
+
     /*
     public interface LL
     {
