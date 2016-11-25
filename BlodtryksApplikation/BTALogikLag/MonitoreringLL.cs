@@ -10,7 +10,7 @@ using Interfaces;
 
 namespace BTALogikLag
 {
-    public class MonitoreringLL : Subject, IObserver
+    public class MonitoreringLL : Subject, IObserverLL
     {
         private MonitorerDTO MDTO;
         private ControlDataLag currentDatalag;
@@ -91,29 +91,29 @@ namespace BTALogikLag
         public void Update(List<double> sekvens)
         {
             MDTO.NuværendeSekvens = sekvens;
-            Notify(sekvens);
+            Notify();
         }
     }
 
     abstract public class Subject
     {
-        private List<IObserver> observers = new List<IObserver>();
+        private List<IObserverPL> observers = new List<IObserverPL>();
 
-        public void Attach(IObserver observer)
+        public void Attach(IObserverPL observer)
         {
             observers.Add(observer);
         }
 
-        public void Detach(IObserver observer)
+        public void Detach(IObserverPL observer)
         {
             observers.Remove(observer);
         }
 
-        public void Notify(List<double> sekvens)
+        public void Notify(/*List<double> sekvens*/)
         {
             foreach (var observer in observers)
             {
-                observer.Update(sekvens);
+                observer.Update();//sekvens);
             }
         }
     }

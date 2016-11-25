@@ -103,14 +103,14 @@ namespace BTADataLag
 
     abstract public class Subject
     {
-        private List<IObserver> observers = new List<IObserver>();
+        private List<IObserverLL> observers = new List<IObserverLL>();
 
-        public void Attach(IObserver observer)
+        public void Attach(IObserverLL observer)
         {
             observers.Add(observer);
         }
 
-        public void Detach(IObserver observer)
+        public void Detach(IObserverLL observer)
         {
             observers.Remove(observer);
         }

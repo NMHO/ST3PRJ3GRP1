@@ -17,7 +17,7 @@ namespace BTAPræsentationsLag
     /// <summary>
     /// Blodtryk Applikationens hovedvindue
     /// </summary>
-    public partial class BTAHovedvindue : Form, IObserver
+    public partial class BTAHovedvindue : Form, IObserverPL
     {
         private ControlLogikLag currentLL;
         private KalibreringDTO KDTO;
@@ -26,8 +26,6 @@ namespace BTAPræsentationsLag
         private KalibreringsVindue kalibreringsForm;
         private AlarmVindue alarmForm;
         private double NulpunktsVærdi;
-        //private static SemaphoreSlim sem = new SemaphoreSlim(1);
-        private static bool monitorer;
         private Gemvindue gemForm;
         private List<double> GUIChartPunkter;
         private Thread thread;
@@ -86,7 +84,7 @@ namespace BTAPræsentationsLag
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
             NulpunktsVærdi = currentLL.NPJLL.hentNulpunktsSpænding();
-            MessageBox.Show("Nuljustering er foretaget.");
+            MessageBox.Show("Nulpunktsjustering er foretaget. (" + NulpunktsVærdi + ")");
             btnStartMåling.Enabled = true;
         }
 
@@ -101,7 +99,7 @@ namespace BTAPræsentationsLag
             else
             {
                 BTN_FilterON.Text = "Diagnose-tilstand";
-                currentLL.MLL.framesize = 1;
+                currentLL.MLL.framesize = 0;
             }
 
         }
@@ -124,25 +122,29 @@ namespace BTAPræsentationsLag
                 currentLL.MLL.Attach(this);
                 currentLL.MLL.startMåling();               
 
-                //monitorer = true;
                 
-                /*
-                thread = new Thread(monitorerBTIGUI);
-                thread.Name = "monThread";
-                thread.IsBackground = true;
-                thread.Start();*/
-                
+                btnStopMåling.Enabled = false;
+                btnStopMåling.Enabled = true;
+                BTN_FilterON.Enabled = true;
+
+                btnKalibrerSystem.Enabled = false;
+                btnNulpunktsjusterSystem.Enabled = false;
+
+                tbSys.Text = "";
+                tbDia.Text = "";
             }
-            btnStopMåling.Enabled = true;
-            BTN_FilterON.Enabled = true;
+            
         }
 
         private void btnStopMåling_Click(object sender, EventArgs e)
         {
             currentLL.MLL.Detach(this);
             currentLL.MLL.stopMåling();
-            //monitorer = false;
+           
             BTNGemdata.Enabled = true;
+            btnStopMåling.Enabled = true;
+            btnKalibrerSystem.Enabled = false;
+            btnNulpunktsjusterSystem.Enabled = false;
         }
 
         private void BTChartInit()
@@ -170,17 +172,7 @@ namespace BTAPræsentationsLag
         private void monitorerBTIGUI()
         {
             currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, NulpunktsVærdi);
-            opdaterBTChart(MDTO.NuværendeSekvens);
-
-            //currentLL.MLL.startMåling();
-
-            /*
-            while (monitorer == true)
-            {               
-                currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, NulpunktsVærdi);
-                opdaterBTChart(MDTO.NuværendeSekvens);
-            }*/
-
+            opdaterBTChart(MDTO.NuværendeSekvens);   
         }
 
         private void opdaterBTChart(List<double> NuværendeSekvens)
@@ -213,7 +205,7 @@ namespace BTAPræsentationsLag
                 }
                 else if (GUIChartPunkter.Last() < this.ADTO.NGrænse)
                 {
-                    ChartBT.Series["BTSerie"].Points.Last().Color = Color.Yellow;
+                    ChartBT.Series["BTSerie"].Points.Last().Color = Color.Red;
                 }
             }
 
@@ -221,8 +213,8 @@ namespace BTAPræsentationsLag
 
             if (ChartBT.Series["BTSerie"].Points.Last().XValue > 10)
             {
-                var max = GUIChartPunkter.Max();
-                var min = GUIChartPunkter.Min();
+                var max = Math.Round(GUIChartPunkter.Max(),0);
+                var min = Math.Round(GUIChartPunkter.Min(), 0);
                 tbSys.Text = max.ToString();
                 tbDia.Text = min.ToString();
             }
@@ -240,9 +232,10 @@ namespace BTAPræsentationsLag
             // this.KDTO = kalibreringsForm.KDTO;
         }
 
-        public void Update(List<double> sekvens)
+        public void Update(/*List<double> sekvens*/)
         {
-            MDTO.NuværendeSekvens = sekvens;
+            //MDTO.NuværendeSekvens = sekvens;
+
             thread = new Thread(monitorerBTIGUI);
             thread.Name = "monThread";
             thread.IsBackground = true;
