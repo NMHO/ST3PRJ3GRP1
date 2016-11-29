@@ -11,6 +11,8 @@ using BTALogikLag;
 using DTO;
 using Interfaces;
 using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Media;
 
 namespace BTAPræsentationsLag
 {
@@ -25,10 +27,14 @@ namespace BTAPræsentationsLag
         private MonitorerDTO MDTO;
         private KalibreringsVindue kalibreringsForm;
         private AlarmVindue alarmForm;
-        private double NulpunktsVærdi;
+        private double nulpunktsVærdi;
         private Gemvindue gemForm;
         private List<double> GUIChartPunkter;
         private Thread thread;
+        private bool alarmLydTilstand;
+        private bool alarmOnOff;
+
+        private SoundPlayer Player;
 
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
@@ -83,8 +89,8 @@ namespace BTAPræsentationsLag
 
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
-            NulpunktsVærdi = currentLL.NPJLL.hentNulpunktsSpænding();
-            MessageBox.Show("Nulpunktsjustering er foretaget. (" + NulpunktsVærdi + ")");
+            nulpunktsVærdi = currentLL.NPJLL.hentNulpunktsSpænding();
+            MessageBox.Show("Nulpunktsjustering er foretaget. (" + nulpunktsVærdi + ")");
             btnStartMåling.Enabled = true;
         }
 
@@ -112,19 +118,26 @@ namespace BTAPræsentationsLag
 
             if (alarmForm.ok == true)
             {
+                Player = new SoundPlayer();
+                Player.SoundLocation = Environment.CurrentDirectory + @"\AppData\beep.wav";
+
+                alarmLydTilstand = true;
+                alarmOnOff = true;
+
                 MDTO.RåBlodtrykssignal.Clear();
                 MDTO.NuværendeSekvens.Clear();
                 MDTO.SignalLængdeISek = 0;
 
                 BTChartInit();
 
+                påførChartAlarmgrænser();
 
                 currentLL.MLL.Attach(this);
-                currentLL.MLL.startMåling();               
+                currentLL.MLL.startMåling();
 
-                
-                btnStopMåling.Enabled = false;
-                btnStopMåling.Enabled = true;
+
+                btnStartMåling.Enabled = false;
+
                 BTN_FilterON.Enabled = true;
 
                 btnKalibrerSystem.Enabled = false;
@@ -133,16 +146,36 @@ namespace BTAPræsentationsLag
                 tbSys.Text = "";
                 tbDia.Text = "";
             }
-            
+
+        }
+
+        private void påførChartAlarmgrænser()
+        {
+            ChartBT.ChartAreas["BTChartArea"].AxisY.StripLines.Clear();
+
+            StripLine ØGrænse = new StripLine();
+            ØGrænse.IntervalOffset = Convert.ToDouble(ADTO.ØGrænse);
+            ØGrænse.StripWidth = 1;
+            ØGrænse.BackColor = Color.Red;
+            ØGrænse.Text = "Øvre Alarmgrænse ";
+
+            StripLine NGrænse = new StripLine();
+            NGrænse.IntervalOffset = Convert.ToDouble(ADTO.NGrænse);
+            NGrænse.StripWidth = 1;
+            NGrænse.BackColor = Color.Red;
+            NGrænse.Text = "Nedre Alarmgrænse ";
+
+            ChartBT.ChartAreas["BTChartArea"].AxisY.StripLines.Add(ØGrænse);
+            ChartBT.ChartAreas["BTChartArea"].AxisY.StripLines.Add(NGrænse);
         }
 
         private void btnStopMåling_Click(object sender, EventArgs e)
         {
             currentLL.MLL.Detach(this);
             currentLL.MLL.stopMåling();
-           
+
             BTNGemdata.Enabled = true;
-            btnStopMåling.Enabled = true;
+            btnStartMåling.Enabled = true;
             btnKalibrerSystem.Enabled = false;
             btnNulpunktsjusterSystem.Enabled = false;
         }
@@ -158,6 +191,17 @@ namespace BTAPræsentationsLag
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = -10.0;
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = 0.0;
 
+            ChartBT.ChartAreas["BTChartArea"].AxisX.MajorGrid.Enabled = true;
+            ChartBT.ChartAreas["BTChartArea"].AxisX.MajorGrid.Interval = 1;
+            ChartBT.ChartAreas["BTChartArea"].AxisX.MajorGrid.LineWidth = 1;
+            ChartBT.ChartAreas["BTChartArea"].AxisX.MajorGrid.LineColor = Color.White;
+
+            ChartBT.ChartAreas["BTChartArea"].AxisY.MajorGrid.Enabled = true;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.MajorGrid.Interval = 50;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.MajorGrid.LineWidth = 1;
+            ChartBT.ChartAreas["BTChartArea"].AxisY.MajorGrid.LineColor = Color.White;
+
+
             GUIChartPunkter = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10)]);
             double xval = -10.0;
             double sampleTime = 1.0 / MDTO.midlingsFrekvens;
@@ -166,13 +210,14 @@ namespace BTAPræsentationsLag
             {
                 xval += sampleTime;
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
+                ChartBT.Series["BTSerie"].Points.Last().Color = Color.Transparent;
             }
         }
 
         private void monitorerBTIGUI()
         {
-            currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, NulpunktsVærdi);
-            opdaterBTChart(MDTO.NuværendeSekvens);   
+            currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, nulpunktsVærdi);
+            opdaterBTChart(MDTO.NuværendeSekvens);
         }
 
         private void opdaterBTChart(List<double> NuværendeSekvens)
@@ -209,15 +254,54 @@ namespace BTAPræsentationsLag
                 }
             }
 
-            double step = (e.NuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
+            if (e.NuværendeSekvens.Any(item => item > ADTO.ØGrænse) && alarmLydTilstand == true)
+            {
+                Player.Play();
+
+                if (alarmOnOff == true)
+                {
+                    alarmOnOff = false;
+
+                    var res = MessageBox.Show("Den øvre grænseværdi for blodtrykket er overskredet, vil du slukke for alarmen?",
+                                        "Alarm overskredet!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        alarmLydTilstand = false;
+                    }
+                }
+
+            }
+            else if (e.NuværendeSekvens.Any(item => item < ADTO.NGrænse) && alarmLydTilstand == true)
+            {
+                Player.Play();
+
+                if (alarmOnOff == true)
+                {
+                    alarmOnOff = false;
+
+                    var res = MessageBox.Show("Den nedre grænseværdi for blodtrykket er overskredet, vil du slukke for alarmen?",
+                                    "Alarm overskredet!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (res == DialogResult.Yes)
+                    {
+                        alarmLydTilstand = false;
+                    }
+                }
+            }
+
 
             if (ChartBT.Series["BTSerie"].Points.Last().XValue > 10)
             {
-                var max = Math.Round(GUIChartPunkter.Max(),0);
+                var max = Math.Round(GUIChartPunkter.Max(), 0);
                 var min = Math.Round(GUIChartPunkter.Min(), 0);
                 tbSys.Text = max.ToString();
                 tbDia.Text = min.ToString();
+
+                btnStopMåling.Enabled = true;
             }
+
+            double step = (e.NuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + step, 1);
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);
@@ -227,18 +311,14 @@ namespace BTAPræsentationsLag
         {
             gemForm = new Gemvindue(currentLL, ref MDTO);
             gemForm.ShowDialog();
-
-
-            // this.KDTO = kalibreringsForm.KDTO;
         }
 
-        public void Update(/*List<double> sekvens*/)
+        public void Update()
         {
-            //MDTO.NuværendeSekvens = sekvens;
-
             thread = new Thread(monitorerBTIGUI);
             thread.Name = "monThread";
             thread.IsBackground = true;
+
             thread.Start();
         }
     }

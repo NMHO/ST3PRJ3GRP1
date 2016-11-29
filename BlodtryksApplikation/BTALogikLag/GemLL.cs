@@ -18,9 +18,9 @@ namespace BTALogikLag
             this.currentDatalag = mydal;
             this.GDTO = currentDatalag.GDL.GDTO;
          }
-        public bool validereCPR(string CPR)
+        public bool validerCPR(string CPR)
         {
-            char[] CPRArray = CPR.ToCharArray();
+            /*char[] CPRArray = CPR.ToCharArray();
             int resultat = 0;
             int[] factor = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
 
@@ -31,10 +31,29 @@ namespace BTALogikLag
             if (resultat == 0)
                 return true;
             else
-                return false;
+                return false;*/
+
+
+            // Nedenstående virker til cpr-validering :-)
+
+            int[] weight = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
+
+            int sum = 0;
+            if (CPR.Length == 10)
+            {
+                for (int i = 0; i < CPR.Length; i++)
+                {
+                    char[] chars = CPR.ToCharArray();
+                    sum += (chars[i] - 0x30) * weight[i];
+                }
+                int res = sum % 11;
+                if (res == 0)
+                    return true;
+            }
+            return false;
         }
 
-        public bool validerePersonalenr(string pnummer)
+        public bool validerPersonalenr(string pnummer)
         {
             char[] PnummerArray = pnummer.ToCharArray();
             if (PnummerArray.Length == 6)

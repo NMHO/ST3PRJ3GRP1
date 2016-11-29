@@ -30,7 +30,7 @@ namespace BTADataLag
         {
             analogInTask = new NationalInstruments.DAQmx.Task();
 
-            analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
+            analogInTask.AIChannels.CreateVoltageChannel("Dev2/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
             analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
 

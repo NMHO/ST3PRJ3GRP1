@@ -23,7 +23,8 @@ namespace BTADataLag
             try
             {
                 string json = JsonConvert.SerializeObject(GDTO);
-                string path = Environment.CurrentDirectory + @"\AppData\Gem.json";
+                string path = Environment.CurrentDirectory +
+                    @"\AppData\" + GDTO.CPR + " - " + string.Format("{0:yyyy-MM-dd_HH-mm-ss}.json", GDTO.Dato);
                 File.WriteAllText(path, json);
                 return true;
             }

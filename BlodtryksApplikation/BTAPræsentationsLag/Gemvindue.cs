@@ -55,8 +55,8 @@ namespace BTAPræsentationsLag
         }
         private void BNTGem_Click(object sender, EventArgs e)
         {
-            CPRvalidering = currentLL.GLL.validereCPR(TXBCPR.Text);
-            PnummerValidering = currentLL.GLL.validerePersonalenr(TXBPersonalenummer.Text); 
+            CPRvalidering = currentLL.GLL.validerCPR(TXBCPR.Text);
+            PnummerValidering = currentLL.GLL.validerPersonalenr(TXBPersonalenummer.Text); 
             
             bool chek = validereTjekboxValgt();
             if (CPRvalidering == true && PnummerValidering == true && chek == true)
@@ -66,6 +66,8 @@ namespace BTAPræsentationsLag
                 GDTO.SignalBLOB = list.ToArray().SelectMany(value => BitConverter.GetBytes(value)).ToArray();
                 GDTO.CPR = TXBCPR.Text;
                 GDTO.Personalenummer = TXBPersonalenummer.Text;
+                GDTO.Dato = DateTime.Now;
+                GDTO.SignalLængde = valgtLængde.ToString() + " sekunder";
 
                 bool b = currentLL.GLL.gemData(GDTO);
                 if(b == true)

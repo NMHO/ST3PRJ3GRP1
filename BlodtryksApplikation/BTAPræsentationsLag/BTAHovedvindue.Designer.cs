@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnKalibrerSystem = new System.Windows.Forms.Button();
             this.btnNulpunktsjusterSystem = new System.Windows.Forms.Button();
             this.BTN_FilterON = new System.Windows.Forms.Button();
@@ -50,10 +50,9 @@
             // 
             // btnKalibrerSystem
             // 
-            this.btnKalibrerSystem.Location = new System.Drawing.Point(8, 33);
-            this.btnKalibrerSystem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnKalibrerSystem.Location = new System.Drawing.Point(1100, 12);
             this.btnKalibrerSystem.Name = "btnKalibrerSystem";
-            this.btnKalibrerSystem.Size = new System.Drawing.Size(107, 26);
+            this.btnKalibrerSystem.Size = new System.Drawing.Size(222, 40);
             this.btnKalibrerSystem.TabIndex = 1;
             this.btnKalibrerSystem.Text = "Kalibrér system";
             this.btnKalibrerSystem.UseVisualStyleBackColor = true;
@@ -61,10 +60,9 @@
             // 
             // btnNulpunktsjusterSystem
             // 
-            this.btnNulpunktsjusterSystem.Location = new System.Drawing.Point(8, 83);
-            this.btnNulpunktsjusterSystem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNulpunktsjusterSystem.Location = new System.Drawing.Point(842, 12);
             this.btnNulpunktsjusterSystem.Name = "btnNulpunktsjusterSystem";
-            this.btnNulpunktsjusterSystem.Size = new System.Drawing.Size(107, 26);
+            this.btnNulpunktsjusterSystem.Size = new System.Drawing.Size(222, 40);
             this.btnNulpunktsjusterSystem.TabIndex = 2;
             this.btnNulpunktsjusterSystem.Text = "Nulpunktsjuster";
             this.btnNulpunktsjusterSystem.UseVisualStyleBackColor = true;
@@ -72,10 +70,9 @@
             // 
             // BTN_FilterON
             // 
-            this.BTN_FilterON.Location = new System.Drawing.Point(163, 33);
-            this.BTN_FilterON.Margin = new System.Windows.Forms.Padding(2);
+            this.BTN_FilterON.Location = new System.Drawing.Point(271, 12);
             this.BTN_FilterON.Name = "BTN_FilterON";
-            this.BTN_FilterON.Size = new System.Drawing.Size(148, 26);
+            this.BTN_FilterON.Size = new System.Drawing.Size(222, 40);
             this.BTN_FilterON.TabIndex = 4;
             this.BTN_FilterON.Text = "Diagnose-tilstand";
             this.BTN_FilterON.UseVisualStyleBackColor = true;
@@ -83,10 +80,9 @@
             // 
             // btnStartMåling
             // 
-            this.btnStartMåling.Location = new System.Drawing.Point(333, 33);
-            this.btnStartMåling.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStartMåling.Location = new System.Drawing.Point(12, 13);
             this.btnStartMåling.Name = "btnStartMåling";
-            this.btnStartMåling.Size = new System.Drawing.Size(107, 26);
+            this.btnStartMåling.Size = new System.Drawing.Size(222, 40);
             this.btnStartMåling.TabIndex = 6;
             this.btnStartMåling.Text = "Start måling";
             this.btnStartMåling.UseVisualStyleBackColor = true;
@@ -94,28 +90,31 @@
             // 
             // ChartBT
             // 
+            this.ChartBT.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.BackColor = System.Drawing.Color.Black;
             chartArea1.Name = "BTChartArea";
             this.ChartBT.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.ChartBT.Legends.Add(legend1);
-            this.ChartBT.Location = new System.Drawing.Point(17, 125);
-            this.ChartBT.Margin = new System.Windows.Forms.Padding(2);
+            this.ChartBT.Location = new System.Drawing.Point(26, 192);
             this.ChartBT.Name = "ChartBT";
+            series1.BorderWidth = 2;
             series1.ChartArea = "BTChartArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
+            series1.Color = System.Drawing.Color.Lime;
             series1.Name = "BTSerie";
             this.ChartBT.Series.Add(series1);
-            this.ChartBT.Size = new System.Drawing.Size(1239, 582);
+            this.ChartBT.Size = new System.Drawing.Size(1858, 895);
             this.ChartBT.TabIndex = 7;
             this.ChartBT.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Titel";
+            title1.Text = "Blodtryksgraf";
+            this.ChartBT.Titles.Add(title1);
             // 
             // btnStopMåling
             // 
-            this.btnStopMåling.Location = new System.Drawing.Point(333, 83);
-            this.btnStopMåling.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStopMåling.Location = new System.Drawing.Point(12, 79);
             this.btnStopMåling.Name = "btnStopMåling";
-            this.btnStopMåling.Size = new System.Drawing.Size(107, 26);
+            this.btnStopMåling.Size = new System.Drawing.Size(222, 40);
             this.btnStopMåling.TabIndex = 8;
             this.btnStopMåling.Text = "Stop måling";
             this.btnStopMåling.UseVisualStyleBackColor = true;
@@ -123,10 +122,9 @@
             // 
             // BTNGemdata
             // 
-            this.BTNGemdata.Location = new System.Drawing.Point(163, 83);
-            this.BTNGemdata.Margin = new System.Windows.Forms.Padding(2);
+            this.BTNGemdata.Location = new System.Drawing.Point(271, 79);
             this.BTNGemdata.Name = "BTNGemdata";
-            this.BTNGemdata.Size = new System.Drawing.Size(148, 26);
+            this.BTNGemdata.Size = new System.Drawing.Size(222, 40);
             this.BTNGemdata.TabIndex = 9;
             this.BTNGemdata.Text = "Gem data";
             this.BTNGemdata.UseVisualStyleBackColor = true;
@@ -135,42 +133,46 @@
             // tbSys
             // 
             this.tbSys.Enabled = false;
-            this.tbSys.Location = new System.Drawing.Point(558, 39);
+            this.tbSys.Location = new System.Drawing.Point(1705, 47);
+            this.tbSys.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbSys.Name = "tbSys";
-            this.tbSys.Size = new System.Drawing.Size(100, 20);
+            this.tbSys.Size = new System.Drawing.Size(148, 26);
             this.tbSys.TabIndex = 10;
             // 
             // tbDia
             // 
             this.tbDia.Enabled = false;
-            this.tbDia.Location = new System.Drawing.Point(558, 83);
+            this.tbDia.Location = new System.Drawing.Point(1705, 116);
+            this.tbDia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbDia.Name = "tbDia";
-            this.tbDia.Size = new System.Drawing.Size(100, 20);
+            this.tbDia.Size = new System.Drawing.Size(148, 26);
             this.tbDia.TabIndex = 11;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(558, 20);
+            this.label1.Location = new System.Drawing.Point(1701, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(122, 20);
             this.label1.TabIndex = 12;
-            this.label1.Text = "Systole";
+            this.label1.Text = "Systole (mmHg)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(558, 66);
+            this.label2.Location = new System.Drawing.Point(1701, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(128, 20);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Diastole";
+            this.label2.Text = "Diastole (mmHg)";
             // 
             // BTAHovedvindue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1270, 674);
+            this.ClientSize = new System.Drawing.Size(1912, 1135);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbDia);
@@ -182,7 +184,6 @@
             this.Controls.Add(this.BTN_FilterON);
             this.Controls.Add(this.btnNulpunktsjusterSystem);
             this.Controls.Add(this.btnKalibrerSystem);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BTAHovedvindue";
             this.Text = "BTA - Hovedvindue";
             this.Shown += new System.EventHandler(this.BTAHovedvindue_Shown);
