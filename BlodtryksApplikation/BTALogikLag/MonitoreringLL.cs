@@ -16,12 +16,14 @@ namespace BTALogikLag
         private ControlDataLag currentDatalag;
         public FilterLL FLL;
         public int framesize { get; set; }
-        
+        private SemaphoreSlim sem;
+
         public MonitoreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
             FLL = new FilterLL(currentDatalag);
             framesize = 0;
+            sem = new SemaphoreSlim(1);
         }
 
         public void startMåling()
@@ -51,15 +53,18 @@ namespace BTALogikLag
 
             if (framesize > 1)
             {
+                sem.Wait();
                 MDTO.NuværendeSekvens = FLL.FiltrerSignal(framesize, midlingAfIndlæstSignal(råtSignal));
             }
             else
             {
+                sem.Wait();
                 MDTO.NuværendeSekvens = midlingAfIndlæstSignal(råtSignal);
             }         
             MDTO.RåBlodtrykssignal.AddRange(råtSignal);
             MDTO.SignalLængdeISek = Convert.ToDouble(MDTO.RåBlodtrykssignal.Count()) / 1000.0;
-            //Thread.Sleep(100); // simulerer DAQ-indlæsning              
+
+            sem.Release();
         }
 
         public void indstilRefTilDTO(ref MonitorerDTO MDTO)

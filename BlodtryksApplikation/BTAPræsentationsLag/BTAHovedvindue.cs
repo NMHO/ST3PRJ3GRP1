@@ -32,8 +32,7 @@ namespace BTAPræsentationsLag
         private List<double> GUIChartPunkter;
         private Thread thread;
         private bool alarmLydTilstand;
-        private bool alarmOnOff;
-
+        private bool alarmOnOff;        
         private SoundPlayer Player;
 
         /// <summary>
@@ -47,6 +46,8 @@ namespace BTAPræsentationsLag
             MDTO = new MonitorerDTO();
             currentLL.MLL.indstilRefTilDTO(ref MDTO);
             BTChartInit();
+            alarmLydTilstand = true;
+            alarmOnOff = true;
         }
 
         private void btnKalibrerSystem_Click(object sender, EventArgs e)
@@ -121,8 +122,10 @@ namespace BTAPræsentationsLag
                 Player = new SoundPlayer();
                 Player.SoundLocation = Environment.CurrentDirectory + @"\AppData\beep.wav";
 
+                /*
                 alarmLydTilstand = true;
                 alarmOnOff = true;
+                */
 
                 MDTO.RåBlodtrykssignal.Clear();
                 MDTO.NuværendeSekvens.Clear();
@@ -143,8 +146,12 @@ namespace BTAPræsentationsLag
                 btnKalibrerSystem.Enabled = false;
                 btnNulpunktsjusterSystem.Enabled = false;
 
-                tbSys.Text = "";
-                tbDia.Text = "";
+                txtSystole.Text = "0";
+                txtSystole.ForeColor = Color.Lime;
+
+                txtDiastole.Text = "0";
+                txtDiastole.ForeColor = Color.Lime;
+
             }
 
         }
@@ -250,8 +257,9 @@ namespace BTAPræsentationsLag
                 }
                 else if (GUIChartPunkter.Last() < this.ADTO.NGrænse)
                 {
-                    ChartBT.Series["BTSerie"].Points.Last().Color = Color.Red;
+                    ChartBT.Series["BTSerie"].Points.Last().Color = Color.Red;                    
                 }
+                
             }
 
             if (e.NuværendeSekvens.Any(item => item > ADTO.ØGrænse) && alarmLydTilstand == true)
@@ -268,6 +276,7 @@ namespace BTAPræsentationsLag
                     if (res == DialogResult.Yes)
                     {
                         alarmLydTilstand = false;
+                        cbAlarmlyd.Checked = false;
                     }
                 }
 
@@ -286,6 +295,7 @@ namespace BTAPræsentationsLag
                     if (res == DialogResult.Yes)
                     {
                         alarmLydTilstand = false;
+                        cbAlarmlyd.Checked = false;
                     }
                 }
             }
@@ -295,11 +305,30 @@ namespace BTAPræsentationsLag
             {
                 var max = Math.Round(GUIChartPunkter.Max(), 0);
                 var min = Math.Round(GUIChartPunkter.Min(), 0);
-                tbSys.Text = max.ToString();
-                tbDia.Text = min.ToString();
+                txtSystole.Text = max.ToString();
+                txtDiastole.Text = min.ToString();
+
+                if (max > this.ADTO.ØGrænse)
+                {
+                    txtSystole.ForeColor = Color.Red;
+                }
+                else
+                {
+                    txtSystole.ForeColor = Color.Lime;
+                }
+
+                if (min < this.ADTO.NGrænse)
+                {
+                    txtDiastole.ForeColor = Color.Red;
+                }
+                else
+                {
+                    txtDiastole.ForeColor = Color.Lime;
+                }
 
                 btnStopMåling.Enabled = true;
             }
+           
 
             double step = (e.NuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
 
@@ -314,12 +343,26 @@ namespace BTAPræsentationsLag
         }
 
         public void Update()
-        {
+        {            
             thread = new Thread(monitorerBTIGUI);
             thread.Name = "monThread";
             thread.IsBackground = true;
 
             thread.Start();
+        }
+
+        private void cbAlarmlyd_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (cbAlarmlyd.Checked == true)
+            {
+                alarmLydTilstand = true;
+                alarmOnOff = true;
+            }
+            else
+            {
+                alarmLydTilstand = false;
+                alarmOnOff = false;
+            }
         }
     }
 
