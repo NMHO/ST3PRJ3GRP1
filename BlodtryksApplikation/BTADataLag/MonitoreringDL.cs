@@ -25,7 +25,9 @@ namespace BTADataLag
             
         }
         
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void indstilDAQ()
         {
             analogInTask = new NationalInstruments.DAQmx.Task();
@@ -101,20 +103,33 @@ namespace BTADataLag
 
     }
 
+    /// <summary>
+    /// Abstrakt subjekt-klasse som MDL arver fra. Bruges til observer-pattern.
+    /// </summary>
     abstract public class Subject
     {
         private List<IObserverLL> observers = new List<IObserverLL>();
 
+        /// <summary>
+        /// Attach'er alle oberservers til subjekt
+        /// </summary>
+        /// <param name="observer"></param>
         public void Attach(IObserverLL observer)
         {
             observers.Add(observer);
         }
-
+        /// <summary>
+        /// Detach'er alle observers fra subjekt
+        /// </summary>
+        /// <param name="observer"></param>
         public void Detach(IObserverLL observer)
         {
             observers.Remove(observer);
         }
-
+        /// <summary>
+        /// Kalder Update i alle attach'ede observerklasser
+        /// </summary>
+        /// <param name="sekvens"></param>
         public void Notify(List<double> sekvens)
         {
             foreach (var observer in observers)

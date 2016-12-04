@@ -89,3 +89,10 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.MStudioCLM.dll
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.DAQmx.xml
 C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.Common.xml
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.DAQmx.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.Common.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.NiLmClientDLL.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.Common.Native.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.MStudioCLM.dll
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.DAQmx.xml
+C:\Users\Kristian\Documents\GitHub\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\NationalInstruments.Common.xml

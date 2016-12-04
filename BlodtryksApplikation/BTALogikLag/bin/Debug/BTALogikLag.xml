@@ -4,9 +4,15 @@
         <name>BTALogikLag</name>
     </assembly>
     <members>
+        <member name="M:BTALogikLag.FilterLL.#ctor(BTADataLag.ControlDataLag)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="mydal"></param>
+        </member>
         <member name="M:BTALogikLag.FilterLL.FiltrerSignal(System.Int32,System.Collections.Generic.List{System.Double})">
             <summary>
-            Denne metode filtrere den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+            Denne metode filtrerer den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
             </summary>
             <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
             <param name="data">Listen med data fra DAQ'en</param>
@@ -57,6 +63,75 @@
             <returns>
             Returnerer en KalibreringDTO med de indlæste kalibreringsdata
             </returns>
+        </member>
+        <member name="T:BTALogikLag.MonitoreringLL">
+            <summary>
+            Henter og håndterer data fra datalaget i forbindelse med monitorering
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.#ctor(BTADataLag.ControlDataLag)">
+            <summary>
+            Constructor der modtager en reference til datalaget. Sætter framesize til 0.
+            </summary>
+            <param name="mydal"></param>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.startMåling">
+            <summary>
+            Attach'er klassen til MDL og kalder asynkront kald i datalaget med 100 samples.
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.stopMåling">
+            <summary>
+            Detach'er klassen fra MDL og stopper asynkront kald.
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.hentBTSekvens(System.Double,System.Double)">
+            <summary>
+            Henter nuværende sekvens fra MDTO og ganger kalibreringshældningen på, og trækker nulpunktsjusteringen fra. Herefter sættes den nuværende sekvens i MDTO igen, afhængigt af framesize.
+            </summary>
+            <param name="KHældning"></param>
+            <param name="NVærdi"></param>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.indstilRefTilDTO(DTO.MonitorerDTO@)">
+            <summary>
+            Opretter en reference til MDTO
+            </summary>
+            <param name="MDTO"></param>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.midlingAfIndlæstSignal(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Midler indlæst signal, således at der tages et gennemsnit af 5 værdier. 
+            </summary>
+            <param name="nSekvens"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BTALogikLag.MonitoreringLL.Update(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Sætter den nuværende sekvens i MDTO lig med indlæst sekvens fra DAQ. Herefter kaldes Notify, som også ligger i MLL.
+            </summary>
+            <param name="sekvens"></param>
+        </member>
+        <member name="T:BTALogikLag.Subject">
+            <summary>
+            Abstrakt subjekt-klasse som MLL arver fra. Bruges til observer-pattern.
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.Subject.Attach(Interfaces.IObserverPL)">
+            <summary>
+            Attach'er alle oberservers til subjekt
+            </summary>
+            <param name="observer"></param>
+        </member>
+        <member name="M:BTALogikLag.Subject.Detach(Interfaces.IObserverPL)">
+            <summary>
+            Detach'er alle observers fra subjekt
+            </summary>
+            <param name="observer"></param>
+        </member>
+        <member name="M:BTALogikLag.Subject.Notify">
+            <summary>
+            Kalder Update i alle attach'ede observerklasser
+            </summary>
         </member>
         <member name="T:BTALogikLag.NulpunktsjusteringLL">
             <summary>

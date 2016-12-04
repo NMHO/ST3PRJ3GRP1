@@ -58,6 +58,11 @@
             Indlæser datasekvenser fra DAQ'en
             </summary>
         </member>
+        <member name="M:BTADataLag.MonitoreringDL.indstilDAQ">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:BTADataLag.MonitoreringDL.startInputAsync(System.Int32)">
             <summary>
             Opretter en ny monitorerings DTO
@@ -68,6 +73,29 @@
             <returns>
             Returnerer af den indlæste datasekvens
             </returns>
+        </member>
+        <member name="T:BTADataLag.Subject">
+            <summary>
+            Abstrakt subjekt-klasse som MDL arver fra. Bruges til observer-pattern.
+            </summary>
+        </member>
+        <member name="M:BTADataLag.Subject.Attach(Interfaces.IObserverLL)">
+            <summary>
+            Attach'er alle oberservers til subjekt
+            </summary>
+            <param name="observer"></param>
+        </member>
+        <member name="M:BTADataLag.Subject.Detach(Interfaces.IObserverLL)">
+            <summary>
+            Detach'er alle observers fra subjekt
+            </summary>
+            <param name="observer"></param>
+        </member>
+        <member name="M:BTADataLag.Subject.Notify(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Kalder Update i alle attach'ede observerklasser
+            </summary>
+            <param name="sekvens"></param>
         </member>
         <member name="T:BTADataLag.NulpunktsjusteringDL">
             <summary>

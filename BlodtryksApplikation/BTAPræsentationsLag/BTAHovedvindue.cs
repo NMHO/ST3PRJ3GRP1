@@ -50,6 +50,11 @@ namespace BTAPræsentationsLag
             alarmOnOff = true;
         }
 
+        /// <summary>
+        /// Åbner kaliberingsform
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnKalibrerSystem_Click(object sender, EventArgs e)
         {
             kalibreringsForm = new KalibreringsVindue(currentLL);
@@ -87,7 +92,11 @@ namespace BTAPræsentationsLag
 
         }
 
-
+        /// <summary>
+        /// Henter nulpunktsspænding 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNulpunktsjusterSystem_Click(object sender, EventArgs e)
         {
             nulpunktsVærdi = currentLL.NPJLL.hentNulpunktsSpænding();
@@ -95,7 +104,11 @@ namespace BTAPræsentationsLag
             btnStartMåling.Enabled = true;
         }
 
-
+        /// <summary>
+        /// Aktiverer/deaktiverer filter ved at ændre framesize.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTN_FilterON_Click(object sender, EventArgs e)
         {
             if (BTN_FilterON.Text == "Diagnose-tilstand")
@@ -111,6 +124,11 @@ namespace BTAPræsentationsLag
 
         }
 
+        /// <summary>
+        /// Åbner alarm-vindue og starter herefter indlæsning af signal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStartMåling_Click(object sender, EventArgs e)
         {
             alarmForm = new AlarmVindue();
@@ -155,7 +173,9 @@ namespace BTAPræsentationsLag
             }
 
         }
-
+        /// <summary>
+        /// Indsætter alarmgrænser på chart
+        /// </summary>
         private void påførChartAlarmgrænser()
         {
             ChartBT.ChartAreas["BTChartArea"].AxisY.StripLines.Clear();
@@ -176,6 +196,11 @@ namespace BTAPræsentationsLag
             ChartBT.ChartAreas["BTChartArea"].AxisY.StripLines.Add(NGrænse);
         }
 
+        /// <summary>
+        /// Stopper indlæsning af signal.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnStopMåling_Click(object sender, EventArgs e)
         {
             currentLL.MLL.Detach(this);
@@ -186,7 +211,9 @@ namespace BTAPræsentationsLag
             btnKalibrerSystem.Enabled = false;
             btnNulpunktsjusterSystem.Enabled = false;
         }
-
+        /// <summary>
+        /// Initialiserer chart
+        /// </summary>
         private void BTChartInit()
         {
             ChartBT.Series["BTSerie"].Points.Clear();
@@ -220,13 +247,18 @@ namespace BTAPræsentationsLag
                 ChartBT.Series["BTSerie"].Points.Last().Color = Color.Transparent;
             }
         }
-
+        /// <summary>
+        /// Henter BT sekvens fra DTO og kalder opdaterBTChart
+        /// </summary>
         private void monitorerBTIGUI()
         {
             currentLL.MLL.hentBTSekvens(KDTO.kalibreringsHældning, nulpunktsVærdi);
             opdaterBTChart(MDTO.NuværendeSekvens);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="NuværendeSekvens"></param>
         private void opdaterBTChart(List<double> NuværendeSekvens)
         {
             EventArgs e = new MyEvent(NuværendeSekvens);
@@ -237,6 +269,11 @@ namespace BTAPræsentationsLag
 
         private delegate void MyEventsHandler(object sender, MyEvent e);
 
+        /// <summary>
+        /// opdaterer chart kontinuerligt og validerer grænseværdier for alarm
+        /// </summary>
+        /// <param name="o"></param>
+        /// <param name="e"></param>
         private void opdaterChart(object o, MyEvent e)
         {
             double nuværendeXval = ChartBT.Series["BTSerie"].Points.Last().XValue;
@@ -336,12 +373,20 @@ namespace BTAPræsentationsLag
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);
         }
 
+        /// <summary>
+        /// Åbner Gem-vindue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTNGemdata_Click(object sender, EventArgs e)
         {
             gemForm = new Gemvindue(currentLL, ref MDTO);
             gemForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Opretter tråd som kalder monitorerBTIGUI fra præsentationslaget.
+        /// </summary>
         public void Update()
         {            
             thread = new Thread(monitorerBTIGUI);
@@ -351,6 +396,11 @@ namespace BTAPræsentationsLag
             thread.Start();
         }
 
+        /// <summary>
+        /// Aktiverer/deaktiverer alarmlyd
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbAlarmlyd_MouseClick(object sender, MouseEventArgs e)
         {
             if (cbAlarmlyd.Checked == true)

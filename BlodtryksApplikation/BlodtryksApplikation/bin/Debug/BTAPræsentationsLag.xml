@@ -94,10 +94,92 @@
             Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
             </summary>
         </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Åbner kaliberingsform
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="M:BTAPræsentationsLag.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)">
             <summary>
             Ved start af program indlæses kalibreringsdata fra kalibreringsfil, hvis den findes
             </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Henter nulpunktsspænding 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.BTN_FilterON_Click(System.Object,System.EventArgs)">
+            <summary>
+            Aktiverer/deaktiverer filter ved at ændre framesize.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.btnStartMåling_Click(System.Object,System.EventArgs)">
+            <summary>
+            Åbner alarm-vindue og starter herefter indlæsning af signal.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.påførChartAlarmgrænser">
+            <summary>
+            Indsætter alarmgrænser på chart
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.btnStopMåling_Click(System.Object,System.EventArgs)">
+            <summary>
+            Stopper indlæsning af signal.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.BTChartInit">
+            <summary>
+            Initialiserer chart
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.monitorerBTIGUI">
+            <summary>
+            Henter BT sekvens fra DTO og kalder opdaterBTChart
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.opdaterBTChart(System.Collections.Generic.List{System.Double})">
+            <summary>
+            
+            </summary>
+            <param name="NuværendeSekvens"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.opdaterChart(System.Object,BTAPræsentationsLag.MyEvent)">
+            <summary>
+            opdaterer chart kontinuerligt og validerer grænseværdier for alarm
+            </summary>
+            <param name="o"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.BTNGemdata_Click(System.Object,System.EventArgs)">
+            <summary>
+            Åbner Gem-vindue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.Update">
+            <summary>
+            Opretter tråd som kalder monitorerBTIGUI fra præsentationslaget.
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.BTAHovedvindue.cbAlarmlyd_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Aktiverer/deaktiverer alarmlyd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
         </member>
         <member name="F:BTAPræsentationsLag.BTAHovedvindue.components">
             <summary>

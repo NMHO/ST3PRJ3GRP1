@@ -11,12 +11,16 @@ namespace BTALogikLag
     {
         private ControlDataLag currentDatalag;
 
+        /// <summary>
+        /// Constructor 
+        /// </summary>
+        /// <param name="mydal"></param>
         public FilterLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
         }
         /// <summary>
-        /// Denne metode filtrere den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+        /// Denne metode filtrerer den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
         /// </summary>
         /// <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
         /// <param name="data">Listen med data fra DAQ'en</param>
