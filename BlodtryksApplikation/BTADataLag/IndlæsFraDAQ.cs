@@ -26,7 +26,9 @@ namespace BTADataLag
         public NationalInstruments.DAQmx.Task analogInTask { get; set; }
         public AnalogSingleChannelReader reader { get; set; }       
 
-
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public IndlæsFraDAQ()
         {            
             

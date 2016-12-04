@@ -20,13 +20,17 @@ namespace BTADataLag
         public int samples { get; set; }
         public NationalInstruments.DAQmx.Task analogInTask { get; set; }
         public AnalogSingleChannelReader reader { get; set; }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public MonitoreringDL()
         {
             
         }
         
         /// <summary>
-        /// 
+        /// Indstiller DAQ
         /// </summary>
         public void indstilDAQ()
         {

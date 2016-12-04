@@ -13,11 +13,21 @@ namespace BTALogikLag
         public GemDTO GDTO { get; set; }
         private ControlDataLag currentDatalag;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="mydal"></param>
         public GemLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
             this.GDTO = currentDatalag.GDL.GDTO;
-         }
+        }
+
+        /// <summary>
+        /// Validerer CPR nr
+        /// </summary>
+        /// <param name="CPR"></param>
+        /// <returns></returns>
         public bool validerCPR(string CPR)
         {
             /*char[] CPRArray = CPR.ToCharArray();
@@ -53,6 +63,11 @@ namespace BTALogikLag
             return false;
         }
 
+        /// <summary>
+        /// Validerer personalenummer
+        /// </summary>
+        /// <param name="pnummer"></param>
+        /// <returns></returns>
         public bool validerPersonalenr(string pnummer)
         {
             char[] PnummerArray = pnummer.ToCharArray();
@@ -64,6 +79,11 @@ namespace BTALogikLag
                 return false;
         }
         
+        /// <summary>
+        /// Kalder gem metode i GDL
+        /// </summary>
+        /// <param name="GDTO_"></param>
+        /// <returns></returns>
         public bool gemData(GemDTO GDTO_)
         {
             bool b = currentDatalag.GDL.gemDataTilFil(GDTO_);
