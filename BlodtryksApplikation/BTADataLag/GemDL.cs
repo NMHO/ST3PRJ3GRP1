@@ -13,11 +13,19 @@ namespace BTADataLag
     {
         public GemDTO GDTO { get; set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public GemDL()
         {
             this.GDTO = new GemDTO();
         }
-    
+
+        /// <summary>
+        /// Gemmer valgt data i fil
+        /// </summary>
+        /// <param name="GDTO"></param>
+        /// <returns></returns>
         public bool gemDataTilFil(GemDTO GDTO)
         {
             try

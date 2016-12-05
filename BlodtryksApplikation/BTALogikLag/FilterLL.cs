@@ -7,6 +7,9 @@ using BTADataLag;
 
 namespace BTALogikLag
 {
+    /// <summary>
+    /// Klasse der indeholder algoritme for filtrering af signal
+    /// </summary>
     public class FilterLL
     {
         private ControlDataLag currentDatalag;

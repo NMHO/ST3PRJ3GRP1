@@ -12,6 +12,9 @@ using BTALogikLag;
 
 namespace BTAPræsentationsLag
 {
+    /// <summary>
+    /// Vindue der dukker op når der trykkes på Gem
+    /// </summary>
     public partial class Gemvindue : Form
     {
         private ControlLogikLag currentLL;
@@ -22,6 +25,11 @@ namespace BTAPræsentationsLag
         private bool PnummerValidering;
         private int valgtLængde;
        
+        /// <summary>
+        /// Constructor 
+        /// </summary>
+        /// <param name="myLL"></param>
+        /// <param name="MDTO"></param>
         public Gemvindue(ControlLogikLag myLL, ref MonitorerDTO MDTO)
         {
             this.currentLL = myLL;
@@ -32,7 +40,10 @@ namespace BTAPræsentationsLag
 
         }
 
-       
+       /// <summary>
+       /// Tjekker hvor meget af signalet der ønskes gemt
+       /// </summary>
+       /// <returns></returns>
         private bool validereTjekboxValgt()
         {
             if (RB10sek.Checked && MDTO.RåBlodtrykssignal.Count > 10000)
@@ -53,6 +64,12 @@ namespace BTAPræsentationsLag
             else
                 return false;
         }
+
+        /// <summary>
+        /// Gemmer valgt data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BNTGem_Click(object sender, EventArgs e)
         {
             CPRvalidering = currentLL.GLL.validerCPR(TXBCPR.Text);
@@ -104,6 +121,11 @@ namespace BTAPræsentationsLag
 
         }
 
+        /// <summary>
+        /// Lukker vindue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BTNAnnuller_Click(object sender, EventArgs e)
         {
             this.Close();
