@@ -9,6 +9,11 @@
             Abstrakt klasse til indlæsning fra DAQ
             </summary>
         </member>
+        <member name="M:BTADataLag.IndlæsFraDAQ.indstilDAQ">
+            <summary>
+            Indstiller DAQ til dataopsamling
+            </summary>
+        </member>
         <member name="M:BTADataLag.IndlæsFraDAQ.ReadInput(System.Int32)">
             <summary>
             Indlæser en serie af samples fra NI-DAQ i volt
@@ -60,19 +65,25 @@
         </member>
         <member name="M:BTADataLag.MonitoreringDL.indstilDAQ">
             <summary>
-            
+            Indstiller DAQ til dataopsamling
             </summary>
         </member>
         <member name="M:BTADataLag.MonitoreringDL.startInputAsync(System.Int32)">
             <summary>
-            Opretter en ny monitorerings DTO
+            Starter den asynkrone indlæsning af data fra DAQ'en        
             </summary>
+            <param name="samples"></param>
+        </member>
+        <member name="M:BTADataLag.MonitoreringDL.stoptInputAsync">
             <summary>
-            Kalder metode der indlæser en datasekvens
+            Stopper den asynkrone indlæsning af data fra DAQ'en
             </summary>
-            <returns>
-            Returnerer af den indlæste datasekvens
-            </returns>
+        </member>
+        <member name="M:BTADataLag.MonitoreringDL.InputRead(System.IAsyncResult)">
+            <summary>
+            Læser data og konverterer til en liste. Kalder Notify som giver besked til de attach'ede observers
+            </summary>
+            <param name="ar"></param>
         </member>
         <member name="T:BTADataLag.Subject">
             <summary>

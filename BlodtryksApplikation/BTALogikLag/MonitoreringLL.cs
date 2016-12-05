@@ -52,7 +52,8 @@ namespace BTALogikLag
         }
 
         /// <summary>
-        /// Henter nuværende sekvens fra MDTO og ganger kalibreringshældningen på, og trækker nulpunktsjusteringen fra. Herefter sættes den nuværende sekvens i MDTO igen, afhængigt af framesize.
+        /// Henter nuværende sekvens fra MDTO og ganger kalibreringshældningen på, og trækker nulpunktsjusteringen fra. 
+        /// Herefter sættes den nuværende sekvens i MDTO igen, afhængigt af framesize.
         /// </summary>
         /// <param name="KHældning"></param>
         /// <param name="NVærdi"></param>
@@ -60,13 +61,25 @@ namespace BTALogikLag
         {
 
             var råtSignal = MDTO.NuværendeSekvens;
-            
+
+
+            if (råtSignal.Average() > 5)
+            {
+                for (int i = 0; i < råtSignal.Count; i++)
+                {
+                    råtSignal[i] = 5;
+                }
+            }
+
             double temp;
+
             for (int i = 0; i < råtSignal.Count; i++)
             {
                 temp = (råtSignal[i] * KHældning) - NVærdi;
                 råtSignal[i] = temp;
             }
+
+            
             
 
             if (framesize > 1)

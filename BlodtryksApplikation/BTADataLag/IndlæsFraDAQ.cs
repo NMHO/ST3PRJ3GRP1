@@ -25,24 +25,29 @@ namespace BTADataLag
         public int samples { get; set; }
         public NationalInstruments.DAQmx.Task analogInTask { get; set; }
         public AnalogSingleChannelReader reader { get; set; }       
-
-
-        public IndlæsFraDAQ()
-        {            
-            
-        }
-
+        
+        /// <summary>
+        /// Indstiller DAQ til dataopsamling
+        /// </summary>
         public void indstilDAQ()
         {
-            analogInTask = new NationalInstruments.DAQmx.Task();
+            try
+            {
+                analogInTask = new NationalInstruments.DAQmx.Task();
 
-            analogInTask.AIChannels.CreateVoltageChannel("Dev2/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
+                analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-            analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
+                analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
 
-            analogInTask.Control(TaskAction.Verify);            
+                analogInTask.Control(TaskAction.Verify);
 
-            reader = new AnalogSingleChannelReader(analogInTask.Stream);
+                reader = new AnalogSingleChannelReader(analogInTask.Stream);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }       
 
         /// <summary>

@@ -19,23 +19,7 @@ namespace BTALogikLag
             this.GDTO = currentDatalag.GDL.GDTO;
          }
         public bool validerCPR(string CPR)
-        {
-            /*char[] CPRArray = CPR.ToCharArray();
-            int resultat = 0;
-            int[] factor = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
-
-            for (int i = 0; i < CPRArray.Length; i++)
-            {
-                resultat = ((CPRArray[i] - 48) * factor[i]) % 11;
-            }
-            if (resultat == 0)
-                return true;
-            else
-                return false;*/
-
-
-            // Nedenstående virker til cpr-validering :-)
-
+        {     
             int[] weight = { 4, 3, 2, 7, 6, 5, 4, 3, 2, 1 };
 
             int sum = 0;

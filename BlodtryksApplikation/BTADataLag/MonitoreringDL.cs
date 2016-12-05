@@ -15,64 +15,54 @@ namespace BTADataLag
     public class MonitoreringDL : Subject
     {
 
-        public AsyncCallback inputCallback { get; set; }
-        public NationalInstruments.DAQmx.Task runningTask { get; set; }
-        public int samples { get; set; }
-        public NationalInstruments.DAQmx.Task analogInTask { get; set; }
-        public AnalogSingleChannelReader reader { get; set; }
-        public MonitoreringDL()
-        {
-            
-        }
-        
+        private AsyncCallback inputCallback;
+        private NationalInstruments.DAQmx.Task runningTask;
+        private int samples;
+        private NationalInstruments.DAQmx.Task analogInTask;
+        private AnalogSingleChannelReader reader;
+
         /// <summary>
-        /// 
+        /// Indstiller DAQ til dataopsamling
         /// </summary>
         public void indstilDAQ()
         {
-            analogInTask = new NationalInstruments.DAQmx.Task();
+            try
+            {
+                analogInTask = new NationalInstruments.DAQmx.Task();
 
-            analogInTask.AIChannels.CreateVoltageChannel("Dev2/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
+                analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-            analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
+                analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, 100);
 
-            analogInTask.Control(TaskAction.Verify);
+                analogInTask.Control(TaskAction.Verify);
 
-            reader = new AnalogSingleChannelReader(analogInTask.Stream);
+                reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
-            reader.SynchronizeCallbacks = true;
-        }
+                reader.SynchronizeCallbacks = true;
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
+        }       
 
         /// <summary>
-        /// Opretter en ny monitorerings DTO
+        /// Starter den asynkrone indlæsning af data fra DAQ'en        
         /// </summary>
-        
-
-
-        /// <summary>
-        /// Kalder metode der indlæser en datasekvens
-        /// </summary>
-        /// <returns>
-        /// Returnerer af den indlæste datasekvens
-        /// </returns>
-        //public List<double> indlæsBTSignal(int samples)
-        //{
-        //    this.samples = samples;
-        //    return ReadInput(this.samples);
-        //}
-
-
+        /// <param name="samples"></param>
         public void startInputAsync(int samples)
         {
             this.samples = samples;
-
             indstilDAQ();            
             inputCallback = new AsyncCallback(InputRead);
             runningTask = analogInTask;
             reader.BeginReadMultiSample(samples, inputCallback, analogInTask);            
         }
 
+        /// <summary>
+        /// Stopper den asynkrone indlæsning af data fra DAQ'en
+        /// </summary>
         public void stoptInputAsync()
         {
             runningTask = null;
@@ -80,6 +70,10 @@ namespace BTADataLag
             analogInTask.Dispose();
         }
 
+        /// <summary>
+        /// Læser data og konverterer til en liste. Kalder Notify som giver besked til de attach'ede observers
+        /// </summary>
+        /// <param name="ar"></param>
         private void InputRead(IAsyncResult ar)
         {
             try
@@ -95,9 +89,9 @@ namespace BTADataLag
                     reader.BeginReadMultiSample(samples, inputCallback, analogInTask);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                return;
+                throw;
             }
         }        
 

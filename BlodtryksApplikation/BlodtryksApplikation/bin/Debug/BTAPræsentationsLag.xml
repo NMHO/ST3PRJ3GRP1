@@ -151,23 +151,19 @@
         </member>
         <member name="M:BTAPræsentationsLag.BTAHovedvindue.opdaterBTChart(System.Collections.Generic.List{System.Double})">
             <summary>
-            
+            Laver et nyt event, og sender et event til GUI-tråden.
             </summary>
-            <param name="NuværendeSekvens"></param>
+            <param name="NuværendeSekvens">Listen med den nuværende sekvens der skal tilføjes blodtryksgrafen</param>
         </member>
         <member name="M:BTAPræsentationsLag.BTAHovedvindue.opdaterChart(System.Object,BTAPræsentationsLag.MyEvent)">
             <summary>
-            opdaterer chart kontinuerligt og validerer grænseværdier for alarm
+            Opdaterer chart kontinuerligt og validerer grænseværdier for alarm
             </summary>
-            <param name="o"></param>
-            <param name="e"></param>
         </member>
         <member name="M:BTAPræsentationsLag.BTAHovedvindue.BTNGemdata_Click(System.Object,System.EventArgs)">
             <summary>
             Åbner Gem-vindue
             </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
         </member>
         <member name="M:BTAPræsentationsLag.BTAHovedvindue.Update">
             <summary>
@@ -178,8 +174,6 @@
             <summary>
             Aktiverer/deaktiverer alarmlyd
             </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
         </member>
         <member name="F:BTAPræsentationsLag.BTAHovedvindue.components">
             <summary>
@@ -197,6 +191,22 @@
             Required method for Designer support - do not modify
             the contents of this method with the code editor.
             </summary>
+        </member>
+        <member name="T:BTAPræsentationsLag.MyEvent">
+            <summary>
+            Klasse til event
+            </summary>
+        </member>
+        <member name="P:BTAPræsentationsLag.MyEvent.NuværendeSekvens">
+            <summary>
+            Listen med den nuværende sekvens
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.MyEvent.#ctor(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Constructor der sætter den medsendte sekvens-parameter til klassens property
+            </summary>
+            <param name="NuværendeSekvens">Listen med den nuværende sekvens</param>
         </member>
         <member name="M:BTAPræsentationsLag.ControlPræsentationsLag.startGUI">
             <summary>

@@ -256,24 +256,21 @@ namespace BTAPræsentationsLag
             opdaterBTChart(MDTO.NuværendeSekvens);
         }
         /// <summary>
-        /// 
+        /// Laver et nyt event, og sender et event til GUI-tråden.
         /// </summary>
-        /// <param name="NuværendeSekvens"></param>
+        /// <param name="NuværendeSekvens">Listen med den nuværende sekvens der skal tilføjes blodtryksgrafen</param>
         private void opdaterBTChart(List<double> NuværendeSekvens)
         {
             EventArgs e = new MyEvent(NuværendeSekvens);
             object[] pList = { this, e };
-            // Sender et event til GUI-tråden
             ChartBT.BeginInvoke(new MyEventsHandler(opdaterChart), pList);
         }
 
         private delegate void MyEventsHandler(object sender, MyEvent e);
 
         /// <summary>
-        /// opdaterer chart kontinuerligt og validerer grænseværdier for alarm
+        /// Opdaterer chart kontinuerligt og validerer grænseværdier for alarm
         /// </summary>
-        /// <param name="o"></param>
-        /// <param name="e"></param>
         private void opdaterChart(object o, MyEvent e)
         {
             double nuværendeXval = ChartBT.Series["BTSerie"].Points.Last().XValue;
@@ -307,7 +304,7 @@ namespace BTAPræsentationsLag
                 {
                     alarmOnOff = false;
 
-                    var res = MessageBox.Show("Den øvre grænseværdi for blodtrykket er overskredet, vil du slukke for alarmen?",
+                    var res = MessageBox.Show("Grænseværdien for blodtrykket er overskredet, vil du slukke for alarmen?",
                                         "Alarm overskredet!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (res == DialogResult.Yes)
@@ -326,7 +323,7 @@ namespace BTAPræsentationsLag
                 {
                     alarmOnOff = false;
 
-                    var res = MessageBox.Show("Den nedre grænseværdi for blodtrykket er overskredet, vil du slukke for alarmen?",
+                    var res = MessageBox.Show("Grænseværdien for blodtrykket er overskredet, vil du slukke for alarmen?",
                                     "Alarm overskredet!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (res == DialogResult.Yes)
@@ -376,8 +373,6 @@ namespace BTAPræsentationsLag
         /// <summary>
         /// Åbner Gem-vindue
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void BTNGemdata_Click(object sender, EventArgs e)
         {
             gemForm = new Gemvindue(currentLL, ref MDTO);
@@ -387,8 +382,8 @@ namespace BTAPræsentationsLag
         /// <summary>
         /// Opretter tråd som kalder monitorerBTIGUI fra præsentationslaget.
         /// </summary>
-        public void Update()
-        {            
+        public new void Update()
+        {
             thread = new Thread(monitorerBTIGUI);
             thread.Name = "monThread";
             thread.IsBackground = true;
@@ -399,8 +394,6 @@ namespace BTAPræsentationsLag
         /// <summary>
         /// Aktiverer/deaktiverer alarmlyd
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void cbAlarmlyd_MouseClick(object sender, MouseEventArgs e)
         {
             if (cbAlarmlyd.Checked == true)
@@ -416,10 +409,20 @@ namespace BTAPræsentationsLag
         }
     }
 
+    /// <summary>
+    /// Klasse til event
+    /// </summary>
     public class MyEvent : EventArgs
     {
+        /// <summary>
+        /// Listen med den nuværende sekvens
+        /// </summary>
         public List<double> NuværendeSekvens { get; private set; }
 
+        /// <summary>
+        /// Constructor der sætter den medsendte sekvens-parameter til klassens property
+        /// </summary>
+        /// <param name="NuværendeSekvens">Listen med den nuværende sekvens</param>
         public MyEvent(List<double> NuværendeSekvens)
         {
             this.NuværendeSekvens = NuværendeSekvens;

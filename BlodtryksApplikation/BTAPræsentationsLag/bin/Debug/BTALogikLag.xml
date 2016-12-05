@@ -87,7 +87,8 @@
         </member>
         <member name="M:BTALogikLag.MonitoreringLL.hentBTSekvens(System.Double,System.Double)">
             <summary>
-            Henter nuværende sekvens fra MDTO og ganger kalibreringshældningen på, og trækker nulpunktsjusteringen fra. Herefter sættes den nuværende sekvens i MDTO igen, afhængigt af framesize.
+            Henter nuværende sekvens fra MDTO og ganger kalibreringshældningen på, og trækker nulpunktsjusteringen fra. 
+            Herefter sættes den nuværende sekvens i MDTO igen, afhængigt af framesize.
             </summary>
             <param name="KHældning"></param>
             <param name="NVærdi"></param>
