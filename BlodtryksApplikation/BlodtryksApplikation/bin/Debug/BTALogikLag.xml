@@ -4,6 +4,11 @@
         <name>BTALogikLag</name>
     </assembly>
     <members>
+        <member name="T:BTALogikLag.FilterLL">
+            <summary>
+            Klasse der indeholder algoritme for filtrering af signal
+            </summary>
+        </member>
         <member name="M:BTALogikLag.FilterLL.#ctor(BTADataLag.ControlDataLag)">
             <summary>
             Constructor 
@@ -16,6 +21,33 @@
             </summary>
             <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
             <param name="data">Listen med data fra DAQ'en</param>
+            <returns></returns>
+        </member>
+        <member name="M:BTALogikLag.GemLL.#ctor(BTADataLag.ControlDataLag)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="mydal"></param>
+        </member>
+        <member name="M:BTALogikLag.GemLL.validerCPR(System.String)">
+            <summary>
+            Validerer CPR nr
+            </summary>
+            <param name="CPR"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BTALogikLag.GemLL.validerPersonalenr(System.String)">
+            <summary>
+            Validerer personalenummer
+            </summary>
+            <param name="pnummer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BTALogikLag.GemLL.gemData(DTO.GemDTO)">
+            <summary>
+            Kalder gem metode i GDL
+            </summary>
+            <param name="GDTO_"></param>
             <returns></returns>
         </member>
         <member name="T:BTALogikLag.KalibreringLL">

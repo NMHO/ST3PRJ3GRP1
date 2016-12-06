@@ -4,6 +4,23 @@
         <name>BTADataLag</name>
     </assembly>
     <members>
+        <member name="M:BTADataLag.ControlDataLag.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BTADataLag.GemDL.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:BTADataLag.GemDL.gemDataTilFil(DTO.GemDTO)">
+            <summary>
+            Gemmer valgt data i fil
+            </summary>
+            <param name="GDTO"></param>
+            <returns></returns>
+        </member>
         <member name="T:BTADataLag.IndlæsFraDAQ">
             <summary>
             Abstrakt klasse til indlæsning fra DAQ

@@ -138,12 +138,7 @@ namespace BTAPræsentationsLag
             if (alarmForm.ok == true)
             {
                 Player = new SoundPlayer();
-                Player.SoundLocation = Environment.CurrentDirectory + @"\AppData\beep.wav";
-
-                /*
-                alarmLydTilstand = true;
-                alarmOnOff = true;
-                */
+                Player.SoundLocation = Environment.CurrentDirectory + @"\AppData\beep.wav";               
 
                 MDTO.RåBlodtrykssignal.Clear();
                 MDTO.NuværendeSekvens.Clear();
@@ -205,11 +200,11 @@ namespace BTAPræsentationsLag
         {
             currentLL.MLL.Detach(this);
             currentLL.MLL.stopMåling();
-
+            
             BTNGemdata.Enabled = true;
             btnStartMåling.Enabled = true;
-            btnKalibrerSystem.Enabled = false;
-            btnNulpunktsjusterSystem.Enabled = false;
+            btnKalibrerSystem.Enabled = true;
+            btnNulpunktsjusterSystem.Enabled = true;
         }
         /// <summary>
         /// Initialiserer chart

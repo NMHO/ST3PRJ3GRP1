@@ -21,6 +21,38 @@
             the contents of this method with the code editor.
             </summary>
         </member>
+        <member name="T:BTAPræsentationsLag.Gemvindue">
+            <summary>
+            Vindue der dukker op når der trykkes på Gem
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.Gemvindue.#ctor(BTALogikLag.ControlLogikLag,DTO.MonitorerDTO@)">
+            <summary>
+            Constructor 
+            </summary>
+            <param name="myLL"></param>
+            <param name="MDTO"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.Gemvindue.validereTjekboxValgt">
+            <summary>
+            Tjekker hvor meget af signalet der ønskes gemt
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BTAPræsentationsLag.Gemvindue.BNTGem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Gemmer valgt data
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:BTAPræsentationsLag.Gemvindue.BTNAnnuller_Click(System.Object,System.EventArgs)">
+            <summary>
+            Lukker vindue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
         <member name="F:BTAPræsentationsLag.Gemvindue.components">
             <summary>
             Required designer variable.

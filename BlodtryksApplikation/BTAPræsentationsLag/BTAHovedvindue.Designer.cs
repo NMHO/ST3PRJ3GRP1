@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnKalibrerSystem = new System.Windows.Forms.Button();
             this.btnNulpunktsjusterSystem = new System.Windows.Forms.Button();
             this.BTN_FilterON = new System.Windows.Forms.Button();
@@ -44,9 +44,9 @@
             this.gbMonitorering = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtSystole = new System.Windows.Forms.Label();
-            this.txtDiastole = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtDiastole = new System.Windows.Forms.Label();
+            this.txtSystole = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartBT)).BeginInit();
@@ -103,26 +103,26 @@
             // ChartBT
             // 
             this.ChartBT.BackColor = System.Drawing.Color.Transparent;
-            chartArea5.BackColor = System.Drawing.Color.Black;
-            chartArea5.Name = "BTChartArea";
-            this.ChartBT.ChartAreas.Add(chartArea5);
+            chartArea1.BackColor = System.Drawing.Color.Black;
+            chartArea1.Name = "BTChartArea";
+            this.ChartBT.ChartAreas.Add(chartArea1);
             this.ChartBT.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChartBT.Location = new System.Drawing.Point(0, 373);
             this.ChartBT.MaximumSize = new System.Drawing.Size(3000, 1000);
             this.ChartBT.Name = "ChartBT";
-            series5.BorderWidth = 2;
-            series5.ChartArea = "BTChartArea";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series5.Color = System.Drawing.Color.Lime;
-            series5.Name = "BTSerie";
-            this.ChartBT.Series.Add(series5);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "BTChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Color = System.Drawing.Color.Lime;
+            series1.Name = "BTSerie";
+            this.ChartBT.Series.Add(series1);
             this.ChartBT.Size = new System.Drawing.Size(1762, 787);
             this.ChartBT.TabIndex = 7;
             this.ChartBT.Text = "chart1";
-            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.Name = "Titel";
-            title5.Text = "Blodtryksgraf";
-            this.ChartBT.Titles.Add(title5);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Titel";
+            title1.Text = "Blodtryksgraf";
+            this.ChartBT.Titles.Add(title1);
             // 
             // btnStopMåling
             // 
@@ -200,16 +200,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Systolisktryk / Diastolisktryk  i mmHg";
             // 
-            // txtSystole
+            // label3
             // 
-            this.txtSystole.AutoSize = true;
-            this.txtSystole.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSystole.ForeColor = System.Drawing.Color.Lime;
-            this.txtSystole.Location = new System.Drawing.Point(76, 71);
-            this.txtSystole.Name = "txtSystole";
-            this.txtSystole.Size = new System.Drawing.Size(104, 113);
-            this.txtSystole.TabIndex = 19;
-            this.txtSystole.Text = "0";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(257, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 113);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "/";
             // 
             // txtDiastole
             // 
@@ -222,16 +222,16 @@
             this.txtDiastole.TabIndex = 20;
             this.txtDiastole.Text = "0";
             // 
-            // label3
+            // txtSystole
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(257, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 113);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "/";
+            this.txtSystole.AutoSize = true;
+            this.txtSystole.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSystole.ForeColor = System.Drawing.Color.Lime;
+            this.txtSystole.Location = new System.Drawing.Point(66, 71);
+            this.txtSystole.Name = "txtSystole";
+            this.txtSystole.Size = new System.Drawing.Size(104, 113);
+            this.txtSystole.TabIndex = 19;
+            this.txtSystole.Text = "0";
             // 
             // tableLayoutPanel2
             // 
