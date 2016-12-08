@@ -330,10 +330,13 @@ namespace BTAPræsentationsLag
             }
 
 
-            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 10)
+            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 2)
             {
-                var max = Math.Round(GUIChartPunkter.Max(), 0);
-                var min = Math.Round(GUIChartPunkter.Min(), 0);
+                var temp = GUIChartPunkter;
+                temp.RemoveRange(0, Convert.ToInt32(GUIChartPunkter.Count * 0.8));
+
+                var max = Math.Round(temp.Max(), 0);
+                var min = Math.Round(temp.Min(), 0);
                 txtSystole.Text = max.ToString();
                 txtDiastole.Text = min.ToString();
 

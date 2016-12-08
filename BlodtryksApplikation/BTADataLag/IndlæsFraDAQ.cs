@@ -15,13 +15,7 @@ namespace BTADataLag
     /// Abstrakt klasse til indlæsning fra DAQ
     /// </summary>
     public abstract class IndlæsFraDAQ : IReadInput
-    {
-
-        //private NI_DAQVoltage datacollector;      
-
-        
-        
-
+    {        
         public int samples { get; set; }
         public NationalInstruments.DAQmx.Task analogInTask { get; set; }
         public AnalogSingleChannelReader reader { get; set; }       
@@ -37,7 +31,7 @@ namespace BTADataLag
 
                 analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
 
-                analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
+                //analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
 
                 analogInTask.Control(TaskAction.Verify);
 
@@ -64,23 +58,7 @@ namespace BTADataLag
             analogInTask.Dispose();
 
             return seqList;
-
-            //return testUdenDAQ();
             
-        }
-
-
-        /*
-        static Random rnd = new Random();
-        private List<double> testUdenDAQ()
-        {
-            List<double> lst = new List<double>(100);
-
-            for (int i = 0; i < 100; i++)
-            {
-                lst.Add(rnd.Next(0, 5));
-            }
-            return lst;
-        }*/
+        }        
     }
 }

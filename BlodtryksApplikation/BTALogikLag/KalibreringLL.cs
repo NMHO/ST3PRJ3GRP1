@@ -25,8 +25,6 @@ namespace BTALogikLag
         public KalibreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
-            //this.KDTO = currentDatalag.KDL.KDTO;
-
         }
 
         /// <summary>

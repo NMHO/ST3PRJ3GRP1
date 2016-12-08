@@ -63,13 +63,13 @@ namespace BTALogikLag
             var råtSignal = MDTO.NuværendeSekvens;
 
 
-            if (råtSignal.Average() > 5)
-            {
-                for (int i = 0; i < råtSignal.Count; i++)
-                {
-                    råtSignal[i] = 5;
-                }
-            }
+            //if (råtSignal.Average() > 5)
+            //{
+            //    for (int i = 0; i < råtSignal.Count; i++)
+            //    {
+            //        råtSignal[i] = 2.5;
+            //    }
+            //}
 
             double temp;
 
