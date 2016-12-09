@@ -230,6 +230,7 @@ namespace BTAPræsentationsLag
             ChartBT.ChartAreas["BTChartArea"].AxisY.MajorGrid.LineWidth = 1;
             ChartBT.ChartAreas["BTChartArea"].AxisY.MajorGrid.LineColor = Color.White;
 
+            ChartBT.ChartAreas["BTChartArea"].AxisX.LabelStyle.Format = "0.0";
 
             GUIChartPunkter = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10)]);
             double xval = -10.0;
@@ -330,13 +331,10 @@ namespace BTAPræsentationsLag
             }
 
 
-            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 2)
+            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 10)
             {
-                var temp = GUIChartPunkter;
-                temp.RemoveRange(0, Convert.ToInt32(GUIChartPunkter.Count * 0.8));
-
-                var max = Math.Round(temp.Max(), 0);
-                var min = Math.Round(temp.Min(), 0);
+                var max = Math.Round(GUIChartPunkter.Max(), 0);
+                var min = Math.Round(GUIChartPunkter.Min(), 0);
                 txtSystole.Text = max.ToString();
                 txtDiastole.Text = min.ToString();
 
