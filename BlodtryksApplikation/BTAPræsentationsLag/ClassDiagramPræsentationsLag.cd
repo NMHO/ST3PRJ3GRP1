@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="BTAPræsentationsLag.AlarmVindue">
+    <Position X="6.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAAAACAAABAAAACAAAACAAAYAAAAEGAAAAAAAQA=</HashCode>
+      <FileName>AlarmVindue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTAPræsentationsLag.BTAHovedvindue" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="4.5" />
+    <NestedTypes>
+      <Delegate Name="BTAPræsentationsLag.BTAHovedvindue.MyEventsHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BTAHovedvindue.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>IFwBAAAQBCEAABMFBBSBAAmCcAAgABAACCAAYwCmCCM=</HashCode>
+      <FileName>BTAHovedvindue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="alarmForm" />
+      <Field Name="kalibreringsForm" />
+      <Field Name="gemForm" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BTAPræsentationsLag.ControlPræsentationsLag" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAACAAIAAAAAA=</HashCode>
+      <FileName>ControlPræsentationsLag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BTAHovedvindue" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BTAPræsentationsLag.Gemvindue">
+    <Position X="10.75" Y="5.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABEAAQCAAAADECJAAAAIAHCAIAggABA=</HashCode>
+      <FileName>Gemvindue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTAPræsentationsLag.KalibreringsVindue">
+    <Position X="6.25" Y="8.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACCAgBAUAASAAAACAAAAEAAAAAAAIAAAAAg=</HashCode>
+      <FileName>Kalibreringsvindue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="BTADataLag.ControlDataLag">
+    <Position X="4.5" Y="0.5" Width="3.25" />
+    <AssociationLine Name="KDL" Type="BTADataLag.KalibreringDL" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7" Y="1.603" />
+        <Point X="7" Y="3.739" />
+        <Point X="9.5" Y="3.739" />
+        <Point X="9.5" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="NPJDL" Type="BTADataLag.NulpunktsjusteringDL" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.322" Y="1.603" />
+        <Point X="6.322" Y="3.75" />
+        <Point X="4.062" Y="3.75" />
+        <Point X="4.062" Y="6.429" />
+        <Point X="2.562" Y="6.429" />
+        <Point X="2.562" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="GDL" Type="BTADataLag.GemDL" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="0.75" />
+        <Point X="9.5" Y="0.75" />
+        <Point X="9.5" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIBgCAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ControlDataLag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="KDL" />
+      <Property Name="MDL" />
+      <Property Name="NPJDL" />
+      <Property Name="GDL" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BTADataLag.GemDL">
+    <Position X="7.75" Y="1.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>GemDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTADataLag.IndlæsFraDAQ">
+    <Position X="4.75" Y="4.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAQgAA=</HashCode>
+      <FileName>IndlæsFraDAQ.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BTADataLag.KalibreringDL">
+    <Position X="7" Y="7.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>KalibreringDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTADataLag.MonitoreringDL">
+    <Position X="0.5" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAIAAAAAAAAAAABAACAAAAAACAgAAAAQgAA=</HashCode>
+      <FileName>MonitoreringDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTADataLag.Subject">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAIAAAAAAAAAAIAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>MonitoreringDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BTADataLag.NulpunktsjusteringDL">
+    <Position X="0.5" Y="7.25" Width="4" />
+    <InheritanceLine Type="BTADataLag.IndlæsFraDAQ" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.375" Y="6.632" />
+        <Point X="6.375" Y="6.847" />
+        <Point X="3.875" Y="6.847" />
+        <Point X="3.875" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>NulpunktsjusteringDL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="1fa9351e-8d5f-4f16-b87b-32ecce7af99c" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v6.0 was released on 5/12/16.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Ændringer i udgivelse</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Tilføjet funktionalitet for monitorering</para>
+          </listItem>
+
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="d1a0e8c2-b80e-4702-ba24-e3823a346b0e" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

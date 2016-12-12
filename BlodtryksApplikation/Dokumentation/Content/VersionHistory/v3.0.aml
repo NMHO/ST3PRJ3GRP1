@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="3c987d8a-7fee-4224-8212-63c552b14ca4" revisionNumber="1">
+  <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <introduction>
+      <para>
+        Version v3.0 was released on 28/10/16.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Ændringer i udgivelse</title>
+      <content>
+
+        <list class="bullet">
+          <listItem>
+            <para>Tilføjet funktionalitet for filtrering af signal</para>
+          </listItem>
+
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="d1a0e8c2-b80e-4702-ba24-e3823a346b0e" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

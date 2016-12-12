@@ -34,6 +34,7 @@ namespace BTAPræsentationsLag
         private bool alarmLydTilstand;
         private bool alarmOnOff;        
         private SoundPlayer Player;
+        private SemaphoreSlim sem;
 
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
@@ -48,6 +49,7 @@ namespace BTAPræsentationsLag
             BTChartInit();
             alarmLydTilstand = true;
             alarmOnOff = true;
+            sem = new SemaphoreSlim(1);
         }
 
         /// <summary>
@@ -257,9 +259,11 @@ namespace BTAPræsentationsLag
         /// <param name="NuværendeSekvens">Listen med den nuværende sekvens der skal tilføjes blodtryksgrafen</param>
         private void opdaterBTChart(List<double> NuværendeSekvens)
         {
-            EventArgs e = new MyEvent(NuværendeSekvens);
+            sem.Wait();
+            EventArgs e = new MyEvent(NuværendeSekvens);        
             object[] pList = { this, e };
             ChartBT.BeginInvoke(new MyEventsHandler(opdaterChart), pList);
+            sem.Release();
         }
 
         private delegate void MyEventsHandler(object sender, MyEvent e);
@@ -271,7 +275,7 @@ namespace BTAPræsentationsLag
         {
             double nuværendeXval = ChartBT.Series["BTSerie"].Points.Last().XValue;
             double næsteXval = 1.0 / (MDTO.NuværendeSekvens.Count * 10);
-
+            
             foreach (var value in e.NuværendeSekvens)
             {
                 ChartBT.Series["BTSerie"].Points.RemoveAt(0);
@@ -290,7 +294,7 @@ namespace BTAPræsentationsLag
                     ChartBT.Series["BTSerie"].Points.Last().Color = Color.Red;                    
                 }
                 
-            }
+            }            
 
             if (e.NuværendeSekvens.Any(item => item > ADTO.ØGrænse) && alarmLydTilstand == true)
             {
