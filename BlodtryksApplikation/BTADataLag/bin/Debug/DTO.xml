@@ -4,6 +4,66 @@
         <name>DTO</name>
     </assembly>
     <members>
+        <member name="T:DTO.AlarmDTO">
+            <summary>
+            AlarmDTO-klasse
+            </summary>
+        </member>
+        <member name="P:DTO.AlarmDTO.ØGrænse">
+            <summary>
+            Øvre grænse
+            </summary>
+        </member>
+        <member name="P:DTO.AlarmDTO.NGrænse">
+            <summary>
+            Nedre grænse
+            </summary>
+        </member>
+        <member name="M:DTO.AlarmDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:DTO.GemDTO">
+            <summary>
+            Gem-DTO klasse
+            </summary>
+        </member>
+        <member name="P:DTO.GemDTO.CPR">
+            <summary>
+            CPR-nummer
+            </summary>
+        </member>
+        <member name="P:DTO.GemDTO.Personalenummer">
+            <summary>
+            Personalenummer
+            </summary>
+        </member>
+        <member name="P:DTO.GemDTO.SignalLængde">
+            <summary>
+            Signallængde i sekunder
+            </summary>
+        </member>
+        <member name="P:DTO.GemDTO.SamplingsfrekvensIHz">
+            <summary>
+            Samplingsfrekvens i Hz
+            </summary>
+        </member>
+        <member name="P:DTO.GemDTO.Dato">
+            <summary>
+            Dato og tid for måling
+            </summary>
+        </member>
+        <member name="P:DTO.GemDTO.SignalBLOB">
+            <summary>
+            Det rå signal, gemt som blobformat
+            </summary>
+        </member>
+        <member name="M:DTO.GemDTO.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
         <member name="T:DTO.KalibreringDTO">
             <summary>
             Kalibrerings-DTO, der indeholder properties til data
@@ -37,6 +97,36 @@
         <member name="M:DTO.KalibreringDTO.#ctor">
             <summary>
             Constructor der sætter alle properties til 0
+            </summary>
+        </member>
+        <member name="T:DTO.MonitorerDTO">
+            <summary>
+            Monitorerings-DTO-klasse
+            </summary>
+        </member>
+        <member name="P:DTO.MonitorerDTO.RåBlodtrykssignal">
+            <summary>
+            Det funde rå blodtrykssignal
+            </summary>
+        </member>
+        <member name="P:DTO.MonitorerDTO.SignalLængdeISek">
+            <summary>
+            Signallængde i sekunder
+            </summary>      
+        </member>
+        <member name="P:DTO.MonitorerDTO.NuværendeSekvens">
+            <summary>
+            Den aktuelle indlæste sekvens, der behandles og vises i grafen i GUI'en
+            </summary>
+        </member>
+        <member name="P:DTO.MonitorerDTO.midlingsFrekvens">
+            <summary>
+            Midlingsfrekvensen som det rå signal midles med før gemmes i NuværendeSekvens
+            </summary>
+        </member>
+        <member name="M:DTO.MonitorerDTO.#ctor">
+            <summary>
+            Constructor
             </summary>
         </member>
     </members>

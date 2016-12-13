@@ -207,6 +207,7 @@ namespace BTAPræsentationsLag
             btnStartMåling.Enabled = true;
             btnKalibrerSystem.Enabled = true;
             btnNulpunktsjusterSystem.Enabled = true;
+            btnStopMåling.Enabled = false;
         }
         /// <summary>
         /// Initialiserer chart
@@ -234,11 +235,13 @@ namespace BTAPræsentationsLag
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.LabelStyle.Format = "0.0";
 
-            GUIChartPunkter = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10)]);
+
+            GUIChartPunkter = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 2)]);
+            var tempChartPunkter = new List<double>(new double[Convert.ToInt32(MDTO.midlingsFrekvens * 10)]);
             double xval = -10.0;
             double sampleTime = 1.0 / MDTO.midlingsFrekvens;
 
-            foreach (var value in GUIChartPunkter)
+            foreach (var value in tempChartPunkter)
             {
                 xval += sampleTime;
                 ChartBT.Series["BTSerie"].Points.AddXY(xval, value);
@@ -335,7 +338,7 @@ namespace BTAPræsentationsLag
             }
 
 
-            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 10)
+            if (ChartBT.Series["BTSerie"].Points.Last().XValue > 2)
             {
                 var max = Math.Round(GUIChartPunkter.Max(), 0);
                 var min = Math.Round(GUIChartPunkter.Min(), 0);

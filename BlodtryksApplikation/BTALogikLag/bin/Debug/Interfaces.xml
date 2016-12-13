@@ -4,9 +4,47 @@
         <name>Interfaces</name>
     </assembly>
     <members>
+        <member name="T:Interfaces.PL">
+            <summary>
+            Interface til brug i præsentationslag
+            </summary>
+        </member>
+        <member name="M:Interfaces.PL.startGUI">
+            <summary>
+            Metode der skal implementeres så hovedvinduet startes
+            </summary>
+        </member>
         <member name="T:Interfaces.IReadInput">
             <summary>
             Interface som angiver en metode til indlæsning af input
+            </summary>
+        </member>
+        <member name="M:Interfaces.IReadInput.ReadInput(System.Int32)">
+            <summary>
+            Metode der returnerer en liste, som indeholder det indlæste input 
+            </summary>
+            <param name="samples">Angiver hvor  mage samples der skal indlæses</param>
+            <returns></returns>
+        </member>
+        <member name="T:Interfaces.IObserverLL">
+            <summary>
+            Observer-interface for logiklaget
+            </summary>
+        </member>
+        <member name="M:Interfaces.IObserverLL.Update(System.Collections.Generic.List{System.Double})">
+            <summary>
+            Update-metode
+            </summary>
+            <param name="sekvens">Liste med nuværende sekvens som parameter</param>
+        </member>
+        <member name="T:Interfaces.IObserverPL">
+            <summary>
+            Observer-interface for præsentationslaget
+            </summary>
+        </member>
+        <member name="M:Interfaces.IObserverPL.Update">
+            <summary>
+            Update-metode
             </summary>
         </member>
     </members>

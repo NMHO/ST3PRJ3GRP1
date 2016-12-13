@@ -18,26 +18,28 @@ namespace BTAPræsentationsLag
     public partial class Gemvindue : Form
     {
         private ControlLogikLag currentLL;
+        /// <summary>
+        /// DTO for gem-funktionalitet
+        /// </summary>
         public GemDTO GDTO { get; private set; }
         private MonitorerDTO MDTO;
 
         private bool CPRvalidering;
         private bool PnummerValidering;
         private int valgtLængde;
-       
+
         /// <summary>
         /// Constructor 
         /// </summary>
-        /// <param name="myLL"></param>
-        /// <param name="MDTO"></param>
+        /// <param name="myLL">Kontrolklassen for logiklag som parameter</param>
+        /// <param name="MDTO">Reference til monitorerings-DTO'en i BTAHovedvindue</param>
         public Gemvindue(ControlLogikLag myLL, ref MonitorerDTO MDTO)
         {
             this.currentLL = myLL;
             InitializeComponent();
             this.GDTO = currentLL.GLL.GDTO;
             this.MDTO = MDTO;
-            LLængde.Text = (MDTO.RåBlodtrykssignal.Count/1000).ToString() + " sek";        
-
+            LLængde.Text = (MDTO.RåBlodtrykssignal.Count/1000).ToString() + " sek"; 
         }
 
        /// <summary>

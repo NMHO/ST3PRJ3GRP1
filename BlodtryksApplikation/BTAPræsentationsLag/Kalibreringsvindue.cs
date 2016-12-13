@@ -19,14 +19,17 @@ namespace BTAPræsentationsLag
     public partial class KalibreringsVindue : Form
     {
         private ControlLogikLag currentLL;
+        /// <summary>
+        /// DTO for kalibrerings-funktionalitet
+        /// </summary>
         public KalibreringDTO KDTO { get; private set; }
        
         private bool validering;
 
         /// <summary>
-        /// Constructor der modtager en reference til kalibreringsDTO'en oprettet i hovedvinduet
+        /// Constructor
         /// </summary>
-        /// <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+        /// <param name="myLL">Kontrolklassen for logiklag som parameter</param>
         public KalibreringsVindue(ControlLogikLag myLL)
         {
             this.currentLL = myLL;

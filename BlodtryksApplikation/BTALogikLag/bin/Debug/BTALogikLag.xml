@@ -4,6 +4,37 @@
         <name>BTALogikLag</name>
     </assembly>
     <members>
+        <member name="T:BTALogikLag.ControlLogikLag">
+            <summary>
+            Kontrolklasse for LogikLag
+            </summary>
+        </member>
+        <member name="P:BTALogikLag.ControlLogikLag.KLL">
+            <summary>
+            Property for Kalibrerings-klasse
+            </summary>
+        </member>
+        <member name="P:BTALogikLag.ControlLogikLag.NPJLL">
+            <summary>
+            Property for Nulpunktsjusterings-klasse
+            </summary>
+        </member>
+        <member name="P:BTALogikLag.ControlLogikLag.GLL">
+            <summary>
+            Property for Gem-klasse
+            </summary>
+        </member>
+        <member name="P:BTALogikLag.ControlLogikLag.MLL">
+            <summary>
+            Property for Monitorerings-klasse
+            </summary>
+        </member>
+        <member name="M:BTALogikLag.ControlLogikLag.#ctor(BTADataLag.ControlDataLag)">
+            <summary>
+            Constructor der initialiserer Logiklaget
+            </summary>
+            <param name="mydal">Modtager kontrolklassen for datalag som parameter</param>
+        </member>
         <member name="T:BTALogikLag.FilterLL">
             <summary>
             Klasse der indeholder algoritme for filtrering af signal
@@ -18,16 +49,27 @@
         <member name="M:BTALogikLag.FilterLL.FiltrerSignal(System.Int32,System.Collections.Generic.List{System.Double})">
             <summary>
             Denne metode filtrerer den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+            Inspiration fra https://dotnetwidkunal.wordpress.com/2010/06/04/creating-a-simple-moving-average-function-in-c/ d. 28/10/16
             </summary>
             <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
             <param name="data">Listen med data fra DAQ'en</param>
             <returns></returns>
         </member>
+        <member name="T:BTALogikLag.GemLL">
+            <summary>
+            Gem-klasse i Logiklaget
+            </summary>
+        </member>
+        <member name="P:BTALogikLag.GemLL.GDTO">
+            <summary>
+            DTO for gem-funktionalitet
+            </summary>
+        </member>
         <member name="M:BTALogikLag.GemLL.#ctor(BTADataLag.ControlDataLag)">
             <summary>
             Constructor
             </summary>
-            <param name="mydal"></param>
+            <param name="mydal">modtager kontrolklassen for datalaget som parameter</param>
         </member>
         <member name="M:BTALogikLag.GemLL.validerCPR(System.String)">
             <summary>
@@ -55,11 +97,15 @@
             Håndterer, beregner og opdaterer kalibreringsdata
             </summary>
         </member>
+        <member name="P:BTALogikLag.KalibreringLL.KDTO">
+            <summary>
+            DTO for kalibrerings-funktionalitet
+            </summary>
+        </member>
         <member name="M:BTALogikLag.KalibreringLL.#ctor(BTADataLag.ControlDataLag)">
             <summary>
             Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
             </summary>
-            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
         </member>
         <member name="M:BTALogikLag.KalibreringLL.opdaterKalibreringsData(System.Double,System.Int32)">
             <summary>
@@ -87,6 +133,7 @@
             <summary>
             Kalder metode der gemmer KDTO fra datalaget
             </summary>
+            <param name="KDTO">Kalibrerings-DTO</param>
         </member>
         <member name="M:BTALogikLag.KalibreringLL.hentKalibreringFraDL">
             <summary>
@@ -99,6 +146,11 @@
         <member name="T:BTALogikLag.MonitoreringLL">
             <summary>
             Henter og håndterer data fra datalaget i forbindelse med monitorering
+            </summary>
+        </member>
+        <member name="P:BTALogikLag.MonitoreringLL.framesize">
+            <summary>
+            Property der bestemmer framesize (filtreringsgraden), og om filter er slået til eller fra
             </summary>
         </member>
         <member name="M:BTALogikLag.MonitoreringLL.#ctor(BTADataLag.ControlDataLag)">

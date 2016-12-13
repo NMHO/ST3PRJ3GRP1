@@ -1,16 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="BTAPræsentationsLag.AlarmVindue">
-    <Position X="6.5" Y="0.5" Width="3.5" />
+    <Position X="6.25" Y="1.25" Width="4" />
+    <Members>
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="textBox2" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>ACABAAAAACAAABAAAACAAAACAAAYAAAAEGAAAAAAAQA=</HashCode>
+      <HashCode>ACABAAAAACIAABAAAACAAAASAAAYAAAAEAAAAAAAAQA=</HashCode>
       <FileName>AlarmVindue.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BTAPræsentationsLag.BTAHovedvindue" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="3.5" Width="4.5" />
+    <Members>
+      <Field Name="bindingSource1" Hidden="true" />
+      <Field Name="BTN_FilterON" Hidden="true" />
+      <Field Name="BTNGemdata" Hidden="true" />
+      <Field Name="btnKalibrerSystem" Hidden="true" />
+      <Field Name="btnNulpunktsjusterSystem" Hidden="true" />
+      <Field Name="btnStartMåling" Hidden="true" />
+      <Field Name="btnStopMåling" Hidden="true" />
+      <Field Name="cbAlarmlyd" Hidden="true" />
+      <Field Name="ChartBT" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="gbMonitorering" Hidden="true" />
+      <Field Name="groupBox1" Hidden="true" />
+      <Field Name="groupBox2" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="tableLayoutPanel2" Hidden="true" />
+      <Field Name="txtDiastole" Hidden="true" />
+      <Field Name="txtSystole" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
     <NestedTypes>
-      <Delegate Name="BTAPræsentationsLag.BTAHovedvindue.MyEventsHandler" Collapsed="true">
+      <Delegate Name="BTAPræsentationsLag.BTAHovedvindue.MyEventsHandler">
         <TypeIdentifier>
           <NewMemberFileName>BTAHovedvindue.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -21,8 +58,8 @@
       <FileName>BTAHovedvindue.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="alarmForm" />
       <Field Name="kalibreringsForm" />
+      <Field Name="alarmForm" />
       <Field Name="gemForm" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
@@ -30,7 +67,7 @@
   <Class Name="BTAPræsentationsLag.ControlPræsentationsLag" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAACAAIAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACAAIAAAAAA=</HashCode>
       <FileName>ControlPræsentationsLag.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -39,14 +76,46 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="BTAPræsentationsLag.Gemvindue">
-    <Position X="10.75" Y="5.25" Width="4" />
+    <Position X="6.25" Y="4" Width="4" />
+    <Members>
+      <Field Name="BNTGem" Hidden="true" />
+      <Field Name="BTNAnnuller" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="LLængde" Hidden="true" />
+      <Field Name="RB10sek" Hidden="true" />
+      <Field Name="RB1min" Hidden="true" />
+      <Field Name="RBHelesignalet" Hidden="true" />
+      <Field Name="TXBCPR" Hidden="true" />
+      <Field Name="TXBPersonalenummer" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAABEAAQCAAAADECJAAAAIAHCAIAggABA=</HashCode>
       <FileName>Gemvindue.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BTAPræsentationsLag.KalibreringsVindue">
-    <Position X="6.25" Y="8.75" Width="3.5" />
+    <Position X="6.25" Y="8.25" Width="4" />
+    <Members>
+      <Field Name="btnKalibreringNr1" Hidden="true" />
+      <Field Name="btnKalibreringNr2" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="txbKalibreringNr1" Hidden="true" />
+      <Field Name="txbKalibreringNr2" Hidden="true" />
+    </Members>
     <TypeIdentifier>
       <HashCode>AABAAAAAACCAgBAUAASAAAACAAAAEAAAAAAAIAAAAAg=</HashCode>
       <FileName>Kalibreringsvindue.cs</FileName>

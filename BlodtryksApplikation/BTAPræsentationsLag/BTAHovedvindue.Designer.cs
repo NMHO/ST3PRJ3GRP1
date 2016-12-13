@@ -154,9 +154,9 @@
             this.cbAlarmlyd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAlarmlyd.Location = new System.Drawing.Point(33, 223);
             this.cbAlarmlyd.Name = "cbAlarmlyd";
-            this.cbAlarmlyd.Size = new System.Drawing.Size(261, 29);
+            this.cbAlarmlyd.Size = new System.Drawing.Size(176, 29);
             this.cbAlarmlyd.TabIndex = 14;
-            this.cbAlarmlyd.Text = "Aktiver/deaktiver alarmlyd";
+            this.cbAlarmlyd.Text = "Aktiver alarmlyd";
             this.cbAlarmlyd.UseVisualStyleBackColor = true;
             this.cbAlarmlyd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbAlarmlyd_MouseClick);
             // 

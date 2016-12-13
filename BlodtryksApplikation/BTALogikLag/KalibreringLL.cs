@@ -14,6 +14,9 @@ namespace BTALogikLag
     /// </summary>
     public class KalibreringLL
     {
+        /// <summary>
+        /// DTO for kalibrerings-funktionalitet
+        /// </summary>
         public KalibreringDTO KDTO { get; private set; }
         private ControlDataLag currentDatalag;
         //private KalibreringDL KDL;        
@@ -21,7 +24,6 @@ namespace BTALogikLag
         /// <summary>
         /// Constructor der modtager en reference til kalibreringsDTO'en oprettet i BTA-hovedvinduet
         /// </summary>
-        /// <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
         public KalibreringLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;
@@ -88,9 +90,11 @@ namespace BTALogikLag
             return true;
         }
 
+
         /// <summary>
         /// Kalder metode der gemmer KDTO fra datalaget
         /// </summary>
+        /// <param name="KDTO">Kalibrerings-DTO</param>
         public void gemKalibrering(KalibreringDTO KDTO)
         {
             currentDatalag.KDL.gemKalibreringTilFil(KDTO);

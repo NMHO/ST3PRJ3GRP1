@@ -9,8 +9,14 @@ using System.IO;
 
 namespace BTADataLag
 {
+    /// <summary>
+    /// Gem-klasse i Datalaget
+    /// </summary>
     public class GemDL
     {
+        /// <summary>
+        /// DTO for gem-funktionalitet
+        /// </summary>
         public GemDTO GDTO { get; set; }
 
         /// <summary>

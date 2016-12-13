@@ -17,7 +17,10 @@ namespace BTALogikLag
     {
         private MonitorerDTO MDTO;
         private ControlDataLag currentDatalag;
-        public FilterLL FLL;
+        private FilterLL FLL;
+        /// <summary>
+        /// Property der bestemmer framesize (filtreringsgraden), og om filter er slået til eller fra
+        /// </summary>
         public int framesize { get; set; }
         private SemaphoreSlim sem;
 

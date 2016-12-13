@@ -11,12 +11,24 @@ using DTO;
 
 namespace BTAPræsentationsLag
 {
+    /// <summary>
+    /// Alarm-vindue
+    /// </summary>
     public partial class AlarmVindue : Form
     {
+        /// <summary>
+        /// DTO for alarm-funktionalitet
+        /// </summary>
         public AlarmDTO ADTO { get; private set; }
         
+        /// <summary>
+        /// Angiver hvorvidt monitorering skal startes (true == start, false == start ikke)
+        /// </summary>
         public bool ok { get; private set; }
 
+        /// <summary>
+        /// Constructor der indstiller alarmvinduet
+        /// </summary>
         public AlarmVindue()
         {
             InitializeComponent();
@@ -26,13 +38,16 @@ namespace BTAPræsentationsLag
             ok = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAnnuller_Click(object sender, EventArgs e)
         {
             ADTO = new AlarmDTO();
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Validering ad inputdata
+        /// </summary>
+        private void btnIndstil_Click(object sender, EventArgs e)
         {
             int ØGrænse_ = int.Parse(textBox2.Text);
             int NGrænse_ = int.Parse(textBox1.Text);

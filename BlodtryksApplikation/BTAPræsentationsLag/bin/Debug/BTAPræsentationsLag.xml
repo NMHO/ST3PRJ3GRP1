@@ -4,6 +4,31 @@
         <name>BTAPræsentationsLag</name>
     </assembly>
     <members>
+        <member name="T:BTAPræsentationsLag.AlarmVindue">
+            <summary>
+            Alarm-vindue
+            </summary>
+        </member>
+        <member name="P:BTAPræsentationsLag.AlarmVindue.ADTO">
+            <summary>
+            DTO for alarm-funktionalitet
+            </summary>
+        </member>
+        <member name="P:BTAPræsentationsLag.AlarmVindue.ok">
+            <summary>
+            Angiver hvorvidt monitorering skal startes (true == start, false == start ikke)
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.AlarmVindue.#ctor">
+            <summary>
+            Constructor der indstiller alarmvinduet
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.AlarmVindue.btnIndstil_Click(System.Object,System.EventArgs)">
+            <summary>
+            Validering ad inputdata
+            </summary>
+        </member>
         <member name="F:BTAPræsentationsLag.AlarmVindue.components">
             <summary>
             Required designer variable.
@@ -26,12 +51,17 @@
             Vindue der dukker op når der trykkes på Gem
             </summary>
         </member>
+        <member name="P:BTAPræsentationsLag.Gemvindue.GDTO">
+            <summary>
+            DTO for gem-funktionalitet
+            </summary>
+        </member>
         <member name="M:BTAPræsentationsLag.Gemvindue.#ctor(BTALogikLag.ControlLogikLag,DTO.MonitorerDTO@)">
             <summary>
             Constructor 
             </summary>
-            <param name="myLL"></param>
-            <param name="MDTO"></param>
+            <param name="myLL">Kontrolklassen for logiklag som parameter</param>
+            <param name="MDTO">Reference til monitorerings-DTO'en i BTAHovedvindue</param>
         </member>
         <member name="M:BTAPræsentationsLag.Gemvindue.validereTjekboxValgt">
             <summary>
@@ -75,11 +105,16 @@
             Kalibreringsvindue
             </summary>
         </member>
+        <member name="P:BTAPræsentationsLag.KalibreringsVindue.KDTO">
+            <summary>
+            DTO for kalibrerings-funktionalitet
+            </summary>
+        </member>
         <member name="M:BTAPræsentationsLag.KalibreringsVindue.#ctor(BTALogikLag.ControlLogikLag)">
             <summary>
-            Constructor der modtager en reference til kalibreringsDTO'en oprettet i hovedvinduet
+            Constructor
             </summary>
-            <param name="KDTO">Bruges til at opbevare kalibreringsdata i</param>
+            <param name="myLL">Kontrolklassen for logiklag som parameter</param>
         </member>
         <member name="M:BTAPræsentationsLag.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)">
             <summary>
@@ -239,6 +274,22 @@
             Constructor der sætter den medsendte sekvens-parameter til klassens property
             </summary>
             <param name="NuværendeSekvens">Listen med den nuværende sekvens</param>
+        </member>
+        <member name="T:BTAPræsentationsLag.ControlPræsentationsLag">
+            <summary>
+            Kontrolklasse for præsentationslag
+            </summary>
+        </member>
+        <member name="P:BTAPræsentationsLag.ControlPræsentationsLag.BTAHovedvindue">
+            <summary>
+            Property for BTAHovedvindue
+            </summary>
+        </member>
+        <member name="M:BTAPræsentationsLag.ControlPræsentationsLag.#ctor(BTALogikLag.ControlLogikLag)">
+            <summary>
+            Constructor der initialiserer Præsentationslaget
+            </summary>
+            <param name="myLL">Modtager kontrolklassen for logiklag som parameter</param>
         </member>
         <member name="M:BTAPræsentationsLag.ControlPræsentationsLag.startGUI">
             <summary>

@@ -4,9 +4,44 @@
         <name>BTADataLag</name>
     </assembly>
     <members>
+        <member name="T:BTADataLag.ControlDataLag">
+            <summary>
+            Kontrolklasse for DataLag
+            </summary>
+        </member>
+        <member name="P:BTADataLag.ControlDataLag.KDL">
+            <summary>
+            Property for Kalibrerings-klasse
+            </summary>
+        </member>
+        <member name="P:BTADataLag.ControlDataLag.NPJDL">
+            <summary>
+            Property for Nulpunktsjusterings-klasse
+            </summary>
+        </member>
+        <member name="P:BTADataLag.ControlDataLag.MDL">
+            <summary>
+            Property for Monitorerings-klasse
+            </summary>
+        </member>
+        <member name="P:BTADataLag.ControlDataLag.GDL">
+            <summary>
+            Property for Gem-klasse
+            </summary>
+        </member>
         <member name="M:BTADataLag.ControlDataLag.#ctor">
             <summary>
-            Constructor
+            Constructor der initialiserer Datalaget
+            </summary>
+        </member>
+        <member name="T:BTADataLag.GemDL">
+            <summary>
+            Gem-klasse i Datalaget
+            </summary>
+        </member>
+        <member name="P:BTADataLag.GemDL.GDTO">
+            <summary>
+            DTO for gem-funktionalitet
             </summary>
         </member>
         <member name="M:BTADataLag.GemDL.#ctor">
@@ -78,6 +113,7 @@
         <member name="T:BTADataLag.MonitoreringDL">
             <summary>
             Indlæser datasekvenser fra DAQ'en
+            Inspiration fra .NET C# example NI-DAQmx (National Instruments\NI-DAQ\Examples\DotNET4.5\Synchronization\Multi-Function\SyncAIAO\CS\MultiFunctionSyncAIAO.2012)
             </summary>
         </member>
         <member name="M:BTADataLag.MonitoreringDL.indstilDAQ">

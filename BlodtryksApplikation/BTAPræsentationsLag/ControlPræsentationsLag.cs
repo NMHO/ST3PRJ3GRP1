@@ -10,13 +10,21 @@ using System.Threading;
 
 namespace BTAPræsentationsLag
 {
+    /// <summary>
+    /// Kontrolklasse for præsentationslag
+    /// </summary>
     public class ControlPræsentationsLag : PL
     {
         private ControlLogikLag currentLL;
+        /// <summary>
+        /// Property for BTAHovedvindue
+        /// </summary>
         public BTAHovedvindue BTAHovedvindue { get; private set; }
 
-        public static SemaphoreSlim sem = new SemaphoreSlim(1);
-
+        /// <summary>
+        /// Constructor der initialiserer Præsentationslaget
+        /// </summary>
+        /// <param name="myLL">Modtager kontrolklassen for logiklag som parameter</param>
         public ControlPræsentationsLag(ControlLogikLag myLL)
         {
             currentLL = myLL;   

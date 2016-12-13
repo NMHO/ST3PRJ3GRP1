@@ -15,10 +15,9 @@ namespace BTADataLag
     /// Abstrakt klasse til indlæsning fra DAQ
     /// </summary>
     public abstract class IndlæsFraDAQ : IReadInput
-    {        
-        public int samples { get; set; }
-        public NationalInstruments.DAQmx.Task analogInTask { get; set; }
-        public AnalogSingleChannelReader reader { get; set; }       
+    {
+        private NationalInstruments.DAQmx.Task analogInTask;
+        private AnalogSingleChannelReader reader;     
         
         /// <summary>
         /// Indstiller DAQ til dataopsamling
@@ -29,9 +28,7 @@ namespace BTADataLag
             {
                 analogInTask = new NationalInstruments.DAQmx.Task();
 
-                analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);
-
-                //analogInTask.Timing.ConfigureSampleClock("", 1000, SampleClockActiveEdge.Rising, SampleQuantityMode.ContinuousSamples, samples);
+                analogInTask.AIChannels.CreateVoltageChannel("Dev1/ai0", "myAIChannel", AITerminalConfiguration.Differential, 0, 5, AIVoltageUnits.Volts);                
 
                 analogInTask.Control(TaskAction.Verify);
 

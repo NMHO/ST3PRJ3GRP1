@@ -24,6 +24,7 @@ namespace BTALogikLag
         }
         /// <summary>
         /// Denne metode filtrerer den liste som kommer ind med et moving avg.-filter som udglatter signalet. 
+        /// Inspiration fra https://dotnetwidkunal.wordpress.com/2010/06/04/creating-a-simple-moving-average-function-in-c/ d. 28/10/16
         /// </summary>
         /// <param name="frameSize">Framesize diktere opløsningen af filteret (høj frameSize = meget udglattet)</param>
         /// <param name="data">Listen med data fra DAQ'en</param>

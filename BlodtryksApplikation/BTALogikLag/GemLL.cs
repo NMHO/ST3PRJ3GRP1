@@ -8,15 +8,21 @@ using DTO;
 
 namespace BTALogikLag
 {
+    /// <summary>
+    /// Gem-klasse i Logiklaget
+    /// </summary>
     public class GemLL
     {
+        /// <summary>
+        /// DTO for gem-funktionalitet
+        /// </summary>
         public GemDTO GDTO { get; set; }
         private ControlDataLag currentDatalag;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="mydal"></param>
+        /// <param name="mydal">modtager kontrolklassen for datalaget som parameter</param>
         public GemLL(ControlDataLag mydal)
         {
             this.currentDatalag = mydal;

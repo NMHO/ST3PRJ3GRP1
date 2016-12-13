@@ -11,6 +11,7 @@ namespace BTADataLag
 {
     /// <summary>
     /// Indlæser datasekvenser fra DAQ'en
+    /// Inspiration fra .NET C# example NI-DAQmx (National Instruments\NI-DAQ\Examples\DotNET4.5\Synchronization\Multi-Function\SyncAIAO\CS\MultiFunctionSyncAIAO.2012)
     /// </summary>
     public class MonitoreringDL : Subject
     {
