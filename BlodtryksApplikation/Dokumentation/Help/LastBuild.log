@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.9.17.0" projectFile="C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Dokumentation.shfbproj" started="13/12/16 14.03.25">
+<shfbBuild product="Sandcastle Help File Builder and Tools" version="2016.9.17.0" projectFile="C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Dokumentation.shfbproj" started="13/12/16 15.57.14">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -40,7 +40,7 @@ References to include (excluding framework assemblies):
     Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL
 
 Copying XML comments files
-    C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPr&#230;sentationsLag\bin\Debug\BTAPr&#230;sentationsLag.xml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BTAPr&#230;sentationsLag.xml
+SHFB: Warning BE0061: File &#39;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPr&#230;sentationsLag\bin\Debug\BTAPr&#230;sentationsLag.xml&#39; could not be loaded and will not be used as an XML comments file.  Error: The process cannot access the file &#39;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTAPr&#230;sentationsLag\bin\Debug\BTAPr&#230;sentationsLag.xml&#39; because it is being used by another process.
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTALogikLag\bin\Debug\BTALogikLag.xml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BTALogikLag.xml
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\BTADataLag\bin\Debug\BTADataLag.xml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BTADataLag.xml
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\DTO\bin\Debug\DTO.XML -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\DTO.XML
@@ -50,16 +50,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00,0140
+</plugIn>    Last step completed in 00:00:00,2350
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00,0200
+    Last step completed in 00:00:00,0250
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateRefInfo.proj]
-Build started 13/12/16 14.03.26.
+Build started 13/12/16 15.57.16.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -80,12 +80,12 @@ Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 201
 Build succeeded.
 
 Time Elapsed 00:00:00.80
-    Last step completed in 00:00:01,0500
+    Last step completed in 00:00:01,0570
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - TransformManifest.proj]
-Build started 13/12/16 14.03.27.
+Build started 13/12/16 15.57.17.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2016.9.17.0)
@@ -105,8 +105,8 @@ Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 201
 
 Build succeeded.
 
-Time Elapsed 00:00:00.60
-    Last step completed in 00:00:00,7420
+Time Elapsed 00:00:00.62
+    Last step completed in 00:00:00,7530
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
@@ -138,28 +138,28 @@ Generating conceptual topic files
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Content\VersionHistory\v6.0.aml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\ddueXml\ad8e161b-8707-46d4-861e-f319c166f91c.xml
     Parsing topic file &#39;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Content\VersionHistory\v7.0.aml&#39;
     C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Content\VersionHistory\v7.0.aml -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\ddueXml\196a2e04-4ca8-4836-8eab-8ea655fb1457.xml
-    Last step completed in 00:00:00,1890
+    Last step completed in 00:00:00,2300
 </buildStep>
 <buildStep step="CreateConceptualTopicConfigs">
 Creating conceptual topic configuration files...
     Companion files
     _ContentMetadata_.xml
     Merging topic IDs into manifest.xml
-    Last step completed in 00:00:00,0980
+    Last step completed in 00:00:00,1020
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00,0000
+    Last step completed in 00:00:00,0010
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00,0000
+    Last step completed in 00:00:00,0040
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - GenerateIntermediateTOC.proj]
-Build started 13/12/16 14.03.28.
+Build started 13/12/16 15.57.18.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2016.9.17.0)
@@ -170,14 +170,14 @@ Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 201
 
 Build succeeded.
 
-Time Elapsed 00:00:00.14
+Time Elapsed 00:00:00.13
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:00,2780
+    Last step completed in 00:00:00,2660
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00,5570
+    Last step completed in 00:00:00,4400
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
@@ -185,12 +185,12 @@ C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\Blodt
   Updating reference topic configurations.
   Updating conceptual topic configurations.
     Removing unused ExampleComponent.
-    Last step completed in 00:00:00,0360
+    Last step completed in 00:00:00,0390
 </buildStep>
 <buildStep step="BuildTopics">
 Building help topics...
 [C:\Program Files (x86)\MSBuild\14.0\bin\MSBuild.exe - BuildTopics.proj]
-Build started 13/12/16 14.03.29.
+Build started 13/12/16 15.57.19.
 Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj&quot; on node 1 (default targets).
 BuildTopics:
   BuildAssembler (v2016.9.17.0)
@@ -261,78 +261,114 @@ BuildAssembler : warning : ShowMissingComponent: [M:BTALogikLag.Subject.Attach(I
 BuildAssembler : warning : ShowMissingComponent: [M:BTALogikLag.Subject.Detach(Interfaces.IObserverPL)] Missing &lt;param name=&quot;observer&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTALogikLag.Subject.observers] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BTAPr‘sentationsLag] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.AlarmVindue] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BTAPr‘sentationsLag.AlarmVindue.ADTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.btnAnnuller_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.btnAnnuller_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.btnAnnuller_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.btnIndstil_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.btnIndstil_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.btnIndstil_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.button1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.button2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.components] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.AlarmVindue.InitializeComponent] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.label1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.label2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.label3] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.label4] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BTAPr‘sentationsLag.AlarmVindue.ok] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.textBox1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.AlarmVindue.textBox2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.BTAHovedvindue] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.#ctor(BTALogikLag.ControlLogikLag)] Missing &lt;param name=&quot;myLL&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.ADTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.alarmForm] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.alarmLydTilstand] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.alarmOnOff] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.bindingSource1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTAHovedvindue_Shown(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTChartInit] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.BTN_FilterON] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTN_FilterON_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTN_FilterON_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTN_FilterON_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.BTNGemdata] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTNGemdata_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTNGemdata_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.BTNGemdata_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.btnKalibrerSystem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnKalibrerSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.btnNulpunktsjusterSystem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnNulpunktsjusterSystem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.btnStartM†ling] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnStartM†ling_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnStartM†ling_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnStartM†ling_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.btnStopM†ling] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnStopM†ling_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnStopM†ling_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.btnStopM†ling_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.cbAlarmlyd] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.cbAlarmlyd_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.cbAlarmlyd_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.cbAlarmlyd_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.ChartBT] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.components] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.currentLL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.gbMonitorering] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.gemForm] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.groupBox1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.groupBox2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.GUIChartPunkter] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.InitializeComponent] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.kalibreringsForm] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.KDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.label3] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.MDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.monitorerBTIGUI] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.nulpunktsV‘rdi] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.opdaterBTChart(System.Collections.Generic.List{System.Double})] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.opdaterBTChart(System.Collections.Generic.List{System.Double})] Missing &lt;param name=&quot;Nuv‘rendeSekvens&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.opdaterChart(System.Object,BTAPr‘sentationsLag.MyEvent)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.opdaterChart(System.Object,BTAPr‘sentationsLag.MyEvent)] Missing &lt;param name=&quot;o&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.opdaterChart(System.Object,BTAPr‘sentationsLag.MyEvent)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.Player] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.p†forChartAlarmgr‘nser] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.sem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.tableLayoutPanel2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.thread] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.txtDiastole] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.BTAHovedvindue.txtSystole] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.BTAHovedvindue.Update] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.BTAHovedvindue.MyEventsHandler] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.ControlPr‘sentationsLag] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.ControlPr‘sentationsLag.#ctor(BTALogikLag.ControlLogikLag)] Missing &lt;param name=&quot;myLL&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BTAPr‘sentationsLag.ControlPr‘sentationsLag.BTAHovedvindue] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.ControlPr‘sentationsLag.currentLL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.ControlPr‘sentationsLag.startGUI] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.Gemvindue] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.#ctor(BTALogikLag.ControlLogikLag,DTO.MonitorerDTO@)] Missing &lt;param name=&quot;myLL&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.#ctor(BTALogikLag.ControlLogikLag,DTO.MonitorerDTO@)] Missing &lt;param name=&quot;MDTO&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.BNTGem] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.BNTGem_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.BNTGem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.BNTGem_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.BTNAnnuller] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.BTNAnnuller_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.BTNAnnuller_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.BTNAnnuller_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.components] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.CPRvalidering] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.currentLL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BTAPr‘sentationsLag.Gemvindue.GDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.InitializeComponent] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.label1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.label2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.label3] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
@@ -347,14 +383,22 @@ BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvin
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.TXBCPR] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.TXBPersonalenummer] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Gemvindue.valgtL‘ngde] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.validereTjekboxValgt] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.Gemvindue.validereTjekboxValgt] Missing &lt;returns&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.KalibreringsVindue] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.#ctor(BTALogikLag.ControlLogikLag)] Missing &lt;param name=&quot;myLL&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr1_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr2_Click(System.Object,System.EventArgs)] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr2_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;sender&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.btnKalibreringNr2_Click(System.Object,System.EventArgs)] Missing &lt;param name=&quot;e&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.components] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.currentLL] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.KalibreringsVindue.InitializeComponent] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BTAPr‘sentationsLag.KalibreringsVindue.KDTO] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.label1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.label2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.label3] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
@@ -363,25 +407,28 @@ BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.Kalibr
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.txbKalibreringNr1] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.txbKalibreringNr2] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [F:BTAPr‘sentationsLag.KalibreringsVindue.validering] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BTAPr‘sentationsLag.MyEvent] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BTAPr‘sentationsLag.MyEvent.#ctor(System.Collections.Generic.List{System.Double})] Missing &lt;param name=&quot;Nuv‘rendeSekvens&quot;/&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [P:BTAPr‘sentationsLag.MyEvent.Nuv‘rendeSekvens] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:Interfaces] Missing &lt;summary&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:Interfaces.IReadInput.ReadInput(System.Int32)] Missing &lt;returns&gt; documentation [C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj]
   Processed 321 topic(s)
-  167 warning(s)
+  214 warning(s)
   CopyFromIndexComponent: &quot;metadata&quot; in-memory cache entries used: 1 of 15.
   ResolveArtLinksComponent: Copying media files...
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 8 of 15.
-  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 4 of 30.
   SaveComponent: Waiting for the document writer task to finish (100 Help1 API file(s) remaining)...
 Done Building Project &quot;C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\BuildTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:18.11
-    Last step completed in 00:00:18,3330
+Time Elapsed 00:00:19.02
+    Last step completed in 00:00:19,1840
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00,0160
+    Last step completed in 00:00:00,0140
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -397,7 +444,7 @@ Processed 321 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Dokumentation.hhk
 Saving HTML Help 1 table of contents to C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Dokumentation.hhc
-    Last step completed in 00:00:02,8100
+    Last step completed in 00:00:03,0600
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -463,7 +510,7 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:00,6671
+    Last step completed in 00:00:00,6540
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
@@ -494,7 +541,7 @@ Compiling HTML Help 1 file...
   
   323	Topics
   
-  3,242	Local links
+  3,252	Local links
   
   231	Internet links
   
@@ -504,19 +551,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\Dokumentation.chm, 324,043 bytes
+  Created c:\Users\Nicklas-MacBook\Documents\Visual Studio 2015\Projects\ST3PRJ3GRP1\BlodtryksApplikation\Dokumentation\Help\Working\Output\HtmlHelp1\Dokumentation.chm, 318,779 bytes
   
-  Compression decreased file by 1,643,446 bytes.
+  Compression decreased file by 1,647,037 bytes.
   
-    Last step completed in 00:00:02,3060
+    Last step completed in 00:00:02,3310
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00,2910
+    Last step completed in 00:00:00,3460
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 13/12/16 14.03.53.  Total time: 00:00:28,3640
+Build completed successfully at 13/12/16 15.57.44.  Total time: 00:00:29,8950
 
 </buildStep>
 </shfbBuild>
