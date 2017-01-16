@@ -31,7 +31,7 @@ namespace BTADataLag
         /// </returns>
         public List<double> indlæsNulpunktsSpænding(int samples)
         {
-            return ReadInput(samples); // IFDAQ.indlæsDataSekvens(100).Average();
+            return ReadInput(samples);
         }
     }   
 }

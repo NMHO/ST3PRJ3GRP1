@@ -22,7 +22,7 @@ namespace BTALogikLag
         /// Property der bestemmer framesize (filtreringsgraden), og om filter er slået til eller fra
         /// </summary>
         public int framesize { get; set; }
-        private SemaphoreSlim sem;
+        public SemaphoreSlim sem { get; set; }
 
         /// <summary>
         /// Constructor der modtager en reference til datalaget. Sætter framesize til 0.
@@ -33,7 +33,7 @@ namespace BTALogikLag
             this.currentDatalag = mydal;
             FLL = new FilterLL(currentDatalag);
             framesize = 0;
-            sem = new SemaphoreSlim(1);
+            //sem = new SemaphoreSlim(1);
         }
 
         /// <summary>
@@ -63,26 +63,16 @@ namespace BTALogikLag
         public void hentBTSekvens(double KHældning, double NVærdi)
         {
 
-            var råtSignal = MDTO.NuværendeSekvens;
-
-
-            //if (råtSignal.Average() > 5)
-            //{
-            //    for (int i = 0; i < råtSignal.Count; i++)
-            //    {
-            //        råtSignal[i] = 2.5;
-            //    }
-            //}
+            var råtSignal = MDTO.NuværendeSekvens;            
 
             double temp;
 
+            // Lille ændring 
             for (int i = 0; i < råtSignal.Count; i++)
             {
-                temp = (råtSignal[i] * KHældning) - NVærdi;
+                temp = (råtSignal[i] - NVærdi) * KHældning;
                 råtSignal[i] = temp;
-            }
-
-            
+            }            
             
 
             if (framesize > 1)
@@ -94,7 +84,9 @@ namespace BTALogikLag
             {
                 sem.Wait();
                 MDTO.NuværendeSekvens = midlingAfIndlæstSignal(råtSignal);
-            }         
+            }
+
+
             MDTO.RåBlodtrykssignal.AddRange(råtSignal);
             MDTO.SignalLængdeISek = Convert.ToDouble(MDTO.RåBlodtrykssignal.Count()) / 1000.0;
 

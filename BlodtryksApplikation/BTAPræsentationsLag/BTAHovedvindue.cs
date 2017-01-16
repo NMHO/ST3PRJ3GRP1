@@ -34,7 +34,7 @@ namespace BTAPræsentationsLag
         private bool alarmLydTilstand;
         private bool alarmOnOff;        
         private SoundPlayer Player;
-        private SemaphoreSlim sem;
+        //private SemaphoreSlim sem;
 
         /// <summary>
         /// Constructor, der initialisere BTA-vinduet og opretter en kalibrerings DTO
@@ -49,7 +49,7 @@ namespace BTAPræsentationsLag
             BTChartInit();
             alarmLydTilstand = true;
             alarmOnOff = true;
-            sem = new SemaphoreSlim(1);
+            currentLL.MLL.sem = new SemaphoreSlim(1);
         }
 
         /// <summary>
@@ -262,11 +262,11 @@ namespace BTAPræsentationsLag
         /// <param name="NuværendeSekvens">Listen med den nuværende sekvens der skal tilføjes blodtryksgrafen</param>
         private void opdaterBTChart(List<double> NuværendeSekvens)
         {
-            sem.Wait();
-            EventArgs e = new MyEvent(NuværendeSekvens);        
+            currentLL.MLL.sem.Wait();
+            EventArgs e = new MyEvent(NuværendeSekvens);    
             object[] pList = { this, e };
             ChartBT.BeginInvoke(new MyEventsHandler(opdaterChart), pList);
-            sem.Release();
+            currentLL.MLL.sem.Release();
         }
 
         private delegate void MyEventsHandler(object sender, MyEvent e);
@@ -276,10 +276,14 @@ namespace BTAPræsentationsLag
         /// </summary>
         private void opdaterChart(object o, MyEvent e)
         {
+            
             double nuværendeXval = ChartBT.Series["BTSerie"].Points.Last().XValue;
             double næsteXval = 1.0 / (MDTO.NuværendeSekvens.Count * 10);
-            
-            foreach (var value in e.NuværendeSekvens)
+
+            var nuværendeSekvens = e.NuværendeSekvens;
+            currentLL.MLL.sem.Wait();
+
+            foreach (var value in nuværendeSekvens)
             {
                 ChartBT.Series["BTSerie"].Points.RemoveAt(0);
                 ChartBT.Series["BTSerie"].Points.AddXY(nuværendeXval + næsteXval, value);
@@ -297,9 +301,10 @@ namespace BTAPræsentationsLag
                     ChartBT.Series["BTSerie"].Points.Last().Color = Color.Red;                    
                 }
                 
-            }            
+            }
+            currentLL.MLL.sem.Release();
 
-            if (e.NuværendeSekvens.Any(item => item > ADTO.ØGrænse) && alarmLydTilstand == true)
+            if (nuværendeSekvens.Any(item => item > ADTO.ØGrænse) && alarmLydTilstand == true)
             {
                 Player.Play();
 
@@ -318,7 +323,7 @@ namespace BTAPræsentationsLag
                 }
 
             }
-            else if (e.NuværendeSekvens.Any(item => item < ADTO.NGrænse) && alarmLydTilstand == true)
+            else if (nuværendeSekvens.Any(item => item < ADTO.NGrænse) && alarmLydTilstand == true)
             {
                 Player.Play();
 
@@ -367,7 +372,7 @@ namespace BTAPræsentationsLag
             }
            
 
-            double step = (e.NuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
+            double step = (nuværendeSekvens.Count + currentLL.MLL.framesize) / MDTO.midlingsFrekvens;
 
             ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Minimum + step, 1);
             ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum = Math.Round(ChartBT.ChartAreas["BTChartArea"].AxisX.Maximum + step, 1);
